@@ -19,7 +19,7 @@ export default function HomeAnimations({ clients }: Props) {
     >
       {/* Badge chip */}
       <motion.div variants={fadeUpVariant}>
-        <span className="inline-flex items-center gap-2 rounded-chip bg-white/5 border border-white/10 px-4 py-1.5 text-xs text-accent-primary-400 uppercase tracking-widest font-medium mb-6">
+        <span className="inline-flex items-center gap-2 rounded-chip bg-white/[0.08] backdrop-blur-xl border border-white/[0.18] px-4 py-1.5 text-xs text-accent-primary-400 uppercase tracking-widest font-medium mb-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.15)]">
           <span className="w-2 h-2 rounded-full bg-accent-primary-500 animate-glow-pulse" />
           Core IT & AI Solutions
         </span>

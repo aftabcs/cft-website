@@ -33,7 +33,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || mobileOpen
-          ? 'bg-[rgba(10,10,10,0.70)] backdrop-blur-[24px] border-b border-white/[0.08] shadow-nav'
+          ? 'bg-[rgba(10,10,10,0.60)] backdrop-blur-[40px] saturate-[180%] border-b border-white/[0.15] shadow-nav'
           : 'bg-transparent'
       }`}
     >
@@ -110,7 +110,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden bg-[rgba(10,10,10,0.90)] backdrop-blur-[30px] border-t border-white/[0.08] overflow-hidden"
+            className="lg:hidden bg-[rgba(10,10,10,0.75)] backdrop-blur-[40px] saturate-[180%] border-t border-white/[0.15] overflow-hidden"
           >
             <ul className="flex flex-col px-4 pb-6 pt-4 gap-1" role="list">
               {navLinks.map(({ href, label }) => {

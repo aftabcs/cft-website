@@ -20,14 +20,14 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-base border-t border-white/[0.08] relative overflow-hidden">
+    <footer className="bg-bg-base border-t border-white/[0.12] relative overflow-hidden">
       {/* Gradient accent line at top */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-cta" aria-hidden="true" />
 
       {/* Subtle red blob accent */}
       <div
         className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full pointer-events-none"
-        style={{ background: '#E53E3E', filter: 'blur(180px)', opacity: 0.08 }}
+        style={{ background: '#E53E3E', filter: 'blur(150px)', opacity: 0.15 }}
         aria-hidden="true"
       />
 

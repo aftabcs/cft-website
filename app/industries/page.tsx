@@ -176,7 +176,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* INDUSTRY QUICK NAV */}
-      <section className="bg-[rgba(10,10,10,0.70)] backdrop-blur-[24px] py-4 border-b border-white/[0.08] sticky top-20 z-30">
+      <section className="bg-[rgba(10,10,10,0.60)] backdrop-blur-[40px] saturate-[180%] py-4 border-b border-white/[0.15] sticky top-20 z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav aria-label="Industry sections" className="overflow-x-auto scrollbar-hide">
             <ul className="flex items-center gap-2 min-w-max" role="list">
