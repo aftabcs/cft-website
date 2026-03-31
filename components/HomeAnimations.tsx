@@ -20,6 +20,7 @@ export default function HomeAnimations({ clients }: Props) {
       {/* Badge chip */}
       <motion.div variants={fadeUpVariant}>
         <span className="inline-flex items-center gap-2 rounded-chip bg-white/5 border border-white/10 px-4 py-1.5 text-xs text-accent-primary-400 uppercase tracking-widest font-medium mb-6">
+          <span className="w-2 h-2 rounded-full bg-accent-primary-500 animate-glow-pulse" />
           Core IT & AI Solutions
         </span>
       </motion.div>
@@ -45,21 +46,21 @@ export default function HomeAnimations({ clients }: Props) {
       <motion.div variants={fadeUpVariant} className="flex flex-col sm:flex-row gap-4">
         <Link
           href="/contact"
-          className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-cta text-white font-semibold text-base rounded-btn shadow-glow-cyan hover:brightness-110 hover:shadow-glow-violet transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-primary-500"
+          className="btn-primary inline-flex items-center justify-center gap-2 text-base hover:scale-[1.02] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-primary-500"
         >
           Get a Free Consultation
           <ArrowRight className="w-5 h-5" aria-hidden="true" />
         </Link>
         <Link
           href="/services"
-          className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-accent-primary-500/50 text-accent-primary-400 hover:bg-accent-primary-500/10 font-semibold text-base rounded-btn transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-primary-400"
+          className="btn-secondary inline-flex items-center justify-center gap-2 text-base font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-primary-400"
         >
           Explore Services
         </Link>
       </motion.div>
 
       {/* Client strip */}
-      <motion.div variants={fadeUpVariant} className="mt-20 pt-8 border-t border-white/8">
+      <motion.div variants={fadeUpVariant} className="mt-20 pt-8 border-t border-white/[0.08]">
         <p className="text-xs font-medium text-text-muted uppercase tracking-widest mb-6">
           Trusted by global leaders
         </p>

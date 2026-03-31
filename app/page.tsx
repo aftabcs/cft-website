@@ -5,7 +5,6 @@ import {
   Banknote,
   ShoppingCart,
   Cpu,
-  Cloud,
   Factory,
   HeartPulse,
   Zap,
@@ -16,6 +15,7 @@ import {
   CheckCircle,
 } from 'lucide-react';
 import HomeAnimations from '@/components/HomeAnimations';
+import BackgroundBlobs from '@/components/BackgroundBlobs';
 
 export const metadata: Metadata = {
   title: 'CodeFlick Technologies — From Software to AI, We Build Everything',
@@ -29,56 +29,48 @@ const services = [
     title: 'AI & Machine Learning',
     description:
       'Chatbots, predictive analytics, LLM integration, AI agents, computer vision, NLP, and generative AI solutions.',
-    accent: 'cyan',
   },
   {
     icon: Zap,
     title: 'Automation',
     description:
       'Power Automate, Power Apps, n8n, Make — BPA, RPA, workflow automation, and intelligent document processing.',
-    accent: 'violet',
   },
   {
     icon: Cpu,
     title: 'Software Development',
     description:
       'Web apps, mobile apps, SaaS, enterprise applications, SDK development, middleware, and API development.',
-    accent: 'cyan',
   },
   {
     icon: Banknote,
     title: 'FinTech Solutions',
     description:
       'Digital banking, payment gateways, KYC systems, core banking integration, loan management, and asset management.',
-    accent: 'violet',
   },
   {
     icon: ShoppingCart,
     title: 'E-commerce',
     description:
       'Shopify, WordPress/WooCommerce, Magento, custom platforms, and headless commerce architecture.',
-    accent: 'cyan',
   },
   {
     icon: Factory,
     title: 'Manufacturing',
     description:
       'MES, supply chain automation, IoT integration, predictive maintenance, and Industry 4.0 smart factory solutions.',
-    accent: 'violet',
   },
   {
     icon: Globe,
     title: 'CRM Solutions',
     description:
       'Salesforce, Odoo, Microsoft Dynamics, Zoho, HubSpot — implementation, customization, and integration.',
-    accent: 'cyan',
   },
   {
     icon: HeartPulse,
     title: 'Healthcare',
     description:
       'EMR/EHR systems, telemedicine platforms, HL7 & FHIR integration, EHS compliance, and remote monitoring.',
-    accent: 'violet',
   },
 ];
 
@@ -131,24 +123,20 @@ export default function HomePage() {
 
       {/* HERO */}
       <section className="relative min-h-screen flex items-center bg-bg-base overflow-hidden">
-        {/* Mesh gradient background */}
-        <div className="absolute inset-0 bg-gradient-bg-mesh pointer-events-none" aria-hidden="true" />
-        {/* Dot grid overlay */}
-        <div className="absolute inset-0 dot-grid opacity-40" aria-hidden="true" />
-
+        <BackgroundBlobs page="home" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-32">
           <HomeAnimations clients={clients} />
         </div>
       </section>
 
       {/* SERVICES */}
-      <section className="bg-bg-surface py-24" id="services">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-bg-base py-24 relative overflow-hidden" id="services">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-14">
             <p className="text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3">
               What We Build
             </p>
-            <h2 className="font-sans font-bold text-h2 text-text-primary">
+            <h2 className="font-sans font-bold text-h2 text-white">
               End-to-End Technology Services
             </h2>
             <p className="mt-4 text-text-secondary text-lg max-w-2xl mx-auto">
@@ -158,31 +146,18 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {services.map(({ icon: Icon, title, description, accent }) => (
+            {services.map(({ icon: Icon, title, description }) => (
               <div
                 key={title}
-                className={`group p-6 rounded-card bg-bg-elevated border transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover ${
-                  accent === 'cyan'
-                    ? 'border-white/8 hover:border-accent-primary-500/35'
-                    : 'border-white/8 hover:border-accent-secondary-500/35'
-                }`}
+                className="glass-card p-6 hover:border-[rgba(229,62,62,0.30)]"
               >
-                <div
-                  className={`w-11 h-11 rounded-lg flex items-center justify-center mb-4 ${
-                    accent === 'cyan'
-                      ? 'bg-accent-primary-500/10'
-                      : 'bg-accent-secondary-500/10'
-                  }`}
-                >
-                  <Icon
-                    className={`w-5 h-5 ${
-                      accent === 'cyan' ? 'text-accent-primary-400' : 'text-accent-secondary-400'
-                    }`}
-                    aria-hidden="true"
-                  />
+                <div className="relative z-10">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/15">
+                    <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
+                  </div>
+                  <h3 className="font-semibold text-white text-sm mb-2">{title}</h3>
+                  <p className="text-text-muted text-xs leading-relaxed">{description}</p>
                 </div>
-                <h3 className="font-semibold text-text-primary text-sm mb-2">{title}</h3>
-                <p className="text-text-muted text-xs leading-relaxed">{description}</p>
               </div>
             ))}
           </div>
@@ -190,7 +165,7 @@ export default function HomePage() {
           <div className="text-center mt-10">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-accent-primary-400 font-semibold text-sm hover:text-accent-primary-300 transition-colors"
+              className="inline-flex items-center gap-2 text-accent-primary-300 font-semibold text-sm hover:text-white transition-colors"
             >
               View all services
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -201,42 +176,45 @@ export default function HomePage() {
 
       {/* STATS */}
       <section className="bg-bg-base py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-bg-mesh opacity-50 pointer-events-none" aria-hidden="true" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map(({ value, label }) => (
-              <div key={label} className="text-center">
-                <p className="font-sans font-bold text-display text-accent-primary-400 mb-2">{value}</p>
-                <p className="text-text-secondary text-sm font-medium">{label}</p>
-              </div>
-            ))}
+          <div className="glass-card p-8 sm:p-12">
+            <div className="relative z-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
+              {stats.map(({ value, label }, i) => (
+                <div key={label} className={`text-center ${i < stats.length - 1 ? 'lg:border-r lg:border-white/10' : ''}`}>
+                  <p className="font-sans font-bold text-display gradient-text mb-2">{value}</p>
+                  <p className="text-text-secondary text-sm font-medium">{label}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* CLIENT LOGOS */}
-      <section className="bg-bg-surface py-20">
+      <section className="bg-bg-base py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-xs font-semibold tracking-widest uppercase text-text-muted mb-3">
               Trusted by
             </p>
-            <h2 className="font-sans font-bold text-h2 text-text-primary">
+            <h2 className="font-sans font-bold text-h2 text-white">
               Global Leaders
             </h2>
             <p className="text-text-secondary mt-2">
               Banks, airlines, governments, and enterprises across 10+ countries
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {clients.map((client) => (
-              <div
-                key={client}
-                className="flex items-center justify-center h-16 rounded-card border border-white/8 px-4 hover:border-accent-primary-500/30 hover:bg-bg-elevated transition-all duration-200"
-              >
-                <span className="text-text-secondary font-medium text-sm text-center">{client}</span>
-              </div>
-            ))}
+          <div className="glass-card p-4 sm:p-6">
+            <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+              {clients.map((client) => (
+                <div
+                  key={client}
+                  className="flex items-center justify-center h-16 rounded-btn border border-white/[0.08] px-4 hover:border-accent-primary-500/30 hover:bg-white/[0.04] transition-all duration-200"
+                >
+                  <span className="text-text-secondary font-medium text-sm text-center">{client}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -244,10 +222,15 @@ export default function HomePage() {
       {/* TESTIMONIAL */}
       <section className="bg-bg-base py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <blockquote className="text-text-secondary text-lg italic leading-relaxed mb-4">
-            &ldquo;They delivered a complex digital onboarding solution for our bank with exceptional quality and speed.&rdquo;
-          </blockquote>
-          <p className="text-accent-primary-400 font-semibold text-sm">— Ajman Bank Team</p>
+          <div className="glass-card p-8 sm:p-10">
+            <div className="relative z-10">
+              <span className="text-6xl text-accent-primary-500/30 leading-none">&ldquo;</span>
+              <blockquote className="text-text-secondary text-lg italic leading-relaxed mb-4 -mt-4">
+                They delivered a complex digital onboarding solution for our bank with exceptional quality and speed.
+              </blockquote>
+              <p className="text-accent-primary-400 font-semibold text-sm">— Ajman Bank Team</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -259,7 +242,7 @@ export default function HomePage() {
               <p className="text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3">
                 Why CodeFlick
               </p>
-              <h2 className="font-sans font-bold text-h2 text-text-primary mb-6">
+              <h2 className="font-sans font-bold text-h2 text-white mb-6">
                 A Technology Partner You Can Trust
               </h2>
               <p className="text-text-secondary text-lg leading-relaxed mb-8">
@@ -280,7 +263,7 @@ export default function HomePage() {
               <div className="mt-10">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 text-accent-primary-400 font-semibold hover:text-accent-primary-300 transition-colors"
+                  className="inline-flex items-center gap-2 text-accent-primary-300 font-semibold hover:text-white transition-colors"
                 >
                   Learn more about us
                   <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -298,11 +281,13 @@ export default function HomePage() {
               ].map(({ icon: Icon, label, sub }) => (
                 <div
                   key={label}
-                  className="p-6 rounded-card bg-bg-surface border border-white/8 hover:border-accent-primary-500/30 transition-all duration-300 hover:shadow-glow-cyan"
+                  className="glass-card p-6 hover:border-[rgba(229,62,62,0.30)]"
                 >
-                  <Icon className="w-8 h-8 text-accent-primary-400 mb-3" aria-hidden="true" />
-                  <p className="font-semibold text-text-primary text-sm mb-1">{label}</p>
-                  <p className="text-text-muted text-xs">{sub}</p>
+                  <div className="relative z-10">
+                    <Icon className="w-8 h-8 text-accent-primary-400 mb-3" aria-hidden="true" />
+                    <p className="font-semibold text-white text-sm mb-1">{label}</p>
+                    <p className="text-text-muted text-xs">{sub}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -311,31 +296,34 @@ export default function HomePage() {
       </section>
 
       {/* CTA BANNER */}
-      <section className="bg-bg-surface py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-bg-mesh opacity-70 pointer-events-none" aria-hidden="true" />
-        <div className="absolute inset-0 border-y border-white/8 pointer-events-none" aria-hidden="true" />
+      <section className="bg-bg-base py-20 relative overflow-hidden">
+        <BackgroundBlobs page="contact" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-sans font-bold text-h2 text-text-primary mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-text-secondary text-lg mb-10 max-w-2xl mx-auto">
-            Talk to our experts and discover how CodeFlick Technologies can accelerate your digital
-            journey.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-cta text-white font-semibold text-base rounded-btn shadow-glow-cyan hover:brightness-110 hover:shadow-glow-violet transition-all duration-200 hover:scale-[1.02]"
-            >
-              Start a Project
-              <ArrowRight className="w-5 h-5" aria-hidden="true" />
-            </Link>
-            <Link
-              href="/services"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-accent-primary-500/50 text-accent-primary-400 hover:bg-accent-primary-500/10 font-semibold text-base rounded-btn transition-all duration-200"
-            >
-              Browse Services
-            </Link>
+          <div className="glass-card p-10 sm:p-14">
+            <div className="relative z-10">
+              <h2 className="font-sans font-bold text-h2 text-white mb-4">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-text-secondary text-lg mb-10 max-w-2xl mx-auto">
+                Talk to our experts and discover how CodeFlick Technologies can accelerate your digital
+                journey.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="btn-primary inline-flex items-center gap-2 text-base hover:scale-[1.02]"
+                >
+                  Start a Project
+                  <ArrowRight className="w-5 h-5" aria-hidden="true" />
+                </Link>
+                <Link
+                  href="/services"
+                  className="btn-secondary inline-flex items-center gap-2 text-base font-semibold"
+                >
+                  Browse Services
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

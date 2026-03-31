@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Mail, MapPin, Phone, Linkedin, Twitter, Github, Zap } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
+import BackgroundBlobs from '@/components/BackgroundBlobs';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
@@ -34,24 +35,23 @@ export default function ContactPage() {
 
       {/* PAGE HERO */}
       <section className="relative bg-bg-base py-28 pt-40 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-bg-mesh pointer-events-none" aria-hidden="true" />
-        <div className="absolute inset-0 dot-grid opacity-30" aria-hidden="true" />
+        <BackgroundBlobs page="contact" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 text-sm text-text-muted">
               <li>
-                <Link href="/" className="hover:text-text-primary transition-colors">
+                <Link href="/" className="hover:text-white transition-colors">
                   Home
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li className="text-text-primary font-medium">Contact</li>
+              <li className="text-white font-medium">Contact</li>
             </ol>
           </nav>
-          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 px-3 py-1">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 px-3 py-1">
             Get in Touch
           </span>
-          <h1 className="font-sans font-bold text-hero text-text-primary max-w-2xl mb-4">
+          <h1 className="font-sans font-bold text-hero text-white max-w-2xl mb-4">
             Let&apos;s Build Something{' '}
             <span className="gradient-text">Together</span>
           </h1>
@@ -68,7 +68,7 @@ export default function ContactPage() {
             {/* LEFT: Contact info (40%) */}
             <div className="lg:col-span-2 space-y-8">
               <div>
-                <h2 className="font-sans font-bold text-h3 text-text-primary mb-2">
+                <h2 className="font-sans font-bold text-h3 text-white mb-2">
                   Contact Information
                 </h2>
                 <p className="text-text-secondary text-sm">
@@ -82,54 +82,54 @@ export default function ContactPage() {
                   className="flex items-start gap-4 group"
                   aria-label="Send email to info@codeftech.com"
                 >
-                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent-primary-500/20 transition-colors">
+                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/15 flex items-center justify-center flex-shrink-0 group-hover:bg-accent-primary-500/25 transition-colors">
                     <Mail className="w-5 h-5 text-accent-primary-400" aria-hidden="true" />
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-0.5">
                       Email
                     </p>
-                    <p className="text-text-primary text-sm font-medium group-hover:text-accent-primary-400 transition-colors">
+                    <p className="text-white text-sm font-medium group-hover:text-accent-primary-400 transition-colors">
                       info@codeftech.com
                     </p>
                   </div>
                 </a>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/15 flex items-center justify-center flex-shrink-0">
                     <Phone className="w-5 h-5 text-accent-primary-400" aria-hidden="true" />
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-0.5">
                       Phone
                     </p>
-                    <p className="text-text-primary text-sm">+91 7987421429</p>
-                    <p className="text-text-primary text-sm">+91 9807950347</p>
+                    <p className="text-white text-sm">+91 7987421429</p>
+                    <p className="text-white text-sm">+91 9807950347</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/15 flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5 text-accent-primary-400" aria-hidden="true" />
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-0.5">
                       India Office (HQ)
                     </p>
-                    <p className="text-text-primary text-sm">Bhopal, Madhya Pradesh, India</p>
+                    <p className="text-white text-sm">Bhopal, Madhya Pradesh, India</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/15 flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5 text-accent-primary-400" aria-hidden="true" />
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-0.5">
                       Qatar Office
                     </p>
-                    <p className="text-text-primary text-sm">Alsaad Street, Doha, Qatar</p>
-                    <p className="text-text-primary text-sm">+974 5540 2909</p>
+                    <p className="text-white text-sm">Alsaad Street, Doha, Qatar</p>
+                    <p className="text-white text-sm">+974 5540 2909</p>
                   </div>
                 </div>
               </div>
@@ -151,7 +151,7 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`CodeFlick Technologies on ${label}`}
-                      className="w-10 h-10 rounded-btn bg-bg-surface border border-white/8 flex items-center justify-center text-text-muted hover:text-accent-primary-400 hover:border-accent-primary-500/40 transition-colors"
+                      className="w-10 h-10 rounded-btn bg-white/[0.06] border border-white/[0.08] flex items-center justify-center text-text-muted hover:text-accent-primary-500 hover:border-accent-primary-500/40 transition-colors"
                     >
                       <Icon className="w-4 h-4" aria-hidden="true" />
                     </a>
@@ -160,10 +160,9 @@ export default function ContactPage() {
               </div>
 
               {/* Free consultation note */}
-              <div className="p-5 rounded-card bg-bg-surface border border-accent-primary-500/20 relative overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-cta" aria-hidden="true" />
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-cta flex items-center justify-center flex-shrink-0 mt-0.5 shadow-glow-cyan">
+              <div className="glass-card p-5">
+                <div className="relative z-10 flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-cta flex items-center justify-center flex-shrink-0 mt-0.5 shadow-glow-red">
                     <Zap className="w-4 h-4 text-white" fill="currentColor" aria-hidden="true" />
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed">
@@ -177,12 +176,13 @@ export default function ContactPage() {
 
             {/* RIGHT: Form (60%) */}
             <div className="lg:col-span-3">
-              <div className="p-8 rounded-card bg-bg-surface border border-white/8 relative overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-cta" aria-hidden="true" />
-                <h2 className="font-sans font-bold text-h3 text-text-primary mb-6">
-                  Send Us a Message
-                </h2>
-                <ContactForm />
+              <div className="glass-card p-8">
+                <div className="relative z-10">
+                  <h2 className="font-sans font-bold text-h3 text-white mb-6">
+                    Send Us a Message
+                  </h2>
+                  <ContactForm />
+                </div>
               </div>
             </div>
           </div>

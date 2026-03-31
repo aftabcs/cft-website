@@ -33,7 +33,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || mobileOpen
-          ? 'bg-bg-base/80 backdrop-blur-xl border-b border-white/8 shadow-nav'
+          ? 'bg-[rgba(10,10,10,0.70)] backdrop-blur-[24px] border-b border-white/[0.08] shadow-nav'
           : 'bg-transparent'
       }`}
     >
@@ -43,7 +43,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
-          <span className="w-8 h-8 rounded-lg bg-gradient-cta flex items-center justify-center shadow-glow-cyan group-hover:shadow-glow-violet transition-shadow duration-300">
+          <span className="w-8 h-8 rounded-lg bg-gradient-cta flex items-center justify-center shadow-glow-red group-hover:shadow-btn-red transition-shadow duration-300">
             <Zap className="w-4 h-4 text-white" fill="currentColor" aria-hidden="true" />
           </span>
           <span className="font-sans font-bold text-lg text-text-primary leading-none">
@@ -64,8 +64,8 @@ export default function Navbar() {
                   href={href}
                   className={`text-sm font-medium transition-colors duration-150 pb-0.5 ${
                     isActive
-                      ? 'text-text-primary border-b-2 border-accent-primary-500'
-                      : 'text-text-secondary hover:text-text-primary'
+                      ? 'text-white border-b-2 border-accent-primary-500'
+                      : 'text-text-secondary hover:text-white'
                   }`}
                 >
                   {label}
@@ -79,7 +79,7 @@ export default function Navbar() {
         <div className="hidden lg:block">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-cta text-white font-semibold text-sm rounded-btn shadow-glow-cyan hover:brightness-110 hover:shadow-glow-violet transition-all duration-200"
+            className="btn-primary inline-flex items-center gap-2 text-sm !py-2.5 !px-5"
           >
             Get a Free Consultation
           </Link>
@@ -87,7 +87,7 @@ export default function Navbar() {
 
         {/* Mobile menu button */}
         <button
-          className="lg:hidden p-2 text-text-secondary hover:text-text-primary transition-colors"
+          className="lg:hidden p-2 text-text-secondary hover:text-white transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-expanded={mobileOpen}
           aria-controls="mobile-menu"
@@ -110,7 +110,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden bg-bg-base/95 backdrop-blur-2xl border-t border-white/8 overflow-hidden"
+            className="lg:hidden bg-[rgba(10,10,10,0.90)] backdrop-blur-[30px] border-t border-white/[0.08] overflow-hidden"
           >
             <ul className="flex flex-col px-4 pb-6 pt-4 gap-1" role="list">
               {navLinks.map(({ href, label }) => {
@@ -121,8 +121,8 @@ export default function Navbar() {
                       href={href}
                       className={`block px-4 py-3 text-base font-medium rounded-btn transition-colors ${
                         isActive
-                          ? 'text-text-primary bg-bg-elevated'
-                          : 'text-text-secondary hover:text-text-primary hover:bg-bg-elevated/60'
+                          ? 'text-white bg-bg-elevated'
+                          : 'text-text-secondary hover:text-white hover:bg-bg-elevated/60'
                       }`}
                     >
                       {label}
@@ -133,7 +133,7 @@ export default function Navbar() {
               <li className="pt-2">
                 <Link
                   href="/contact"
-                  className="flex items-center justify-center px-6 py-3 bg-gradient-cta text-white font-semibold text-base rounded-btn transition-all duration-200"
+                  className="btn-primary flex items-center justify-center text-base"
                 >
                   Get a Free Consultation
                 </Link>

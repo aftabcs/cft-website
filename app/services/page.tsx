@@ -13,6 +13,7 @@ import {
   HeartPulse,
   ArrowRight,
 } from 'lucide-react';
+import BackgroundBlobs from '@/components/BackgroundBlobs';
 
 export const metadata: Metadata = {
   title: 'IT Services',
@@ -38,7 +39,6 @@ const serviceCategories = [
       'Natural Language Processing (NLP)',
       'AI Agents — Self-Learning Autonomous Systems',
     ],
-    accent: 'cyan',
   },
   {
     id: 'automation',
@@ -53,7 +53,6 @@ const serviceCategories = [
       'Enterprise Automation (BPA, Workflow Automation, RPA)',
       'Intelligent Document Processing',
     ],
-    accent: 'violet',
   },
   {
     id: 'software',
@@ -70,7 +69,6 @@ const serviceCategories = [
       'SDK & Middleware Development',
       'API Development (RESTful, GraphQL, SOAP)',
     ],
-    accent: 'cyan',
   },
   {
     id: 'fintech',
@@ -87,7 +85,6 @@ const serviceCategories = [
       'KYC & AML Systems (IDWise, Onfido)',
       'Asset Management & Investment Tracking',
     ],
-    accent: 'violet',
   },
   {
     id: 'ecommerce',
@@ -103,7 +100,6 @@ const serviceCategories = [
       'Custom Marketplace Solutions',
       'Headless Commerce — API-First Architecture',
     ],
-    accent: 'cyan',
   },
   {
     id: 'manufacturing',
@@ -118,7 +114,6 @@ const serviceCategories = [
       'IoT Integration & Predictive Maintenance',
       'Industry 4.0 — Smart Factory & Digital Twin',
     ],
-    accent: 'violet',
   },
   {
     id: 'crm',
@@ -133,7 +128,6 @@ const serviceCategories = [
       'Microsoft Dynamics (Implementation, Migration)',
       'Zoho & HubSpot (Setup, Workflow Automation)',
     ],
-    accent: 'cyan',
   },
   {
     id: 'healthcare',
@@ -148,7 +142,6 @@ const serviceCategories = [
       'Telemedicine — Virtual Consultations & Remote Monitoring',
       'HL7 & FHIR — Healthcare Data Interoperability',
     ],
-    accent: 'violet',
   },
   {
     id: 'cloud',
@@ -163,7 +156,6 @@ const serviceCategories = [
       'Containerization (Docker, Kubernetes)',
       'Security & Compliance — Enterprise-Grade Security',
     ],
-    accent: 'cyan',
   },
   {
     id: 'data',
@@ -178,7 +170,6 @@ const serviceCategories = [
       'Real-Time Reporting — Live Data Insights',
       'Big Data Solutions — Large-Scale Data Processing',
     ],
-    accent: 'violet',
   },
 ];
 
@@ -187,24 +178,23 @@ export default function ServicesPage() {
     <>
       {/* PAGE HERO */}
       <section className="relative bg-bg-base py-28 pt-40 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-bg-mesh pointer-events-none" aria-hidden="true" />
-        <div className="absolute inset-0 dot-grid opacity-30" aria-hidden="true" />
+        <BackgroundBlobs page="services" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 text-sm text-text-muted">
               <li>
-                <Link href="/" className="hover:text-text-primary transition-colors">
+                <Link href="/" className="hover:text-white transition-colors">
                   Home
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li className="text-text-primary font-medium">IT Services</li>
+              <li className="text-white font-medium">IT Services</li>
             </ol>
           </nav>
-          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 px-3 py-1">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 px-3 py-1">
             What We Build
           </span>
-          <h1 className="font-sans font-bold text-hero text-text-primary max-w-2xl mb-4">
+          <h1 className="font-sans font-bold text-hero text-white max-w-2xl mb-4">
             Comprehensive IT Services
           </h1>
           <p className="text-text-secondary text-lg max-w-xl">
@@ -218,47 +208,26 @@ export default function ServicesPage() {
       <section className="bg-bg-base py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-6">
-            {serviceCategories.map(({ id, icon: Icon, title, tagline, description, services, accent }) => (
+            {serviceCategories.map(({ id, icon: Icon, title, tagline, description, services }) => (
               <div
                 key={id}
                 id={id}
-                className={`group p-8 rounded-card bg-bg-surface border transition-all duration-300 hover:shadow-card-hover ${
-                  accent === 'cyan'
-                    ? 'border-white/8 hover:border-accent-primary-500/30'
-                    : 'border-white/8 hover:border-accent-secondary-500/30'
-                }`}
+                className="glass-card p-8 hover:border-[rgba(229,62,62,0.30)]"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Left: Title + description */}
                   <div className="lg:col-span-1">
-                    <div
-                      className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                        accent === 'cyan' ? 'bg-accent-primary-500/10' : 'bg-accent-secondary-500/10'
-                      }`}
-                    >
-                      <Icon
-                        className={`w-6 h-6 ${
-                          accent === 'cyan' ? 'text-accent-primary-400' : 'text-accent-secondary-400'
-                        }`}
-                        aria-hidden="true"
-                      />
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/15">
+                      <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
                     </div>
-                    <h2 className="font-sans font-bold text-h3 text-text-primary mb-1">{title}</h2>
-                    <p
-                      className={`text-xs font-medium uppercase tracking-widest mb-3 ${
-                        accent === 'cyan' ? 'text-accent-primary-400' : 'text-accent-secondary-400'
-                      }`}
-                    >
+                    <h2 className="font-sans font-bold text-h3 text-white mb-1">{title}</h2>
+                    <p className="text-xs font-medium uppercase tracking-widest mb-3 text-accent-primary-400">
                       {tagline}
                     </p>
                     <p className="text-text-secondary text-sm leading-relaxed">{description}</p>
                     <Link
                       href="/contact"
-                      className={`inline-flex items-center gap-2 mt-4 text-sm font-medium transition-colors ${
-                        accent === 'cyan'
-                          ? 'text-accent-primary-400 hover:text-accent-primary-300'
-                          : 'text-accent-secondary-400 hover:text-accent-secondary-400/80'
-                      }`}
+                      className="inline-flex items-center gap-2 mt-4 text-sm font-medium transition-colors text-accent-primary-300 hover:text-white"
                     >
                       Get a Quote
                       <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -278,9 +247,7 @@ export default function ServicesPage() {
                           className="flex items-start gap-2.5 text-text-secondary text-sm"
                         >
                           <span
-                            className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 ${
-                              accent === 'cyan' ? 'bg-accent-primary-500' : 'bg-accent-secondary-500'
-                            }`}
+                            className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 bg-accent-primary-500"
                             aria-hidden="true"
                           />
                           {service}
@@ -296,23 +263,27 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA BANNER */}
-      <section className="bg-bg-surface py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-bg-mesh opacity-70 pointer-events-none" aria-hidden="true" />
+      <section className="bg-bg-base py-20 relative overflow-hidden">
+        <BackgroundBlobs page="contact" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-sans font-bold text-h2 text-text-primary mb-4">
-            Looking for a Specific Solution?
-          </h2>
-          <p className="text-text-secondary text-lg mb-10 max-w-2xl mx-auto">
-            Our experts will design a tailored technology solution for your exact business
-            requirements.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-cta text-white font-semibold text-base rounded-btn shadow-glow-cyan hover:brightness-110 hover:shadow-glow-violet transition-all duration-200 hover:scale-[1.02]"
-          >
-            Talk to an Expert
-            <ArrowRight className="w-5 h-5" aria-hidden="true" />
-          </Link>
+          <div className="glass-card p-10 sm:p-14">
+            <div className="relative z-10">
+              <h2 className="font-sans font-bold text-h2 text-white mb-4">
+                Looking for a Specific Solution?
+              </h2>
+              <p className="text-text-secondary text-lg mb-10 max-w-2xl mx-auto">
+                Our experts will design a tailored technology solution for your exact business
+                requirements.
+              </p>
+              <Link
+                href="/contact"
+                className="btn-primary inline-flex items-center gap-2 text-base hover:scale-[1.02]"
+              >
+                Talk to an Expert
+                <ArrowRight className="w-5 h-5" aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>

@@ -13,6 +13,7 @@ import {
   Wallet,
   ArrowRight,
 } from 'lucide-react';
+import BackgroundBlobs from '@/components/BackgroundBlobs';
 
 export const metadata: Metadata = {
   title: 'Industries We Serve',
@@ -32,7 +33,6 @@ const industries = [
       'We deliver end-to-end banking solutions — from core banking integration (Temenos T24) to mobile banking apps, KYC/AML systems, payment gateways, and AI-driven fraud detection.',
     focusAreas: 'Digital banking, core integration, compliance, fraud detection',
     clients: ['Ajman Bank', 'National Bank of Iraq (NBI)', 'Invest Bank', 'Capital Bank of Jordan'],
-    accent: 'cyan',
   },
   {
     id: 'fintech',
@@ -45,7 +45,6 @@ const industries = [
       'We build payment solutions, lending platforms, KYC automation systems, and neobanking infrastructure that scales with your growth.',
     focusAreas: 'Payment solutions, lending, KYC automation, neobanking',
     clients: [],
-    accent: 'violet',
   },
   {
     id: 'ecommerce',
@@ -58,7 +57,6 @@ const industries = [
       'We build Shopify, WooCommerce, and Magento stores, custom marketplace platforms, headless commerce architecture, and unified inventory management systems.',
     focusAreas: 'Shopify, WooCommerce, Magento, marketplaces',
     clients: [],
-    accent: 'cyan',
   },
   {
     id: 'manufacturing',
@@ -71,7 +69,6 @@ const industries = [
       'We implement MES systems, supply chain automation, IoT sensor integration, predictive maintenance ML models, and Industry 4.0 digital twin technology.',
     focusAreas: 'MES, supply chain automation, IoT, Industry 4.0',
     clients: [],
-    accent: 'violet',
   },
   {
     id: 'crm',
@@ -84,7 +81,6 @@ const industries = [
       'We implement and customize Salesforce, Odoo, Microsoft Dynamics, Zoho, and HubSpot with full integration across your business systems.',
     focusAreas: 'Salesforce, Odoo, Microsoft Dynamics',
     clients: [],
-    accent: 'cyan',
   },
   {
     id: 'healthcare',
@@ -97,7 +93,6 @@ const industries = [
       'We build EMR/EHR systems, telemedicine platforms, EHS compliance tools, patient portals, and HL7/FHIR integration layers.',
     focusAreas: 'EMR, EHR, EHS, telemedicine, HL7/FHIR',
     clients: [],
-    accent: 'violet',
   },
   {
     id: 'government',
@@ -110,7 +105,6 @@ const industries = [
       'We design digital identity systems, e-governance platforms, citizen service portals, and inter-departmental integrations.',
     focusAreas: 'Digital identity, e-governance, citizen services',
     clients: ['Government of Uganda', 'Government of India', 'MPSEDC'],
-    accent: 'cyan',
   },
   {
     id: 'aviation',
@@ -123,7 +117,6 @@ const industries = [
       'We build booking system integrations, customer experience platforms, loyalty programs, and AI-powered operations optimization.',
     focusAreas: 'Booking systems, customer experience, loyalty programs',
     clients: ['Qatar Airways'],
-    accent: 'violet',
   },
   {
     id: 'logistics',
@@ -136,7 +129,6 @@ const industries = [
       'We build tracking systems, warehouse automation platforms, fleet management tools, and last-mile delivery solutions.',
     focusAreas: 'Tracking systems, warehouse automation, fleet management',
     clients: [],
-    accent: 'cyan',
   },
   {
     id: 'startups',
@@ -149,7 +141,6 @@ const industries = [
       'We deliver MVP development, scalable architecture design, rapid prototyping, and ongoing technical partnership as you scale.',
     focusAreas: 'MVP development, scalable architecture, rapid prototyping',
     clients: [],
-    accent: 'violet',
   },
 ];
 
@@ -158,24 +149,23 @@ export default function IndustriesPage() {
     <>
       {/* PAGE HERO */}
       <section className="relative bg-bg-base py-28 pt-40 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-bg-mesh pointer-events-none" aria-hidden="true" />
-        <div className="absolute inset-0 dot-grid opacity-30" aria-hidden="true" />
+        <BackgroundBlobs page="industries" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 text-sm text-text-muted">
               <li>
-                <Link href="/" className="hover:text-text-primary transition-colors">
+                <Link href="/" className="hover:text-white transition-colors">
                   Home
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li className="text-text-primary font-medium">Industries</li>
+              <li className="text-white font-medium">Industries</li>
             </ol>
           </nav>
-          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 px-3 py-1">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 px-3 py-1">
             Industry Expertise
           </span>
-          <h1 className="font-sans font-bold text-hero text-text-primary max-w-2xl mb-4">
+          <h1 className="font-sans font-bold text-hero text-white max-w-2xl mb-4">
             Built for <span className="gradient-text">Your Industry</span>
           </h1>
           <p className="text-text-secondary text-lg max-w-xl">
@@ -186,7 +176,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* INDUSTRY QUICK NAV */}
-      <section className="bg-bg-surface py-4 border-b border-white/8 sticky top-20 z-30">
+      <section className="bg-[rgba(10,10,10,0.70)] backdrop-blur-[24px] py-4 border-b border-white/[0.08] sticky top-20 z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav aria-label="Industry sections" className="overflow-x-auto scrollbar-hide">
             <ul className="flex items-center gap-2 min-w-max" role="list">
@@ -194,7 +184,7 @@ export default function IndustriesPage() {
                 <li key={id}>
                   <a
                     href={`#${id}`}
-                    className="flex items-center gap-2 px-3 py-2 text-xs text-text-muted hover:text-text-primary rounded-btn hover:bg-bg-elevated transition-all whitespace-nowrap"
+                    className="flex items-center gap-2 px-3 py-2 text-xs text-text-muted hover:text-white rounded-btn hover:bg-white/[0.06] transition-all whitespace-nowrap"
                   >
                     <Icon className="w-3.5 h-3.5" aria-hidden="true" />
                     {title.split(' &')[0].split(' and')[0]}
@@ -209,37 +199,20 @@ export default function IndustriesPage() {
       {/* INDUSTRY SECTIONS */}
       <section className="bg-bg-base py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-          {industries.map(({ id, icon: Icon, title, tagline, challenge, solution, focusAreas, clients, accent }) => (
+          {industries.map(({ id, icon: Icon, title, tagline, challenge, solution, focusAreas, clients }) => (
             <div
               key={id}
               id={id}
-              className={`p-8 rounded-card bg-bg-surface border transition-all duration-300 scroll-mt-36 hover:shadow-card-hover ${
-                accent === 'cyan'
-                  ? 'border-white/8 hover:border-accent-primary-500/25'
-                  : 'border-white/8 hover:border-accent-secondary-500/25'
-              }`}
+              className="glass-card p-8 scroll-mt-36 hover:border-[rgba(229,62,62,0.30)]"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Left */}
                 <div>
-                  <div
-                    className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                      accent === 'cyan' ? 'bg-accent-primary-500/10' : 'bg-accent-secondary-500/10'
-                    }`}
-                  >
-                    <Icon
-                      className={`w-6 h-6 ${
-                        accent === 'cyan' ? 'text-accent-primary-400' : 'text-accent-secondary-400'
-                      }`}
-                      aria-hidden="true"
-                    />
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/15">
+                    <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
                   </div>
-                  <h2 className="font-sans font-bold text-h3 text-text-primary mb-1">{title}</h2>
-                  <p
-                    className={`text-xs font-medium uppercase tracking-widest mb-4 ${
-                      accent === 'cyan' ? 'text-accent-primary-400' : 'text-accent-secondary-400'
-                    }`}
-                  >
+                  <h2 className="font-sans font-bold text-h3 text-white mb-1">{title}</h2>
+                  <p className="text-xs font-medium uppercase tracking-widest mb-4 text-accent-primary-400">
                     {tagline}
                   </p>
 
@@ -254,7 +227,7 @@ export default function IndustriesPage() {
                     <h3 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-2">
                       Our Solution
                     </h3>
-                    <p className="text-text-primary text-sm leading-relaxed">{solution}</p>
+                    <p className="text-white text-sm leading-relaxed">{solution}</p>
                   </div>
                 </div>
 
@@ -275,7 +248,7 @@ export default function IndustriesPage() {
                         {clients.map((client) => (
                           <span
                             key={client}
-                            className="px-3 py-1.5 rounded-chip bg-bg-elevated border border-white/8 text-text-secondary text-xs font-medium"
+                            className="px-3 py-1.5 rounded-chip bg-white/[0.06] border border-white/[0.08] text-text-secondary text-xs font-medium"
                           >
                             {client}
                           </span>
@@ -283,17 +256,13 @@ export default function IndustriesPage() {
                       </div>
                     </div>
                   )}
-                  <div className="mt-auto p-6 rounded-card bg-bg-elevated border border-white/8">
+                  <div className="mt-auto p-6 rounded-card bg-white/[0.04] border border-white/[0.08]">
                     <p className="text-text-secondary text-sm mb-4">
                       Ready to modernize your {title.toLowerCase()} operations?
                     </p>
                     <Link
                       href="/contact"
-                      className={`inline-flex items-center gap-2 text-sm font-semibold transition-colors ${
-                        accent === 'cyan'
-                          ? 'text-accent-primary-400 hover:text-accent-primary-300'
-                          : 'text-accent-secondary-400 hover:text-accent-secondary-400/80'
-                      }`}
+                      className="inline-flex items-center gap-2 text-sm font-semibold transition-colors text-accent-primary-300 hover:text-white"
                     >
                       Discuss Your Project
                       <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -307,23 +276,27 @@ export default function IndustriesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-bg-surface py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-bg-mesh opacity-70 pointer-events-none" aria-hidden="true" />
+      <section className="bg-bg-base py-20 relative overflow-hidden">
+        <BackgroundBlobs page="contact" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-sans font-bold text-h2 text-text-primary mb-4">
-            Don&apos;t See Your Industry?
-          </h2>
-          <p className="text-text-secondary text-lg mb-8 max-w-xl mx-auto">
-            We work across all sectors. Contact us to discuss how we can solve your specific
-            technology challenges.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-cta text-white font-semibold text-base rounded-btn shadow-glow-cyan hover:brightness-110 hover:shadow-glow-violet transition-all duration-200 hover:scale-[1.02]"
-          >
-            Contact Our Team
-            <ArrowRight className="w-5 h-5" aria-hidden="true" />
-          </Link>
+          <div className="glass-card p-10 sm:p-14">
+            <div className="relative z-10">
+              <h2 className="font-sans font-bold text-h2 text-white mb-4">
+                Don&apos;t See Your Industry?
+              </h2>
+              <p className="text-text-secondary text-lg mb-8 max-w-xl mx-auto">
+                We work across all sectors. Contact us to discuss how we can solve your specific
+                technology challenges.
+              </p>
+              <Link
+                href="/contact"
+                className="btn-primary inline-flex items-center gap-2 text-base hover:scale-[1.02]"
+              >
+                Contact Our Team
+                <ArrowRight className="w-5 h-5" aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>

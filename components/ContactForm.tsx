@@ -102,10 +102,10 @@ export default function ContactForm() {
   }
 
   const inputClass = (field: keyof FormState) =>
-    `w-full px-4 py-3 bg-bg-elevated border rounded-btn text-text-primary placeholder:text-text-muted text-sm transition-all focus:outline-none focus:ring-1 ${
+    `w-full px-4 py-3 bg-[rgba(255,255,255,0.04)] border rounded-btn text-white placeholder:text-text-subtle text-sm transition-all focus:outline-none ${
       errors[field]
-        ? 'border-red-500 focus:border-red-400 focus:ring-red-500/30'
-        : 'border-white/8 focus:border-accent-primary-500 focus:ring-accent-primary-500/20 hover:border-white/15'
+        ? 'border-accent-primary-300 focus:border-accent-primary-300 focus:shadow-[0_0_0_3px_rgba(229,62,62,0.15)]'
+        : 'border-[rgba(255,255,255,0.10)] focus:border-accent-primary-500 focus:shadow-[0_0_0_3px_rgba(229,62,62,0.15)] focus:bg-[rgba(255,255,255,0.06)] hover:border-[rgba(255,255,255,0.18)]'
     }`;
 
   const labelClass = 'block text-sm font-medium text-text-secondary mb-1.5';
@@ -117,16 +117,16 @@ export default function ContactForm() {
         animate={{ opacity: 1, scale: 1 }}
         className="flex flex-col items-center text-center py-12"
       >
-        <div className="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center mb-4">
-          <AlertCircle className="w-8 h-8 text-red-400" aria-hidden="true" />
+        <div className="w-16 h-16 rounded-full bg-accent-primary-500/10 flex items-center justify-center mb-4">
+          <AlertCircle className="w-8 h-8 text-accent-primary-300" aria-hidden="true" />
         </div>
-        <h3 className="font-semibold text-text-primary text-xl mb-2">Something went wrong</h3>
+        <h3 className="font-semibold text-white text-xl mb-2">Something went wrong</h3>
         <p className="text-text-secondary text-sm max-w-sm">
           We could not send your message. Please try again or email us directly.
         </p>
         <button
           onClick={() => setStatus('idle')}
-          className="mt-6 text-sm text-accent-primary-400 hover:text-accent-primary-300 font-medium transition-colors"
+          className="mt-6 text-sm text-accent-primary-300 hover:text-white font-medium transition-colors"
         >
           Try again
         </button>
@@ -144,14 +144,14 @@ export default function ContactForm() {
         <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mb-4">
           <CheckCircle className="w-8 h-8 text-green-400" aria-hidden="true" />
         </div>
-        <h3 className="font-semibold text-text-primary text-xl mb-2">Message Sent!</h3>
+        <h3 className="font-semibold text-white text-xl mb-2">Message Sent!</h3>
         <p className="text-text-secondary text-sm max-w-sm">
           Thank you for reaching out. Our team will review your message and get back to you within
           24 hours.
         </p>
         <button
           onClick={() => setStatus('idle')}
-          className="mt-6 text-sm text-accent-primary-400 hover:text-accent-primary-300 font-medium transition-colors"
+          className="mt-6 text-sm text-accent-primary-300 hover:text-white font-medium transition-colors"
         >
           Send another message
         </button>
@@ -180,7 +180,7 @@ export default function ContactForm() {
           aria-describedby={errors.fullName ? 'fullName-error' : undefined}
         />
         {errors.fullName && (
-          <p id="fullName-error" className="text-red-400 text-xs mt-1 flex items-center gap-1">
+          <p id="fullName-error" className="text-accent-primary-300 text-xs mt-1 flex items-center gap-1">
             <AlertCircle className="w-3 h-3" aria-hidden="true" />
             {errors.fullName}
           </p>
@@ -207,7 +207,7 @@ export default function ContactForm() {
             aria-describedby={errors.email ? 'email-error' : undefined}
           />
           {errors.email && (
-            <p id="email-error" className="text-red-400 text-xs mt-1 flex items-center gap-1">
+            <p id="email-error" className="text-accent-primary-300 text-xs mt-1 flex items-center gap-1">
               <AlertCircle className="w-3 h-3" aria-hidden="true" />
               {errors.email}
             </p>
@@ -231,7 +231,7 @@ export default function ContactForm() {
             aria-describedby={errors.phone ? 'phone-error' : undefined}
           />
           {errors.phone && (
-            <p id="phone-error" className="text-red-400 text-xs mt-1 flex items-center gap-1">
+            <p id="phone-error" className="text-accent-primary-300 text-xs mt-1 flex items-center gap-1">
               <AlertCircle className="w-3 h-3" aria-hidden="true" />
               {errors.phone}
             </p>
@@ -258,7 +258,7 @@ export default function ContactForm() {
           aria-describedby={errors.company ? 'company-error' : undefined}
         />
         {errors.company && (
-          <p id="company-error" className="text-red-400 text-xs mt-1 flex items-center gap-1">
+          <p id="company-error" className="text-accent-primary-300 text-xs mt-1 flex items-center gap-1">
             <AlertCircle className="w-3 h-3" aria-hidden="true" />
             {errors.company}
           </p>
@@ -290,7 +290,7 @@ export default function ContactForm() {
           ))}
         </select>
         {errors.service && (
-          <p id="service-error" className="text-red-400 text-xs mt-1 flex items-center gap-1">
+          <p id="service-error" className="text-accent-primary-300 text-xs mt-1 flex items-center gap-1">
             <AlertCircle className="w-3 h-3" aria-hidden="true" />
             {errors.service}
           </p>
@@ -315,7 +315,7 @@ export default function ContactForm() {
           aria-describedby={errors.message ? 'message-error' : undefined}
         />
         {errors.message && (
-          <p id="message-error" className="text-red-400 text-xs mt-1 flex items-center gap-1">
+          <p id="message-error" className="text-accent-primary-300 text-xs mt-1 flex items-center gap-1">
             <AlertCircle className="w-3 h-3" aria-hidden="true" />
             {errors.message}
           </p>
@@ -326,7 +326,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-cta disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold text-base rounded-btn shadow-glow-cyan hover:brightness-110 hover:shadow-glow-violet transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-primary-500"
+        className="w-full sm:w-auto btn-primary inline-flex items-center justify-center gap-2 text-base disabled:opacity-60 disabled:cursor-not-allowed hover:scale-[1.02] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-primary-500"
         aria-live="polite"
       >
         {status === 'submitting' ? (
