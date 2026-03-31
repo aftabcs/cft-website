@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Zap, Linkedin, Twitter, Github, Mail, MapPin, Phone } from 'lucide-react';
+import { Linkedin, Twitter, Github, Mail, MapPin, Phone } from 'lucide-react';
 
 const footerLinks = {
   company: [
@@ -35,16 +35,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2.5 mb-5 group w-fit">
-              <span className="w-8 h-8 rounded-lg bg-gradient-cta flex items-center justify-center shadow-glow-red">
-                <Zap className="w-4 h-4 text-white" fill="currentColor" aria-hidden="true" />
-              </span>
-              <span className="font-sans font-bold text-base text-white">
-                CodeFlick
-                <span className="block text-xs font-mono font-medium text-text-muted tracking-widest">
-                  TECHNOLOGIES
-                </span>
-              </span>
+            <Link href="/" className="flex items-center mb-5 group w-fit">
+              <img
+                src="/new-logo.png"
+                alt="CodeFlick Technologies"
+                className="h-10 w-auto drop-shadow-[0_0_12px_rgba(229,62,62,0.3)]"
+              />
             </Link>
             <p className="text-text-muted text-sm leading-relaxed mb-6">
               End-to-end IT solutions driving digital transformation across AI, FinTech, Automation, and Enterprise systems.

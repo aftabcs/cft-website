@@ -12,9 +12,10 @@ interface Blob {
 
 const blobConfigs: Record<string, Blob[]> = {
   home: [
-    { color: '#E53E3E', size: 700, top: '-10%', right: '-5%', blur: 100, opacity: 0.35 },
-    { color: '#FF6B9D', size: 500, top: '40%', left: '-10%', blur: 80, opacity: 0.28, delay: 2 },
-    { color: '#9B2C2C', size: 600, bottom: '10%', right: '20%', blur: 120, opacity: 0.22, delay: 4 },
+    { color: '#E53E3E', size: 800, top: '-12%', right: '-8%', blur: 120, opacity: 0.40 },
+    { color: '#FF6B9D', size: 550, top: '35%', left: '-12%', blur: 90, opacity: 0.32, delay: 2 },
+    { color: '#9B2C2C', size: 650, bottom: '8%', right: '18%', blur: 130, opacity: 0.28, delay: 4 },
+    { color: '#FF4444', size: 300, top: '20%', right: '30%', blur: 60, opacity: 0.18, delay: 6 },
   ],
   services: [
     { color: '#E53E3E', size: 600, top: '-5%', left: '10%', blur: 100, opacity: 0.30 },

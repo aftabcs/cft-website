@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -42,16 +42,12 @@ export default function Navbar() {
         aria-label="Main navigation"
       >
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
-          <span className="w-8 h-8 rounded-lg bg-gradient-cta flex items-center justify-center shadow-glow-red group-hover:shadow-btn-red transition-shadow duration-300">
-            <Zap className="w-4 h-4 text-white" fill="currentColor" aria-hidden="true" />
-          </span>
-          <span className="font-sans font-bold text-lg text-text-primary leading-none">
-            CodeFlick
-            <span className="block text-xs font-mono font-medium text-text-muted tracking-widest">
-              TECHNOLOGIES
-            </span>
-          </span>
+        <Link href="/" className="flex items-center flex-shrink-0 group">
+          <img
+            src="/new-logo.png"
+            alt="CodeFlick Technologies"
+            className="h-10 w-auto drop-shadow-[0_0_12px_rgba(229,62,62,0.3)] group-hover:drop-shadow-[0_0_20px_rgba(229,62,62,0.5)] transition-all duration-300"
+          />
         </Link>
 
         {/* Desktop nav */}
