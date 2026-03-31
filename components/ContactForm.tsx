@@ -102,10 +102,10 @@ export default function ContactForm() {
   }
 
   const inputClass = (field: keyof FormState) =>
-    `w-full px-4 py-3 bg-[rgba(255,255,255,0.06)] backdrop-blur-sm border rounded-[10px] text-white placeholder:text-text-subtle text-sm transition-all focus:outline-none shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] ${
+    `w-full px-4 py-3 bg-[rgba(255,255,255,0.04)] backdrop-blur-sm border rounded-[10px] text-white placeholder:text-text-subtle text-sm transition-all focus:outline-none shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${
       errors[field]
-        ? 'border-accent-primary-300 focus:border-accent-primary-300 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.10)]'
-        : 'border-[rgba(255,255,255,0.15)] focus:border-accent-primary-500 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.10),inset_0_1px_0_rgba(255,255,255,0.10)] focus:bg-[rgba(255,255,255,0.09)] hover:border-[rgba(255,255,255,0.25)] hover:bg-[rgba(255,255,255,0.08)]'
+        ? 'border-accent-primary-500 focus:border-accent-primary-400 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.15)]'
+        : 'border-[rgba(255,255,255,0.08)] focus:border-accent-primary-500 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.10),inset_0_1px_0_rgba(255,255,255,0.06)] focus:bg-[rgba(255,255,255,0.06)] hover:border-[rgba(255,255,255,0.15)] hover:bg-[rgba(255,255,255,0.05)]'
     }`;
 
   const labelClass = 'block text-sm font-medium text-text-secondary mb-1.5';
@@ -118,7 +118,7 @@ export default function ContactForm() {
         className="flex flex-col items-center text-center py-12"
       >
         <div className="w-16 h-16 rounded-full bg-accent-primary-500/10 flex items-center justify-center mb-4">
-          <AlertCircle className="w-8 h-8 text-accent-primary-300" aria-hidden="true" />
+          <AlertCircle className="w-8 h-8 text-accent-primary-400" aria-hidden="true" />
         </div>
         <h3 className="font-semibold text-white text-xl mb-2">Something went wrong</h3>
         <p className="text-text-secondary text-sm max-w-sm">
@@ -126,7 +126,7 @@ export default function ContactForm() {
         </p>
         <button
           onClick={() => setStatus('idle')}
-          className="mt-6 text-sm text-accent-primary-300 hover:text-white font-medium transition-colors"
+          className="mt-6 text-sm text-accent-primary-400 hover:text-white font-medium transition-colors"
         >
           Try again
         </button>
@@ -151,7 +151,7 @@ export default function ContactForm() {
         </p>
         <button
           onClick={() => setStatus('idle')}
-          className="mt-6 text-sm text-accent-primary-300 hover:text-white font-medium transition-colors"
+          className="mt-6 text-sm text-accent-primary-400 hover:text-white font-medium transition-colors"
         >
           Send another message
         </button>
@@ -161,10 +161,9 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate aria-label="Contact form">
-      {/* Row 1: Full Name */}
       <div className="mb-4">
         <label htmlFor="fullName" className={labelClass}>
-          Full Name <span className="text-accent-primary-400" aria-hidden="true">*</span>
+          Full Name <span className="text-accent-primary-500" aria-hidden="true">*</span>
         </label>
         <input
           id="fullName"
@@ -180,18 +179,17 @@ export default function ContactForm() {
           aria-describedby={errors.fullName ? 'fullName-error' : undefined}
         />
         {errors.fullName && (
-          <p id="fullName-error" className="text-accent-primary-300 text-xs mt-1 flex items-center gap-1">
+          <p id="fullName-error" className="text-accent-primary-400 text-xs mt-1 flex items-center gap-1">
             <AlertCircle className="w-3 h-3" aria-hidden="true" />
             {errors.fullName}
           </p>
         )}
       </div>
 
-      {/* Row 2: Email + Phone */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
         <div>
           <label htmlFor="email" className={labelClass}>
-            Email Address <span className="text-accent-primary-400" aria-hidden="true">*</span>
+            Email Address <span className="text-accent-primary-500" aria-hidden="true">*</span>
           </label>
           <input
             id="email"
@@ -207,7 +205,7 @@ export default function ContactForm() {
             aria-describedby={errors.email ? 'email-error' : undefined}
           />
           {errors.email && (
-            <p id="email-error" className="text-accent-primary-300 text-xs mt-1 flex items-center gap-1">
+            <p id="email-error" className="text-accent-primary-400 text-xs mt-1 flex items-center gap-1">
               <AlertCircle className="w-3 h-3" aria-hidden="true" />
               {errors.email}
             </p>
@@ -215,7 +213,7 @@ export default function ContactForm() {
         </div>
         <div>
           <label htmlFor="phone" className={labelClass}>
-            Phone Number <span className="text-accent-primary-400" aria-hidden="true">*</span>
+            Phone Number <span className="text-accent-primary-500" aria-hidden="true">*</span>
           </label>
           <input
             id="phone"
@@ -231,7 +229,7 @@ export default function ContactForm() {
             aria-describedby={errors.phone ? 'phone-error' : undefined}
           />
           {errors.phone && (
-            <p id="phone-error" className="text-accent-primary-300 text-xs mt-1 flex items-center gap-1">
+            <p id="phone-error" className="text-accent-primary-400 text-xs mt-1 flex items-center gap-1">
               <AlertCircle className="w-3 h-3" aria-hidden="true" />
               {errors.phone}
             </p>
@@ -239,10 +237,9 @@ export default function ContactForm() {
         </div>
       </div>
 
-      {/* Row 3: Company */}
       <div className="mb-4">
         <label htmlFor="company" className={labelClass}>
-          Company Name <span className="text-accent-primary-400" aria-hidden="true">*</span>
+          Company Name <span className="text-accent-primary-500" aria-hidden="true">*</span>
         </label>
         <input
           id="company"
@@ -258,17 +255,16 @@ export default function ContactForm() {
           aria-describedby={errors.company ? 'company-error' : undefined}
         />
         {errors.company && (
-          <p id="company-error" className="text-accent-primary-300 text-xs mt-1 flex items-center gap-1">
+          <p id="company-error" className="text-accent-primary-400 text-xs mt-1 flex items-center gap-1">
             <AlertCircle className="w-3 h-3" aria-hidden="true" />
             {errors.company}
           </p>
         )}
       </div>
 
-      {/* Row 4: Service Interest */}
       <div className="mb-4">
         <label htmlFor="service" className={labelClass}>
-          Service of Interest <span className="text-accent-primary-400" aria-hidden="true">*</span>
+          Service of Interest <span className="text-accent-primary-500" aria-hidden="true">*</span>
         </label>
         <select
           id="service"
@@ -290,17 +286,16 @@ export default function ContactForm() {
           ))}
         </select>
         {errors.service && (
-          <p id="service-error" className="text-accent-primary-300 text-xs mt-1 flex items-center gap-1">
+          <p id="service-error" className="text-accent-primary-400 text-xs mt-1 flex items-center gap-1">
             <AlertCircle className="w-3 h-3" aria-hidden="true" />
             {errors.service}
           </p>
         )}
       </div>
 
-      {/* Row 5: Message */}
       <div className="mb-6">
         <label htmlFor="message" className={labelClass}>
-          Message <span className="text-accent-primary-400" aria-hidden="true">*</span>
+          Message <span className="text-accent-primary-500" aria-hidden="true">*</span>
         </label>
         <textarea
           id="message"
@@ -315,14 +310,13 @@ export default function ContactForm() {
           aria-describedby={errors.message ? 'message-error' : undefined}
         />
         {errors.message && (
-          <p id="message-error" className="text-accent-primary-300 text-xs mt-1 flex items-center gap-1">
+          <p id="message-error" className="text-accent-primary-400 text-xs mt-1 flex items-center gap-1">
             <AlertCircle className="w-3 h-3" aria-hidden="true" />
             {errors.message}
           </p>
         )}
       </div>
 
-      {/* Submit */}
       <button
         type="submit"
         disabled={status === 'submitting'}

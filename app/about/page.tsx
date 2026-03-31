@@ -125,7 +125,7 @@ export default function AboutPage() {
               <li className="text-white font-medium">About Us</li>
             </ol>
           </nav>
-          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 px-3 py-1">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 border border-accent-primary-500/15 px-3 py-1">
             Our Story
           </span>
           <h1 className="font-sans font-bold text-hero text-white max-w-2xl">
@@ -140,7 +140,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3">
+              <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
                 Who We Are
               </p>
               <h2 className="font-sans font-bold text-h2 text-white mb-6">
@@ -165,7 +165,7 @@ export default function AboutPage() {
               {stats.map(({ value, label, icon: Icon }) => (
                 <div
                   key={label}
-                  className="glass-card p-6 text-center hover:border-[rgba(255,255,255,0.30)]"
+                  className="glass-card p-6 text-center group"
                 >
                   <div className="relative z-10">
                     <Icon className="w-8 h-8 text-accent-primary-400 mx-auto mb-3" aria-hidden="true" />
@@ -183,7 +183,7 @@ export default function AboutPage() {
       <section className="bg-bg-base py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3">
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
               Our Expertise
             </p>
             <h2 className="font-sans font-bold text-h2 text-white">
@@ -194,7 +194,7 @@ export default function AboutPage() {
             {expertise.map(({ domain, capabilities }) => (
               <div
                 key={domain}
-                className="glass-card p-6 hover:border-[rgba(255,255,255,0.30)]"
+                className="glass-card p-6 group"
               >
                 <div className="relative z-10">
                   <h3 className="font-semibold text-white text-base mb-2">{domain}</h3>
@@ -210,7 +210,7 @@ export default function AboutPage() {
       <section className="bg-bg-base py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3">
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
               Our Team
             </p>
             <h2 className="font-sans font-bold text-h2 text-white">
@@ -220,7 +220,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
             <div className="glass-card p-6 text-center hover:border-[rgba(255,255,255,0.30)]">
               <div className="relative z-10">
-                <div className="w-16 h-16 rounded-full bg-accent-primary-500/15 flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-accent-primary-500/10 flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-accent-primary-400" aria-hidden="true" />
                 </div>
                 <h3 className="font-semibold text-white text-lg mb-1">Zen Hadi</h3>
@@ -231,7 +231,7 @@ export default function AboutPage() {
             </div>
             <div className="glass-card p-6 text-center hover:border-[rgba(255,255,255,0.30)]">
               <div className="relative z-10">
-                <div className="w-16 h-16 rounded-full bg-accent-primary-500/15 flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-accent-primary-500/10 flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-accent-primary-400" aria-hidden="true" />
                 </div>
                 <h3 className="font-semibold text-white text-lg mb-1">Faris Marwan</h3>
@@ -248,7 +248,7 @@ export default function AboutPage() {
       <section className="bg-bg-base py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3">
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
               Our Offices
             </p>
             <h2 className="font-sans font-bold text-h2 text-white">
@@ -281,7 +281,7 @@ export default function AboutPage() {
       <section className="bg-bg-base py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3">
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
               Our Values
             </p>
             <h2 className="font-sans font-bold text-h2 text-white">
@@ -292,10 +292,10 @@ export default function AboutPage() {
             {values.map(({ icon: Icon, title, description }) => (
               <div
                 key={title}
-                className="glass-card p-6 text-center hover:border-[rgba(255,255,255,0.30)]"
+                className="glass-card p-6 text-center group"
               >
                 <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-accent-primary-500/15">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-accent-primary-500/10">
                     <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
                   </div>
                   <h3 className="font-semibold text-white text-base mb-2">{title}</h3>
@@ -311,7 +311,7 @@ export default function AboutPage() {
       <section className="bg-bg-base py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold tracking-widest uppercase text-text-muted mb-3">
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-text-muted mb-3">
               Recent Clients
             </p>
             <h2 className="font-sans font-bold text-h2 text-white">
@@ -322,7 +322,7 @@ export default function AboutPage() {
             {clients.map((client) => (
               <div
                 key={client}
-                className="flex items-center justify-center h-16 rounded-card border border-white/[0.08] px-4 hover:border-accent-primary-500/30 hover:bg-white/[0.04] backdrop-blur-sm transition-all duration-200"
+                className="flex items-center justify-center h-16 rounded-card border border-white/[0.06] px-4 hover:border-accent-primary-500/25 hover:bg-accent-primary-500/[0.03] transition-all duration-200"
               >
                 <span className="text-text-secondary font-medium text-sm text-center">{client}</span>
               </div>

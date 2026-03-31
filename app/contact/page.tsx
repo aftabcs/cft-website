@@ -48,7 +48,7 @@ export default function ContactPage() {
               <li className="text-white font-medium">Contact</li>
             </ol>
           </nav>
-          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 px-3 py-1">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 border border-accent-primary-500/15 px-3 py-1">
             Get in Touch
           </span>
           <h1 className="font-sans font-bold text-hero text-white max-w-2xl mb-4">
@@ -82,7 +82,7 @@ export default function ContactPage() {
                   className="flex items-start gap-4 group"
                   aria-label="Send email to info@codeftech.com"
                 >
-                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/15 flex items-center justify-center flex-shrink-0 group-hover:bg-accent-primary-500/25 transition-colors">
+                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/10 border border-accent-primary-500/15 flex items-center justify-center flex-shrink-0 group-hover:bg-accent-primary-500/20 transition-colors">
                     <Mail className="w-5 h-5 text-accent-primary-400" aria-hidden="true" />
                   </div>
                   <div>
@@ -96,7 +96,7 @@ export default function ContactPage() {
                 </a>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/15 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/10 border border-accent-primary-500/15 flex items-center justify-center flex-shrink-0">
                     <Phone className="w-5 h-5 text-accent-primary-400" aria-hidden="true" />
                   </div>
                   <div>
@@ -109,7 +109,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/15 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/10 border border-accent-primary-500/15 flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5 text-accent-primary-400" aria-hidden="true" />
                   </div>
                   <div>
@@ -121,7 +121,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/15 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/10 border border-accent-primary-500/15 flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5 text-accent-primary-400" aria-hidden="true" />
                   </div>
                   <div>
@@ -151,7 +151,7 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`CodeFlick Technologies on ${label}`}
-                      className="w-10 h-10 rounded-btn bg-white/[0.06] border border-white/[0.08] flex items-center justify-center text-text-muted hover:text-accent-primary-500 hover:border-accent-primary-500/40 transition-colors"
+                      className="w-10 h-10 rounded-btn bg-white/[0.04] border border-white/[0.06] flex items-center justify-center text-text-muted hover:text-accent-primary-500 hover:border-accent-primary-500/40 transition-colors"
                     >
                       <Icon className="w-4 h-4" aria-hidden="true" />
                     </a>

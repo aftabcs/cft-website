@@ -162,7 +162,7 @@ export default function IndustriesPage() {
               <li className="text-white font-medium">Industries</li>
             </ol>
           </nav>
-          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 px-3 py-1">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 border border-accent-primary-500/15 px-3 py-1">
             Industry Expertise
           </span>
           <h1 className="font-sans font-bold text-hero text-white max-w-2xl mb-4">
@@ -203,12 +203,12 @@ export default function IndustriesPage() {
             <div
               key={id}
               id={id}
-              className="glass-card p-8 scroll-mt-36 hover:border-[rgba(255,255,255,0.30)]"
+              className="glass-card p-8 scroll-mt-36 group"
             >
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Left */}
                 <div>
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/15">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/10 border border-accent-primary-500/15 group-hover:bg-accent-primary-500/15 transition-all duration-300">
                     <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
                   </div>
                   <h2 className="font-sans font-bold text-h3 text-white mb-1">{title}</h2>
@@ -248,7 +248,7 @@ export default function IndustriesPage() {
                         {clients.map((client) => (
                           <span
                             key={client}
-                            className="px-3 py-1.5 rounded-chip bg-white/[0.06] border border-white/[0.08] text-text-secondary text-xs font-medium"
+                            className="px-3 py-1.5 rounded-chip bg-accent-primary-500/[0.06] border border-accent-primary-500/15 text-text-secondary text-xs font-medium"
                           >
                             {client}
                           </span>
@@ -256,13 +256,13 @@ export default function IndustriesPage() {
                       </div>
                     </div>
                   )}
-                  <div className="mt-auto p-6 rounded-card bg-white/[0.04] border border-white/[0.08]">
+                  <div className="mt-auto p-6 rounded-card bg-accent-primary-500/[0.03] border border-accent-primary-500/10">
                     <p className="text-text-secondary text-sm mb-4">
                       Ready to modernize your {title.toLowerCase()} operations?
                     </p>
                     <Link
                       href="/contact"
-                      className="inline-flex items-center gap-2 text-sm font-semibold transition-colors text-accent-primary-300 hover:text-white"
+                      className="inline-flex items-center gap-2 text-sm font-semibold transition-colors text-accent-primary-400 hover:text-white"
                     >
                       Discuss Your Project
                       <ArrowRight className="w-4 h-4" aria-hidden="true" />

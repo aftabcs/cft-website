@@ -191,7 +191,7 @@ export default function ServicesPage() {
               <li className="text-white font-medium">IT Services</li>
             </ol>
           </nav>
-          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 px-3 py-1">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 border border-accent-primary-500/15 px-3 py-1">
             What We Build
           </span>
           <h1 className="font-sans font-bold text-hero text-white max-w-2xl mb-4">
@@ -212,12 +212,12 @@ export default function ServicesPage() {
               <div
                 key={id}
                 id={id}
-                className="glass-card p-8 hover:border-[rgba(255,255,255,0.30)]"
+                className="glass-card p-8 group"
               >
                 <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Left: Title + description */}
                   <div className="lg:col-span-1">
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/15">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/10 border border-accent-primary-500/15 group-hover:bg-accent-primary-500/15 transition-all duration-300">
                       <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
                     </div>
                     <h2 className="font-sans font-bold text-h3 text-white mb-1">{title}</h2>
@@ -227,7 +227,7 @@ export default function ServicesPage() {
                     <p className="text-text-secondary text-sm leading-relaxed">{description}</p>
                     <Link
                       href="/contact"
-                      className="inline-flex items-center gap-2 mt-4 text-sm font-medium transition-colors text-accent-primary-300 hover:text-white"
+                      className="inline-flex items-center gap-2 mt-4 text-sm font-medium transition-colors text-accent-primary-400 hover:text-white"
                     >
                       Get a Quote
                       <ArrowRight className="w-4 h-4" aria-hidden="true" />

@@ -12,26 +12,26 @@ interface Blob {
 
 const blobConfigs: Record<string, Blob[]> = {
   home: [
-    { color: '#FFFFFF', size: 800, top: '-12%', right: '-8%', blur: 140, opacity: 0.08 },
-    { color: '#888888', size: 550, top: '35%', left: '-12%', blur: 100, opacity: 0.10, delay: 2 },
-    { color: '#444444', size: 650, bottom: '8%', right: '18%', blur: 130, opacity: 0.12, delay: 4 },
-    { color: '#FFFFFF', size: 300, top: '20%', right: '30%', blur: 70, opacity: 0.05, delay: 6 },
+    { color: '#E11D48', size: 900, top: '-15%', right: '-10%', blur: 160, opacity: 0.12 },
+    { color: '#9F1239', size: 600, top: '40%', left: '-15%', blur: 120, opacity: 0.10, delay: 2 },
+    { color: '#F43F5E', size: 500, bottom: '5%', right: '20%', blur: 140, opacity: 0.08, delay: 4 },
+    { color: '#BE123C', size: 350, top: '15%', right: '35%', blur: 80, opacity: 0.06, delay: 6 },
   ],
   services: [
-    { color: '#FFFFFF', size: 600, top: '-5%', left: '10%', blur: 120, opacity: 0.07 },
-    { color: '#888888', size: 500, top: '50%', right: '-8%', blur: 100, opacity: 0.08, delay: 3 },
+    { color: '#E11D48', size: 700, top: '-8%', left: '5%', blur: 140, opacity: 0.10 },
+    { color: '#9F1239', size: 550, top: '50%', right: '-10%', blur: 120, opacity: 0.08, delay: 3 },
   ],
   about: [
-    { color: '#888888', size: 600, top: '-8%', right: '15%', blur: 120, opacity: 0.08 },
-    { color: '#FFFFFF', size: 500, bottom: '15%', left: '-5%', blur: 100, opacity: 0.06, delay: 2 },
+    { color: '#BE123C', size: 650, top: '-10%', right: '10%', blur: 130, opacity: 0.10 },
+    { color: '#E11D48', size: 500, bottom: '10%', left: '-8%', blur: 110, opacity: 0.07, delay: 2 },
   ],
   industries: [
-    { color: '#FFFFFF', size: 550, top: '5%', right: '-10%', blur: 110, opacity: 0.07 },
-    { color: '#444444', size: 600, bottom: '5%', left: '5%', blur: 120, opacity: 0.10, delay: 3 },
+    { color: '#E11D48', size: 600, top: '3%', right: '-12%', blur: 130, opacity: 0.09 },
+    { color: '#9F1239', size: 650, bottom: '0%', left: '0%', blur: 140, opacity: 0.10, delay: 3 },
   ],
   contact: [
-    { color: '#888888', size: 500, top: '-5%', left: '20%', blur: 100, opacity: 0.08 },
-    { color: '#FFFFFF', size: 450, top: '40%', right: '-5%', blur: 80, opacity: 0.06, delay: 2 },
+    { color: '#BE123C', size: 550, top: '-8%', left: '15%', blur: 120, opacity: 0.10 },
+    { color: '#E11D48', size: 500, top: '35%', right: '-8%', blur: 100, opacity: 0.07, delay: 2 },
   ],
 };
 
@@ -45,7 +45,7 @@ export default function BackgroundBlobs({ page }: { page: keyof typeof blobConfi
           key={i}
           className="absolute rounded-full animate-blob-float"
           style={{
-            background: blob.color,
+            background: `radial-gradient(circle, ${blob.color} 0%, transparent 70%)`,
             width: blob.size,
             height: blob.size,
             top: blob.top,

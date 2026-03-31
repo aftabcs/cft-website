@@ -20,26 +20,23 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-base border-t border-white/[0.12] relative overflow-hidden">
-      {/* Gradient accent line at top */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-cta" aria-hidden="true" />
+    <footer className="bg-bg-base border-t border-white/[0.06] relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-primary-500/30 to-transparent" aria-hidden="true" />
 
-      {/* Subtle glow accent */}
       <div
-        className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full pointer-events-none"
-        style={{ background: '#FFFFFF', filter: 'blur(160px)', opacity: 0.04 }}
+        className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle, #E11D48 0%, transparent 70%)', filter: 'blur(180px)', opacity: 0.04 }}
         aria-hidden="true"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center mb-5 group w-fit">
               <img
                 src="/logo.svg"
                 alt="CodeFlick Technologies"
-                className="h-10 w-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.08)]"
+                className="h-10 w-auto drop-shadow-[0_0_15px_rgba(225,29,72,0.10)]"
               />
             </Link>
             <p className="text-text-muted text-sm leading-relaxed mb-6">
@@ -57,7 +54,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`CodeFlick Technologies on ${label}`}
-                  className="w-9 h-9 rounded-btn bg-bg-elevated border border-white/[0.08] flex items-center justify-center text-text-muted hover:text-accent-primary-500 hover:border-accent-primary-500/40 transition-colors"
+                  className="w-9 h-9 rounded-btn bg-white/[0.04] border border-white/[0.06] flex items-center justify-center text-text-muted hover:text-accent-primary-400 hover:border-accent-primary-500/30 hover:bg-accent-primary-500/10 transition-all duration-200"
                 >
                   <Icon className="w-4 h-4" aria-hidden="true" />
                 </a>
@@ -65,9 +62,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Company links */}
           <div>
-            <h3 className="text-xs font-semibold text-white uppercase tracking-widest mb-4">
+            <h3 className="text-xs font-semibold text-white uppercase tracking-[0.2em] mb-4">
               Company
             </h3>
             <ul className="space-y-3" role="list">
@@ -75,7 +71,7 @@ export default function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-text-muted text-sm hover:text-white transition-colors"
+                    className="text-text-muted text-sm hover:text-accent-primary-400 transition-colors"
                   >
                     {label}
                   </Link>
@@ -84,9 +80,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services links */}
           <div>
-            <h3 className="text-xs font-semibold text-white uppercase tracking-widest mb-4">
+            <h3 className="text-xs font-semibold text-white uppercase tracking-[0.2em] mb-4">
               Services
             </h3>
             <ul className="space-y-3" role="list">
@@ -94,7 +89,7 @@ export default function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-text-muted text-sm hover:text-white transition-colors"
+                    className="text-text-muted text-sm hover:text-accent-primary-400 transition-colors"
                   >
                     {label}
                   </Link>
@@ -103,9 +98,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h3 className="text-xs font-semibold text-white uppercase tracking-widest mb-4">
+            <h3 className="text-xs font-semibold text-white uppercase tracking-[0.2em] mb-4">
               Contact
             </h3>
             <ul className="space-y-4" role="list">
@@ -137,16 +131,15 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="border-t border-white/[0.06] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="border-t border-white/[0.04] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-text-subtle text-sm">
             &copy; {new Date().getFullYear()} CodeFlick Technologies. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy" className="text-text-muted text-sm hover:text-white transition-colors">
+            <Link href="/privacy" className="text-text-muted text-sm hover:text-accent-primary-400 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-text-muted text-sm hover:text-white transition-colors">
+            <Link href="/terms" className="text-text-muted text-sm hover:text-accent-primary-400 transition-colors">
               Terms of Service
             </Link>
           </div>

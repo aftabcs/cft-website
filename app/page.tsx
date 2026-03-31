@@ -124,16 +124,16 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative min-h-screen flex items-center bg-bg-base overflow-hidden">
         <BackgroundBlobs page="home" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-32">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-32 w-full">
           <HomeAnimations clients={clients} />
         </div>
       </section>
 
       {/* SERVICES */}
-      <section className="bg-bg-base py-24 relative overflow-hidden" id="services">
+      <section className="bg-bg-base py-28 relative overflow-hidden" id="services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-14">
-            <p className="text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3">
+          <div className="text-center mb-16">
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
               What We Build
             </p>
             <h2 className="font-sans font-bold text-h2 text-white">
@@ -149,10 +149,10 @@ export default function HomePage() {
             {services.map(({ icon: Icon, title, description }) => (
               <div
                 key={title}
-                className="glass-card p-6 hover:border-[rgba(255,255,255,0.30)]"
+                className="glass-card p-6 group"
               >
                 <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/15">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/10 group-hover:bg-accent-primary-500/20 transition-colors">
                     <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
                   </div>
                   <h3 className="font-semibold text-white text-sm mb-2">{title}</h3>
@@ -165,7 +165,7 @@ export default function HomePage() {
           <div className="text-center mt-10">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-accent-primary-300 font-semibold text-sm hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 text-accent-primary-400 font-semibold text-sm hover:text-white transition-colors"
             >
               View all services
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -180,8 +180,8 @@ export default function HomePage() {
           <div className="glass-card p-8 sm:p-12">
             <div className="relative z-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
               {stats.map(({ value, label }, i) => (
-                <div key={label} className={`text-center ${i < stats.length - 1 ? 'lg:border-r lg:border-white/10' : ''}`}>
-                  <p className="font-sans font-bold text-display gradient-text mb-2">{value}</p>
+                <div key={label} className={`text-center ${i < stats.length - 1 ? 'lg:border-r lg:border-white/[0.06]' : ''}`}>
+                  <p className="font-sans font-black text-display gradient-text mb-2">{value}</p>
                   <p className="text-text-secondary text-sm font-medium">{label}</p>
                 </div>
               ))}
@@ -194,7 +194,7 @@ export default function HomePage() {
       <section className="bg-bg-base py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold tracking-widest uppercase text-text-muted mb-3">
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-text-muted mb-3">
               Trusted by
             </p>
             <h2 className="font-sans font-bold text-h2 text-white">
@@ -209,7 +209,7 @@ export default function HomePage() {
               {clients.map((client) => (
                 <div
                   key={client}
-                  className="flex items-center justify-center h-16 rounded-btn border border-white/[0.08] px-4 hover:border-accent-primary-500/30 hover:bg-white/[0.04] transition-all duration-200"
+                  className="flex items-center justify-center h-16 rounded-btn border border-white/[0.06] px-4 hover:border-accent-primary-500/25 hover:bg-accent-primary-500/5 transition-all duration-200"
                 >
                   <span className="text-text-secondary font-medium text-sm text-center">{client}</span>
                 </div>
@@ -224,7 +224,7 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="glass-card p-8 sm:p-10">
             <div className="relative z-10">
-              <span className="text-6xl text-accent-primary-500/30 leading-none">&ldquo;</span>
+              <span className="text-6xl text-accent-primary-500/20 leading-none">&ldquo;</span>
               <blockquote className="text-text-secondary text-lg italic leading-relaxed mb-4 -mt-4">
                 They delivered a complex digital onboarding solution for our bank with exceptional quality and speed.
               </blockquote>
@@ -235,11 +235,11 @@ export default function HomePage() {
       </section>
 
       {/* WHY CODEFLICK */}
-      <section className="bg-bg-base py-24">
+      <section className="bg-bg-base py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3">
+              <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
                 Why CodeFlick
               </p>
               <h2 className="font-sans font-bold text-h2 text-white mb-6">
@@ -263,7 +263,7 @@ export default function HomePage() {
               <div className="mt-10">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 text-accent-primary-300 font-semibold hover:text-white transition-colors"
+                  className="inline-flex items-center gap-2 text-accent-primary-400 font-semibold hover:text-white transition-colors"
                 >
                   Learn more about us
                   <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -271,7 +271,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Visual side */}
             <div className="grid grid-cols-2 gap-4">
               {[
                 { icon: Brain, label: 'AI-Powered', sub: 'LLMs, ML, Computer Vision' },
@@ -281,10 +280,10 @@ export default function HomePage() {
               ].map(({ icon: Icon, label, sub }) => (
                 <div
                   key={label}
-                  className="glass-card p-6 hover:border-[rgba(255,255,255,0.30)]"
+                  className="glass-card p-6 group"
                 >
                   <div className="relative z-10">
-                    <Icon className="w-8 h-8 text-accent-primary-400 mb-3" aria-hidden="true" />
+                    <Icon className="w-8 h-8 text-accent-primary-400 mb-3 group-hover:text-accent-primary-300 transition-colors" aria-hidden="true" />
                     <p className="font-semibold text-white text-sm mb-1">{label}</p>
                     <p className="text-text-muted text-xs">{sub}</p>
                   </div>
