@@ -7,15 +7,17 @@ import {
   Factory,
   HeartPulse,
   ShoppingBag,
-  GraduationCap,
   Truck,
+  Globe,
+  Rocket,
+  Wallet,
   ArrowRight,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Industries We Serve',
   description:
-    'CodeFlick Technologies serves Banking & FinTech, Aviation, Government, Manufacturing, Healthcare, Retail, Education, and Logistics — delivering specialized IT solutions for every sector.',
+    'CodeFlick Technologies serves Banking, FinTech, E-commerce, Manufacturing, CRM, Healthcare, Government, Aviation, Logistics, and Startups — delivering specialized IT solutions for every sector.',
 };
 
 const industries = [
@@ -28,90 +30,124 @@ const industries = [
       'Banks face mounting pressure to modernize core systems, meet compliance requirements, and deliver digital-first customer experiences while managing legacy infrastructure.',
     solution:
       'We deliver end-to-end banking solutions — from core banking integration (Temenos T24) to mobile banking apps, KYC/AML systems, payment gateways, and AI-driven fraud detection.',
+    focusAreas: 'Digital banking, core integration, compliance, fraud detection',
     clients: ['Ajman Bank', 'National Bank of Iraq (NBI)', 'Invest Bank', 'Capital Bank of Jordan'],
     accent: 'cyan',
   },
   {
-    id: 'aviation',
-    icon: Plane,
-    title: 'Aviation & Aerospace',
-    tagline: 'Technology that keeps operations airborne',
+    id: 'fintech',
+    icon: Wallet,
+    title: 'FinTech',
+    tagline: 'Payments, lending, and neobanking platforms',
     challenge:
-      'Aviation enterprises need real-time operational systems, seamless passenger experiences, and complex integrations across global supply chains and regulatory frameworks.',
+      'FinTech companies need rapid-to-market payment solutions, robust lending platforms, and seamless KYC automation to stay competitive in a fast-moving market.',
     solution:
-      'We build passenger management systems, maintenance tracking platforms, crew scheduling tools, API integrations with global distribution systems, and AI-powered operations optimization.',
-    clients: ['Qatar Airways'],
+      'We build payment solutions, lending platforms, KYC automation systems, and neobanking infrastructure that scales with your growth.',
+    focusAreas: 'Payment solutions, lending, KYC automation, neobanking',
+    clients: [],
     accent: 'violet',
   },
   {
-    id: 'government',
-    icon: Building2,
-    title: 'Government & Public Sector',
-    tagline: 'Digital government that serves citizens',
+    id: 'ecommerce',
+    icon: ShoppingBag,
+    title: 'E-commerce',
+    tagline: 'Commerce that converts everywhere',
     challenge:
-      'Government agencies need secure, accessible, and scalable digital infrastructure to deliver public services, manage data, and automate processes across departments.',
+      'E-commerce businesses must deliver seamless omnichannel experiences, manage complex inventory across channels, and personalize customer journeys at scale.',
     solution:
-      'We design e-governance platforms, citizen service portals, document management systems, inter-departmental integrations, and AI automation for government workflows.',
-    clients: ['Government of Uganda', 'Government of India', 'MPSEDC'],
+      'We build Shopify, WooCommerce, and Magento stores, custom marketplace platforms, headless commerce architecture, and unified inventory management systems.',
+    focusAreas: 'Shopify, WooCommerce, Magento, marketplaces',
+    clients: [],
     accent: 'cyan',
   },
   {
     id: 'manufacturing',
     icon: Factory,
-    title: 'Manufacturing & Industry 4.0',
+    title: 'Manufacturing',
     tagline: 'Smart factories powered by data',
     challenge:
       'Manufacturers struggle with production visibility, predictive maintenance, supply chain disruptions, and the shift from legacy MES to modern Industry 4.0 frameworks.',
     solution:
-      'We implement IoT sensor integration, predictive maintenance ML models, ERP systems (Odoo, SAP integration), supply chain optimization, and real-time production dashboards.',
+      'We implement MES systems, supply chain automation, IoT sensor integration, predictive maintenance ML models, and Industry 4.0 digital twin technology.',
+    focusAreas: 'MES, supply chain automation, IoT, Industry 4.0',
     clients: [],
     accent: 'violet',
+  },
+  {
+    id: 'crm',
+    icon: Globe,
+    title: 'CRM & Sales',
+    tagline: 'Unified business operations at scale',
+    challenge:
+      'Sales teams need unified CRM platforms that connect marketing, sales, and service across the organization for a 360-degree customer view.',
+    solution:
+      'We implement and customize Salesforce, Odoo, Microsoft Dynamics, Zoho, and HubSpot with full integration across your business systems.',
+    focusAreas: 'Salesforce, Odoo, Microsoft Dynamics',
+    clients: [],
+    accent: 'cyan',
   },
   {
     id: 'healthcare',
     icon: HeartPulse,
-    title: 'Healthcare & Life Sciences',
+    title: 'Healthcare',
     tagline: 'Technology that improves patient outcomes',
     challenge:
-      'Healthcare providers need interoperable systems, HIPAA/GDPR-compliant data management, telemedicine infrastructure, and AI tools that augment clinical decision-making.',
+      'Healthcare providers need interoperable systems, compliant data management, telemedicine infrastructure, and AI tools that augment clinical decision-making.',
     solution:
-      'We build electronic health record (EHR) systems, telemedicine platforms, medical AI (image analysis, diagnosis support), patient portals, and HL7/FHIR integration layers.',
-    clients: [],
-    accent: 'cyan',
-  },
-  {
-    id: 'retail',
-    icon: ShoppingBag,
-    title: 'Retail & E-commerce',
-    tagline: 'Commerce that converts everywhere',
-    challenge:
-      'Retailers must deliver seamless omnichannel experiences, manage complex inventory across channels, and personalize customer journeys at scale.',
-    solution:
-      'We build headless commerce platforms, marketplace integrations, AI-powered recommendation engines, loyalty programs, and unified inventory/order management systems.',
+      'We build EMR/EHR systems, telemedicine platforms, EHS compliance tools, patient portals, and HL7/FHIR integration layers.',
+    focusAreas: 'EMR, EHR, EHS, telemedicine, HL7/FHIR',
     clients: [],
     accent: 'violet',
   },
   {
-    id: 'education',
-    icon: GraduationCap,
-    title: 'Education & EdTech',
-    tagline: 'Learning platforms built for tomorrow',
+    id: 'government',
+    icon: Building2,
+    title: 'Government',
+    tagline: 'Digital government that serves citizens',
     challenge:
-      'Educational institutions need scalable LMS platforms, AI tutoring tools, adaptive learning systems, and data analytics to improve outcomes.',
+      'Government agencies need secure, accessible, and scalable digital infrastructure to deliver public services, manage data, and automate processes across departments.',
     solution:
-      'We develop LMS platforms, AI tutors, video streaming infrastructure, assessment engines, student analytics dashboards, and mobile learning apps.',
-    clients: [],
+      'We design digital identity systems, e-governance platforms, citizen service portals, and inter-departmental integrations.',
+    focusAreas: 'Digital identity, e-governance, citizen services',
+    clients: ['Government of Uganda', 'Government of India', 'MPSEDC'],
     accent: 'cyan',
+  },
+  {
+    id: 'aviation',
+    icon: Plane,
+    title: 'Aviation',
+    tagline: 'Technology that keeps operations airborne',
+    challenge:
+      'Aviation enterprises need real-time operational systems, seamless passenger experiences, and complex integrations across global supply chains.',
+    solution:
+      'We build booking system integrations, customer experience platforms, loyalty programs, and AI-powered operations optimization.',
+    focusAreas: 'Booking systems, customer experience, loyalty programs',
+    clients: ['Qatar Airways'],
+    accent: 'violet',
   },
   {
     id: 'logistics',
     icon: Truck,
-    title: 'Logistics & Supply Chain',
+    title: 'Logistics',
     tagline: 'Visibility and efficiency across your supply chain',
     challenge:
       'Logistics companies need real-time shipment tracking, route optimization, warehouse automation, and seamless carrier integrations to stay competitive.',
     solution:
-      'We build TMS/WMS platforms, real-time tracking systems, route optimization ML models, IoT fleet management, and last-mile delivery apps.',
+      'We build tracking systems, warehouse automation platforms, fleet management tools, and last-mile delivery solutions.',
+    focusAreas: 'Tracking systems, warehouse automation, fleet management',
+    clients: [],
+    accent: 'cyan',
+  },
+  {
+    id: 'startups',
+    icon: Rocket,
+    title: 'Startups',
+    tagline: 'Move fast with the right foundation',
+    challenge:
+      'Startups need to validate ideas quickly with MVPs, build scalable architecture from day one, and iterate rapidly without burning through their runway.',
+    solution:
+      'We deliver MVP development, scalable architecture design, rapid prototyping, and ongoing technical partnership as you scale.',
+    focusAreas: 'MVP development, scalable architecture, rapid prototyping',
     clients: [],
     accent: 'violet',
   },
@@ -173,7 +209,7 @@ export default function IndustriesPage() {
       {/* INDUSTRY SECTIONS */}
       <section className="bg-bg-base py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-          {industries.map(({ id, icon: Icon, title, tagline, challenge, solution, clients, accent }) => (
+          {industries.map(({ id, icon: Icon, title, tagline, challenge, solution, focusAreas, clients, accent }) => (
             <div
               key={id}
               id={id}
@@ -224,6 +260,12 @@ export default function IndustriesPage() {
 
                 {/* Right */}
                 <div className="flex flex-col justify-between">
+                  <div className="mb-6">
+                    <h3 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-2">
+                      Key Focus Areas
+                    </h3>
+                    <p className="text-text-secondary text-sm">{focusAreas}</p>
+                  </div>
                   {clients.length > 0 && (
                     <div className="mb-6">
                       <h3 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">

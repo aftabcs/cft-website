@@ -20,34 +20,44 @@ export const metadata: Metadata = {
 
 const expertise = [
   {
-    domain: 'Software Development',
+    domain: 'Artificial Intelligence & ML',
     capabilities:
-      'Web Apps, Mobile Apps, SaaS, Enterprise Applications, SDK & Middleware Development, APIs, Microservices',
-  },
-  {
-    domain: 'AI & Machine Learning',
-    capabilities:
-      'Chatbots, Predictive Analytics, ML Models, Computer Vision, NLP, LLM Integration, AI Agents, Generative AI',
+      'Chatbots, Predictive Analytics, ML Models, AI Automation, Computer Vision, NLP, LLM Integration, AI Agents, Generative AI',
   },
   {
     domain: 'Automation',
     capabilities:
-      'Power Automate, Power Apps, n8n, Make, BPA, RPA, Workflow Automation, CRM/ERP Automation, Document Automation',
+      'Power Automate, Power Apps, n8n, Make, BPA, RPA, Workflow Automation',
+  },
+  {
+    domain: 'Software Development',
+    capabilities:
+      'Web Apps, Mobile Apps, SaaS, Enterprise Applications, SDK Development, Middleware, API Development',
   },
   {
     domain: 'FinTech Solutions',
     capabilities:
-      'Digital Banking, Payment Gateways, KYC Systems, Core Banking Integration (Temenos T24), Asset Management, Treasury Systems',
+      'Digital Banking, Payment Gateways, KYC Systems, Banking APIs, Core Banking Integration',
   },
   {
     domain: 'E-commerce Solutions',
     capabilities:
-      'Custom Storefronts, Headless Commerce, Marketplace Integrations, Payment Processing, Inventory Management',
+      'Shopify, WordPress/WooCommerce, Magento, Custom Platforms',
+  },
+  {
+    domain: 'CRM Solutions',
+    capabilities:
+      'Salesforce, Odoo, Microsoft Dynamics, Zoho, HubSpot',
+  },
+  {
+    domain: 'Healthcare Solutions',
+    capabilities:
+      'EMR, EHR, EHS, Telemedicine, HL7/FHIR Integration',
   },
   {
     domain: 'Cloud & DevOps',
     capabilities:
-      'AWS, Azure, GCP, CI/CD Pipelines, Containerization (Docker/K8s), Infrastructure as Code, Cloud Migration',
+      'AWS, Azure, GCP, CI/CD, Docker, Kubernetes',
   },
 ];
 
@@ -145,7 +155,7 @@ export default function AboutPage() {
                 end-to-end technology services across multiple industries and domains. With deep
                 expertise across all technology disciplines — including Software Development,
                 Artificial Intelligence, Machine Learning, Automation, Cloud Computing, Data
-                Analytics, Cyber Security, DevOps, System Integration, Enterprise Applications, CRM,
+                Analytics, DevOps, System Integration, Enterprise Applications, CRM,
                 ERP, API Development, SDK Development, Middleware, and IT Consulting.
               </p>
               <p className="text-text-secondary text-lg leading-relaxed">
@@ -192,6 +202,69 @@ export default function AboutPage() {
                 <p className="text-text-secondary text-sm leading-relaxed">{capabilities}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CORE TEAM */}
+      <section className="bg-bg-surface py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3">
+              Our Team
+            </p>
+            <h2 className="font-sans font-bold text-h2 text-text-primary">
+              Core Team
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            <div className="p-6 rounded-card bg-bg-elevated border border-white/8 text-center hover:border-accent-primary-500/30 hover:shadow-glow-cyan transition-all">
+              <div className="w-16 h-16 rounded-full bg-accent-primary-500/10 flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-accent-primary-400" aria-hidden="true" />
+              </div>
+              <h3 className="font-semibold text-text-primary text-lg mb-1">Zen Hadi</h3>
+              <p className="text-text-muted text-xs mb-2">(زين هادي)</p>
+              <p className="text-accent-primary-400 text-sm font-medium">Strategic Advisor / Consultant</p>
+              <p className="text-text-muted text-xs mt-1">India</p>
+            </div>
+            <div className="p-6 rounded-card bg-bg-elevated border border-white/8 text-center hover:border-accent-secondary-500/30 hover:shadow-glow-violet transition-all">
+              <div className="w-16 h-16 rounded-full bg-accent-secondary-500/10 flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-accent-secondary-400" aria-hidden="true" />
+              </div>
+              <h3 className="font-semibold text-text-primary text-lg mb-1">Faris Marwan</h3>
+              <p className="text-text-muted text-xs mb-2">(فارس مروان)</p>
+              <p className="text-accent-secondary-400 text-sm font-medium">AI/ML & Automation Expert</p>
+              <p className="text-text-muted text-xs mt-1">India</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* OFFICE LOCATIONS */}
+      <section className="bg-bg-base py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="text-xs font-semibold tracking-widest uppercase text-accent-primary-400 mb-3">
+              Our Offices
+            </p>
+            <h2 className="font-sans font-bold text-h2 text-text-primary">
+              Global Presence
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div className="p-6 rounded-card bg-bg-surface border border-white/8 hover:border-accent-primary-500/30 transition-all">
+              <h3 className="font-semibold text-text-primary text-base mb-2">India (HQ)</h3>
+              <p className="text-text-secondary text-sm mb-1">Bhopal, Madhya Pradesh, India</p>
+              <p className="text-text-muted text-xs mb-1">Core Development, AI Research, Global Operations</p>
+              <p className="text-accent-primary-400 text-sm mt-3">+91 7987421429</p>
+              <p className="text-accent-primary-400 text-sm">+91 9807950347</p>
+            </div>
+            <div className="p-6 rounded-card bg-bg-surface border border-white/8 hover:border-accent-secondary-500/30 transition-all">
+              <h3 className="font-semibold text-text-primary text-base mb-2">Qatar</h3>
+              <p className="text-text-secondary text-sm mb-1">Alsaad Street, Doha, Qatar</p>
+              <p className="text-text-muted text-xs mb-1">Middle East Sales, Client Success, Strategic Partnerships</p>
+              <p className="text-accent-secondary-400 text-sm mt-3">+974 5540 2909</p>
+            </div>
           </div>
         </div>
       </section>

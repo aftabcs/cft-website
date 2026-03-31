@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Mail, MapPin, Linkedin, Twitter, Github, Zap } from 'lucide-react';
+import { Mail, MapPin, Phone, Linkedin, Twitter, Github, Zap } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
@@ -97,15 +97,39 @@ export default function ContactPage() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-btn bg-accent-primary-500/10 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-accent-primary-400" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-0.5">
+                      Phone
+                    </p>
+                    <p className="text-text-primary text-sm">+91 7987421429</p>
+                    <p className="text-text-primary text-sm">+91 9807950347</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/10 flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5 text-accent-primary-400" aria-hidden="true" />
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-0.5">
-                      Global Presence
+                      India Office (HQ)
                     </p>
-                    <p className="text-text-primary text-sm">
-                      Middle East · South Asia · Africa · Europe
+                    <p className="text-text-primary text-sm">Bhopal, Madhya Pradesh, India</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-btn bg-accent-primary-500/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-accent-primary-400" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-0.5">
+                      Qatar Office
                     </p>
+                    <p className="text-text-primary text-sm">Alsaad Street, Doha, Qatar</p>
+                    <p className="text-text-primary text-sm">+974 5540 2909</p>
                   </div>
                 </div>
               </div>

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Zap, Linkedin, Twitter, Github, Mail, MapPin } from 'lucide-react';
+import { Zap, Linkedin, Twitter, Github, Mail, MapPin, Phone } from 'lucide-react';
 
 const footerLinks = {
   company: [
@@ -10,11 +10,11 @@ const footerLinks = {
   ],
   services: [
     { href: '/services#ai', label: 'AI & Machine Learning' },
-    { href: '/services#fintech', label: 'FinTech Solutions' },
     { href: '/services#automation', label: 'Automation' },
     { href: '/services#software', label: 'Software Development' },
-    { href: '/services#cloud', label: 'Cloud & DevOps' },
+    { href: '/services#fintech', label: 'FinTech Solutions' },
     { href: '/services#ecommerce', label: 'E-commerce' },
+    { href: '/services#manufacturing', label: 'Manufacturing' },
   ],
 };
 
@@ -116,9 +116,18 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a
+                  href="tel:+917987421429"
+                  className="flex items-start gap-3 text-text-muted text-sm hover:text-text-secondary transition-colors group"
+                >
+                  <Phone className="w-4 h-4 mt-0.5 text-accent-primary-500 flex-shrink-0" aria-hidden="true" />
+                  <span>+91 7987421429</span>
+                </a>
+              </li>
+              <li>
                 <div className="flex items-start gap-3 text-text-muted text-sm">
                   <MapPin className="w-4 h-4 mt-0.5 text-accent-primary-500 flex-shrink-0" aria-hidden="true" />
-                  <span>Serving clients globally across the Middle East, Africa, India &amp; Europe</span>
+                  <span>Bhopal, India &middot; Doha, Qatar</span>
                 </div>
               </li>
             </ul>

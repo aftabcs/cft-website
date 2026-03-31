@@ -6,7 +6,8 @@ import {
   ShoppingCart,
   Cpu,
   Cloud,
-  Shield,
+  Factory,
+  HeartPulse,
   Zap,
   Globe,
   Award,
@@ -27,56 +28,56 @@ const services = [
     icon: Brain,
     title: 'AI & Machine Learning',
     description:
-      'Chatbots, predictive analytics, LLM integration, AI agents, computer vision, and generative AI solutions.',
+      'Chatbots, predictive analytics, LLM integration, AI agents, computer vision, NLP, and generative AI solutions.',
     accent: 'cyan',
-  },
-  {
-    icon: Banknote,
-    title: 'FinTech Solutions',
-    description:
-      'Digital banking, payment gateways, KYC systems, core banking integration (Temenos T24), and wealth management.',
-    accent: 'violet',
   },
   {
     icon: Zap,
     title: 'Automation',
     description:
       'Power Automate, Power Apps, n8n, Make — BPA, RPA, workflow automation, and intelligent document processing.',
-    accent: 'cyan',
-  },
-  {
-    icon: ShoppingCart,
-    title: 'E-commerce',
-    description:
-      'Scalable storefronts, headless commerce, marketplace integrations, and omnichannel solutions.',
     accent: 'violet',
   },
   {
     icon: Cpu,
     title: 'Software Development',
     description:
-      'Web apps, mobile apps, SaaS, SDK development, middleware, APIs, microservices, and enterprise applications.',
+      'Web apps, mobile apps, SaaS, enterprise applications, SDK development, middleware, and API development.',
     accent: 'cyan',
   },
   {
-    icon: Cloud,
-    title: 'Cloud & DevOps',
+    icon: Banknote,
+    title: 'FinTech Solutions',
     description:
-      'AWS, Azure, GCP deployment, CI/CD pipelines, containerization, infrastructure as code, and cloud migration.',
+      'Digital banking, payment gateways, KYC systems, core banking integration, loan management, and asset management.',
     accent: 'violet',
   },
   {
-    icon: Shield,
-    title: 'Cyber Security',
+    icon: ShoppingCart,
+    title: 'E-commerce',
     description:
-      'Security audits, penetration testing, compliance (ISO 27001, SOC 2), threat intelligence, and SIEM.',
+      'Shopify, WordPress/WooCommerce, Magento, custom platforms, and headless commerce architecture.',
     accent: 'cyan',
   },
   {
-    icon: Globe,
-    title: 'CRM & ERP',
+    icon: Factory,
+    title: 'Manufacturing',
     description:
-      'Salesforce, Odoo, Microsoft Dynamics — implementation, customization, integration, and training.',
+      'MES, supply chain automation, IoT integration, predictive maintenance, and Industry 4.0 smart factory solutions.',
+    accent: 'violet',
+  },
+  {
+    icon: Globe,
+    title: 'CRM Solutions',
+    description:
+      'Salesforce, Odoo, Microsoft Dynamics, Zoho, HubSpot — implementation, customization, and integration.',
+    accent: 'cyan',
+  },
+  {
+    icon: HeartPulse,
+    title: 'Healthcare',
+    description:
+      'EMR/EHR systems, telemedicine platforms, HL7 & FHIR integration, EHS compliance, and remote monitoring.',
     accent: 'violet',
   },
 ];
@@ -100,10 +101,10 @@ const clients = [
 ];
 
 const whyUs = [
-  'Deep expertise across all technology disciplines — AI to legacy system modernization',
-  'Proven delivery for global banks, government bodies, and Fortune-class enterprises',
-  'Multi-industry specialization: FinTech, Aviation, Government, Healthcare & more',
-  'Agile, transparent delivery with dedicated project management and 24/7 support',
+  'Deep domain expertise — AI, Automation, FinTech, E-commerce, Manufacturing, CRM, Healthcare',
+  'Global client base — Ajman Bank, NBI, Qatar Airways, Government of India, and more',
+  'End-to-end IT solutions — from strategy to execution, software to AI',
+  'Global presence — offices in India (Bhopal) and Qatar (Doha)',
 ];
 
 const jsonLd = {
@@ -237,6 +238,16 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIAL */}
+      <section className="bg-bg-base py-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <blockquote className="text-text-secondary text-lg italic leading-relaxed mb-4">
+            &ldquo;They delivered a complex digital onboarding solution for our bank with exceptional quality and speed.&rdquo;
+          </blockquote>
+          <p className="text-accent-primary-400 font-semibold text-sm">— Ajman Bank Team</p>
         </div>
       </section>
 

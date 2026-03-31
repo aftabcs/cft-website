@@ -5,22 +5,20 @@ import { motion } from 'framer-motion';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const serviceOptions = [
-  'AI & Machine Learning',
-  'FinTech Solutions',
-  'Automation (Power Automate / n8n)',
+  'AI & ML',
+  'Automation',
   'Software Development',
-  'E-commerce Solutions',
+  'FinTech',
+  'E-commerce',
+  'Manufacturing',
+  'CRM',
+  'Healthcare',
   'Cloud & DevOps',
-  'Cyber Security',
-  'CRM & ERP',
-  'Data & Analytics',
-  'IT Consulting',
   'Other',
 ];
 
 type FormState = {
-  firstName: string;
-  lastName: string;
+  fullName: string;
   email: string;
   phone: string;
   company: string;
@@ -31,8 +29,7 @@ type FormState = {
 type FormErrors = Partial<Record<keyof FormState, string>>;
 
 const initialForm: FormState = {
-  firstName: '',
-  lastName: '',
+  fullName: '',
   email: '',
   phone: '',
   company: '',
@@ -42,14 +39,14 @@ const initialForm: FormState = {
 
 function validate(form: FormState): FormErrors {
   const errors: FormErrors = {};
-  if (!form.firstName.trim()) errors.firstName = 'First name is required';
-  if (!form.lastName.trim()) errors.lastName = 'Last name is required';
+  if (!form.fullName.trim()) errors.fullName = 'Full name is required';
   if (!form.email.trim()) {
     errors.email = 'Email is required';
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
     errors.email = 'Please enter a valid email address';
   }
   if (!form.company.trim()) errors.company = 'Company name is required';
+  if (!form.phone.trim()) errors.phone = 'Phone number is required';
   if (!form.service) errors.service = 'Please select a service';
   if (!form.message.trim()) {
     errors.message = 'Message is required';
@@ -125,56 +122,30 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate aria-label="Contact form">
-      {/* Row 1: First + Last name */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-        <div>
-          <label htmlFor="firstName" className={labelClass}>
-            First Name <span className="text-accent-primary-400" aria-hidden="true">*</span>
-          </label>
-          <input
-            id="firstName"
-            name="firstName"
-            type="text"
-            autoComplete="given-name"
-            value={form.firstName}
-            onChange={handleChange}
-            placeholder="John"
-            className={inputClass('firstName')}
-            aria-required="true"
-            aria-invalid={!!errors.firstName}
-            aria-describedby={errors.firstName ? 'firstName-error' : undefined}
-          />
-          {errors.firstName && (
-            <p id="firstName-error" className="text-red-400 text-xs mt-1 flex items-center gap-1">
-              <AlertCircle className="w-3 h-3" aria-hidden="true" />
-              {errors.firstName}
-            </p>
-          )}
-        </div>
-        <div>
-          <label htmlFor="lastName" className={labelClass}>
-            Last Name <span className="text-accent-primary-400" aria-hidden="true">*</span>
-          </label>
-          <input
-            id="lastName"
-            name="lastName"
-            type="text"
-            autoComplete="family-name"
-            value={form.lastName}
-            onChange={handleChange}
-            placeholder="Doe"
-            className={inputClass('lastName')}
-            aria-required="true"
-            aria-invalid={!!errors.lastName}
-            aria-describedby={errors.lastName ? 'lastName-error' : undefined}
-          />
-          {errors.lastName && (
-            <p id="lastName-error" className="text-red-400 text-xs mt-1 flex items-center gap-1">
-              <AlertCircle className="w-3 h-3" aria-hidden="true" />
-              {errors.lastName}
-            </p>
-          )}
-        </div>
+      {/* Row 1: Full Name */}
+      <div className="mb-4">
+        <label htmlFor="fullName" className={labelClass}>
+          Full Name <span className="text-accent-primary-400" aria-hidden="true">*</span>
+        </label>
+        <input
+          id="fullName"
+          name="fullName"
+          type="text"
+          autoComplete="name"
+          value={form.fullName}
+          onChange={handleChange}
+          placeholder="John Doe"
+          className={inputClass('fullName')}
+          aria-required="true"
+          aria-invalid={!!errors.fullName}
+          aria-describedby={errors.fullName ? 'fullName-error' : undefined}
+        />
+        {errors.fullName && (
+          <p id="fullName-error" className="text-red-400 text-xs mt-1 flex items-center gap-1">
+            <AlertCircle className="w-3 h-3" aria-hidden="true" />
+            {errors.fullName}
+          </p>
+        )}
       </div>
 
       {/* Row 2: Email + Phone */}
@@ -205,7 +176,7 @@ export default function ContactForm() {
         </div>
         <div>
           <label htmlFor="phone" className={labelClass}>
-            Phone Number
+            Phone Number <span className="text-accent-primary-400" aria-hidden="true">*</span>
           </label>
           <input
             id="phone"
@@ -216,7 +187,16 @@ export default function ContactForm() {
             onChange={handleChange}
             placeholder="+1 (555) 000-0000"
             className={inputClass('phone')}
+            aria-required="true"
+            aria-invalid={!!errors.phone}
+            aria-describedby={errors.phone ? 'phone-error' : undefined}
           />
+          {errors.phone && (
+            <p id="phone-error" className="text-red-400 text-xs mt-1 flex items-center gap-1">
+              <AlertCircle className="w-3 h-3" aria-hidden="true" />
+              {errors.phone}
+            </p>
+          )}
         </div>
       </div>
 

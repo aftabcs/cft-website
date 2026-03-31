@@ -20,7 +20,7 @@ export default function HomeAnimations({ clients }: Props) {
       {/* Badge chip */}
       <motion.div variants={fadeUpVariant}>
         <span className="inline-flex items-center gap-2 rounded-chip bg-white/5 border border-white/10 px-4 py-1.5 text-xs text-accent-primary-400 uppercase tracking-widest font-medium mb-6">
-          Enterprise IT Solutions
+          Core IT & AI Solutions
         </span>
       </motion.div>
 
@@ -38,8 +38,7 @@ export default function HomeAnimations({ clients }: Props) {
         variants={fadeUpVariant}
         className="text-xl text-text-secondary max-w-xl leading-relaxed mb-10"
       >
-        CodeFlick Technologies delivers end-to-end digital transformation — from AI and
-        automation to FinTech systems and enterprise software — for global leaders.
+        We help businesses across industries build, scale, and automate their digital systems — from custom software and AI solutions to cloud infrastructure and system integration. With offices in Bhopal, India and Doha, Qatar.
       </motion.p>
 
       {/* CTA row */}
