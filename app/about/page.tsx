@@ -117,7 +117,7 @@ export default function AboutPage() {
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 text-sm text-text-muted">
               <li>
-                <Link href="/" className="hover:text-white transition-colors">
+                <Link href="/" className="hover:text-accent-primary-400 transition-colors">
                   Home
                 </Link>
               </li>
@@ -125,7 +125,7 @@ export default function AboutPage() {
               <li className="text-white font-medium">About Us</li>
             </ol>
           </nav>
-          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 border border-accent-primary-500/15 px-3 py-1">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 px-3 py-1 border border-accent-primary-500/15">
             Our Story
           </span>
           <h1 className="font-sans font-bold text-hero text-white max-w-2xl">
@@ -136,7 +136,7 @@ export default function AboutPage() {
       </section>
 
       {/* MISSION */}
-      <section className="bg-bg-base py-24">
+      <section className="bg-bg-base py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -168,7 +168,7 @@ export default function AboutPage() {
                   className="glass-card p-6 text-center group"
                 >
                   <div className="relative z-10">
-                    <Icon className="w-8 h-8 text-accent-primary-400 mx-auto mb-3" aria-hidden="true" />
+                    <Icon className="w-8 h-8 text-accent-primary-400 mx-auto mb-3 group-hover:text-accent-primary-300 transition-colors" aria-hidden="true" />
                     <p className="font-sans font-bold text-4xl text-white mb-1">{value}</p>
                     <p className="text-text-muted text-sm">{label}</p>
                   </div>
@@ -180,9 +180,9 @@ export default function AboutPage() {
       </section>
 
       {/* EXPERTISE */}
-      <section className="bg-bg-base py-24">
+      <section className="bg-bg-base py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <div className="text-center mb-16">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
               Our Expertise
             </p>
@@ -207,9 +207,9 @@ export default function AboutPage() {
       </section>
 
       {/* CORE TEAM */}
-      <section className="bg-bg-base py-24">
+      <section className="bg-bg-base py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <div className="text-center mb-16">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
               Our Team
             </p>
@@ -218,24 +218,24 @@ export default function AboutPage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            <div className="glass-card p-6 text-center hover:border-[rgba(255,255,255,0.30)]">
+            <div className="glass-card p-6 text-center group">
               <div className="relative z-10">
-                <div className="w-16 h-16 rounded-full bg-accent-primary-500/10 flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-accent-primary-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent-primary-500/20 transition-colors">
                   <Users className="w-8 h-8 text-accent-primary-400" aria-hidden="true" />
                 </div>
                 <h3 className="font-semibold text-white text-lg mb-1">Zen Hadi</h3>
-                <p className="text-text-muted text-xs mb-2">(زين هادي)</p>
+                <p className="text-text-muted text-xs mb-2">(&#x632;&#x64A;&#x646; &#x647;&#x627;&#x62F;&#x64A;)</p>
                 <p className="text-accent-primary-400 text-sm font-medium">Strategic Advisor / Consultant</p>
                 <p className="text-text-muted text-xs mt-1">India</p>
               </div>
             </div>
-            <div className="glass-card p-6 text-center hover:border-[rgba(255,255,255,0.30)]">
+            <div className="glass-card p-6 text-center group">
               <div className="relative z-10">
-                <div className="w-16 h-16 rounded-full bg-accent-primary-500/10 flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-accent-primary-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent-primary-500/20 transition-colors">
                   <Users className="w-8 h-8 text-accent-primary-400" aria-hidden="true" />
                 </div>
                 <h3 className="font-semibold text-white text-lg mb-1">Faris Marwan</h3>
-                <p className="text-text-muted text-xs mb-2">(فارس مروان)</p>
+                <p className="text-text-muted text-xs mb-2">(&#x641;&#x627;&#x631;&#x633; &#x645;&#x631;&#x648;&#x627;&#x646;)</p>
                 <p className="text-accent-primary-400 text-sm font-medium">AI/ML & Automation Expert</p>
                 <p className="text-text-muted text-xs mt-1">India</p>
               </div>
@@ -245,9 +245,9 @@ export default function AboutPage() {
       </section>
 
       {/* OFFICE LOCATIONS */}
-      <section className="bg-bg-base py-24">
+      <section className="bg-bg-base py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <div className="text-center mb-16">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
               Our Offices
             </p>
@@ -256,7 +256,7 @@ export default function AboutPage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <div className="glass-card p-6 hover:border-[rgba(255,255,255,0.30)]">
+            <div className="glass-card p-6 group">
               <div className="relative z-10">
                 <h3 className="font-semibold text-white text-base mb-2">India (HQ)</h3>
                 <p className="text-text-secondary text-sm mb-1">Bhopal, Madhya Pradesh, India</p>
@@ -265,7 +265,7 @@ export default function AboutPage() {
                 <p className="text-accent-primary-400 text-sm">+91 9807950347</p>
               </div>
             </div>
-            <div className="glass-card p-6 hover:border-[rgba(255,255,255,0.30)]">
+            <div className="glass-card p-6 group">
               <div className="relative z-10">
                 <h3 className="font-semibold text-white text-base mb-2">Qatar</h3>
                 <p className="text-text-secondary text-sm mb-1">Alsaad Street, Doha, Qatar</p>
@@ -278,9 +278,9 @@ export default function AboutPage() {
       </section>
 
       {/* VALUES */}
-      <section className="bg-bg-base py-24">
+      <section className="bg-bg-base py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <div className="text-center mb-16">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
               Our Values
             </p>
@@ -295,7 +295,7 @@ export default function AboutPage() {
                 className="glass-card p-6 text-center group"
               >
                 <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-accent-primary-500/10">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-accent-primary-500/10 group-hover:bg-accent-primary-500/20 transition-colors">
                     <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
                   </div>
                   <h3 className="font-semibold text-white text-base mb-2">{title}</h3>
@@ -322,7 +322,7 @@ export default function AboutPage() {
             {clients.map((client) => (
               <div
                 key={client}
-                className="flex items-center justify-center h-16 rounded-card border border-white/[0.06] px-4 hover:border-accent-primary-500/25 hover:bg-accent-primary-500/[0.03] transition-all duration-200"
+                className="flex items-center justify-center h-16 rounded-card border border-white/[0.06] px-4 hover:border-accent-primary-500/25 hover:bg-accent-primary-500/5 backdrop-blur-sm transition-all duration-200"
               >
                 <span className="text-text-secondary font-medium text-sm text-center">{client}</span>
               </div>
