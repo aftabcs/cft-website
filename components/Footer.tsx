@@ -24,10 +24,10 @@ export default function Footer() {
       {/* Gradient accent line at top */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-cta" aria-hidden="true" />
 
-      {/* Subtle red blob accent */}
+      {/* Subtle glow accent */}
       <div
         className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full pointer-events-none"
-        style={{ background: '#E53E3E', filter: 'blur(150px)', opacity: 0.15 }}
+        style={{ background: '#FFFFFF', filter: 'blur(160px)', opacity: 0.04 }}
         aria-hidden="true"
       />
 
@@ -37,9 +37,9 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center mb-5 group w-fit">
               <img
-                src="/new-logo.png"
+                src="/logo.svg"
                 alt="CodeFlick Technologies"
-                className="h-10 w-auto drop-shadow-[0_0_12px_rgba(229,62,62,0.3)]"
+                className="h-10 w-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.08)]"
               />
             </Link>
             <p className="text-text-muted text-sm leading-relaxed mb-6">

@@ -165,7 +165,7 @@ export default function AboutPage() {
               {stats.map(({ value, label, icon: Icon }) => (
                 <div
                   key={label}
-                  className="glass-card p-6 text-center hover:border-[rgba(229,62,62,0.30)]"
+                  className="glass-card p-6 text-center hover:border-[rgba(255,255,255,0.30)]"
                 >
                   <div className="relative z-10">
                     <Icon className="w-8 h-8 text-accent-primary-400 mx-auto mb-3" aria-hidden="true" />
@@ -194,7 +194,7 @@ export default function AboutPage() {
             {expertise.map(({ domain, capabilities }) => (
               <div
                 key={domain}
-                className="glass-card p-6 hover:border-[rgba(229,62,62,0.30)]"
+                className="glass-card p-6 hover:border-[rgba(255,255,255,0.30)]"
               >
                 <div className="relative z-10">
                   <h3 className="font-semibold text-white text-base mb-2">{domain}</h3>
@@ -218,7 +218,7 @@ export default function AboutPage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            <div className="glass-card p-6 text-center hover:border-[rgba(229,62,62,0.30)]">
+            <div className="glass-card p-6 text-center hover:border-[rgba(255,255,255,0.30)]">
               <div className="relative z-10">
                 <div className="w-16 h-16 rounded-full bg-accent-primary-500/15 flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-accent-primary-400" aria-hidden="true" />
@@ -229,7 +229,7 @@ export default function AboutPage() {
                 <p className="text-text-muted text-xs mt-1">India</p>
               </div>
             </div>
-            <div className="glass-card p-6 text-center hover:border-[rgba(229,62,62,0.30)]">
+            <div className="glass-card p-6 text-center hover:border-[rgba(255,255,255,0.30)]">
               <div className="relative z-10">
                 <div className="w-16 h-16 rounded-full bg-accent-primary-500/15 flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-accent-primary-400" aria-hidden="true" />
@@ -256,7 +256,7 @@ export default function AboutPage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <div className="glass-card p-6 hover:border-[rgba(229,62,62,0.30)]">
+            <div className="glass-card p-6 hover:border-[rgba(255,255,255,0.30)]">
               <div className="relative z-10">
                 <h3 className="font-semibold text-white text-base mb-2">India (HQ)</h3>
                 <p className="text-text-secondary text-sm mb-1">Bhopal, Madhya Pradesh, India</p>
@@ -265,7 +265,7 @@ export default function AboutPage() {
                 <p className="text-accent-primary-400 text-sm">+91 9807950347</p>
               </div>
             </div>
-            <div className="glass-card p-6 hover:border-[rgba(229,62,62,0.30)]">
+            <div className="glass-card p-6 hover:border-[rgba(255,255,255,0.30)]">
               <div className="relative z-10">
                 <h3 className="font-semibold text-white text-base mb-2">Qatar</h3>
                 <p className="text-text-secondary text-sm mb-1">Alsaad Street, Doha, Qatar</p>
@@ -292,7 +292,7 @@ export default function AboutPage() {
             {values.map(({ icon: Icon, title, description }) => (
               <div
                 key={title}
-                className="glass-card p-6 text-center hover:border-[rgba(229,62,62,0.30)]"
+                className="glass-card p-6 text-center hover:border-[rgba(255,255,255,0.30)]"
               >
                 <div className="relative z-10">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-accent-primary-500/15">

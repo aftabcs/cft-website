@@ -12,26 +12,26 @@ interface Blob {
 
 const blobConfigs: Record<string, Blob[]> = {
   home: [
-    { color: '#E53E3E', size: 800, top: '-12%', right: '-8%', blur: 120, opacity: 0.40 },
-    { color: '#FF6B9D', size: 550, top: '35%', left: '-12%', blur: 90, opacity: 0.32, delay: 2 },
-    { color: '#9B2C2C', size: 650, bottom: '8%', right: '18%', blur: 130, opacity: 0.28, delay: 4 },
-    { color: '#FF4444', size: 300, top: '20%', right: '30%', blur: 60, opacity: 0.18, delay: 6 },
+    { color: '#FFFFFF', size: 800, top: '-12%', right: '-8%', blur: 140, opacity: 0.08 },
+    { color: '#888888', size: 550, top: '35%', left: '-12%', blur: 100, opacity: 0.10, delay: 2 },
+    { color: '#444444', size: 650, bottom: '8%', right: '18%', blur: 130, opacity: 0.12, delay: 4 },
+    { color: '#FFFFFF', size: 300, top: '20%', right: '30%', blur: 70, opacity: 0.05, delay: 6 },
   ],
   services: [
-    { color: '#E53E3E', size: 600, top: '-5%', left: '10%', blur: 100, opacity: 0.30 },
-    { color: '#FF6B9D', size: 500, top: '50%', right: '-8%', blur: 90, opacity: 0.25, delay: 3 },
+    { color: '#FFFFFF', size: 600, top: '-5%', left: '10%', blur: 120, opacity: 0.07 },
+    { color: '#888888', size: 500, top: '50%', right: '-8%', blur: 100, opacity: 0.08, delay: 3 },
   ],
   about: [
-    { color: '#FF6B9D', size: 600, top: '-8%', right: '15%', blur: 110, opacity: 0.30 },
-    { color: '#E53E3E', size: 500, bottom: '15%', left: '-5%', blur: 80, opacity: 0.28, delay: 2 },
+    { color: '#888888', size: 600, top: '-8%', right: '15%', blur: 120, opacity: 0.08 },
+    { color: '#FFFFFF', size: 500, bottom: '15%', left: '-5%', blur: 100, opacity: 0.06, delay: 2 },
   ],
   industries: [
-    { color: '#E53E3E', size: 550, top: '5%', right: '-10%', blur: 90, opacity: 0.32 },
-    { color: '#9B2C2C', size: 600, bottom: '5%', left: '5%', blur: 110, opacity: 0.22, delay: 3 },
+    { color: '#FFFFFF', size: 550, top: '5%', right: '-10%', blur: 110, opacity: 0.07 },
+    { color: '#444444', size: 600, bottom: '5%', left: '5%', blur: 120, opacity: 0.10, delay: 3 },
   ],
   contact: [
-    { color: '#FF6B9D', size: 500, top: '-5%', left: '20%', blur: 80, opacity: 0.28 },
-    { color: '#E53E3E', size: 450, top: '40%', right: '-5%', blur: 70, opacity: 0.30, delay: 2 },
+    { color: '#888888', size: 500, top: '-5%', left: '20%', blur: 100, opacity: 0.08 },
+    { color: '#FFFFFF', size: 450, top: '40%', right: '-5%', blur: 80, opacity: 0.06, delay: 2 },
   ],
 };
 

@@ -162,7 +162,7 @@ export default function ContactPage() {
               {/* Free consultation note */}
               <div className="glass-card p-5">
                 <div className="relative z-10 flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-cta flex items-center justify-center flex-shrink-0 mt-0.5 shadow-glow-red">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-cta flex items-center justify-center flex-shrink-0 mt-0.5 shadow-glow-white">
                     <Zap className="w-4 h-4 text-white" fill="currentColor" aria-hidden="true" />
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed">

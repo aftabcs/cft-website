@@ -203,7 +203,7 @@ export default function IndustriesPage() {
             <div
               key={id}
               id={id}
-              className="glass-card p-8 scroll-mt-36 hover:border-[rgba(229,62,62,0.30)]"
+              className="glass-card p-8 scroll-mt-36 hover:border-[rgba(255,255,255,0.30)]"
             >
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Left */}

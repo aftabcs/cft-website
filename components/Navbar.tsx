@@ -44,9 +44,9 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center flex-shrink-0 group">
           <img
-            src="/new-logo.png"
+            src="/logo.svg"
             alt="CodeFlick Technologies"
-            className="h-10 w-auto drop-shadow-[0_0_12px_rgba(229,62,62,0.3)] group-hover:drop-shadow-[0_0_20px_rgba(229,62,62,0.5)] transition-all duration-300"
+            className="h-10 w-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.08)] group-hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.15)] transition-all duration-300"
           />
         </Link>
 

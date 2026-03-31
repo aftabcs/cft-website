@@ -149,7 +149,7 @@ export default function HomePage() {
             {services.map(({ icon: Icon, title, description }) => (
               <div
                 key={title}
-                className="glass-card p-6 hover:border-[rgba(229,62,62,0.30)]"
+                className="glass-card p-6 hover:border-[rgba(255,255,255,0.30)]"
               >
                 <div className="relative z-10">
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/15">
@@ -281,7 +281,7 @@ export default function HomePage() {
               ].map(({ icon: Icon, label, sub }) => (
                 <div
                   key={label}
-                  className="glass-card p-6 hover:border-[rgba(229,62,62,0.30)]"
+                  className="glass-card p-6 hover:border-[rgba(255,255,255,0.30)]"
                 >
                   <div className="relative z-10">
                     <Icon className="w-8 h-8 text-accent-primary-400 mb-3" aria-hidden="true" />

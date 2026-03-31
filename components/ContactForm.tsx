@@ -104,8 +104,8 @@ export default function ContactForm() {
   const inputClass = (field: keyof FormState) =>
     `w-full px-4 py-3 bg-[rgba(255,255,255,0.06)] backdrop-blur-sm border rounded-[10px] text-white placeholder:text-text-subtle text-sm transition-all focus:outline-none shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] ${
       errors[field]
-        ? 'border-accent-primary-300 focus:border-accent-primary-300 focus:shadow-[0_0_0_3px_rgba(229,62,62,0.15)]'
-        : 'border-[rgba(255,255,255,0.15)] focus:border-accent-primary-500 focus:shadow-[0_0_0_3px_rgba(229,62,62,0.15),inset_0_1px_0_rgba(255,255,255,0.10)] focus:bg-[rgba(255,255,255,0.09)] hover:border-[rgba(255,255,255,0.25)] hover:bg-[rgba(255,255,255,0.08)]'
+        ? 'border-accent-primary-300 focus:border-accent-primary-300 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.10)]'
+        : 'border-[rgba(255,255,255,0.15)] focus:border-accent-primary-500 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.10),inset_0_1px_0_rgba(255,255,255,0.10)] focus:bg-[rgba(255,255,255,0.09)] hover:border-[rgba(255,255,255,0.25)] hover:bg-[rgba(255,255,255,0.08)]'
     }`;
 
   const labelClass = 'block text-sm font-medium text-text-secondary mb-1.5';

@@ -17,11 +17,11 @@ const config: Config = {
         },
         accent: {
           primary: {
-            300: '#FF6B6B',
-            400: '#FF4444',
-            500: '#E53E3E',
-            600: '#C53030',
-            700: '#9B2C2C',
+            300: '#D4D4D4',
+            400: '#A3A3A3',
+            500: '#737373',
+            600: '#525252',
+            700: '#404040',
           },
         },
         glass: {
@@ -30,7 +30,7 @@ const config: Config = {
           heavy: 'rgba(255,255,255,0.22)',
           border: 'rgba(255,255,255,0.18)',
           'border-hover': 'rgba(255,255,255,0.30)',
-          'border-red': 'rgba(229,62,62,0.35)',
+          'border-accent': 'rgba(255,255,255,0.25)',
         },
         text: {
           primary: '#FFFFFF',
@@ -50,9 +50,9 @@ const config: Config = {
         h3: ['1.5rem', { lineHeight: '1.25', letterSpacing: '-0.01em' }],
       },
       backgroundImage: {
-        'gradient-hero-text': 'linear-gradient(135deg, #FFFFFF 0%, #FF6B6B 50%, #E53E3E 100%)',
-        'gradient-cta': 'linear-gradient(135deg, #E53E3E 0%, #C53030 100%)',
-        'glass-sheen': 'linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.03) 40%, rgba(255,255,255,0) 100%)',
+        'gradient-hero-text': 'linear-gradient(135deg, #FFFFFF 0%, #D4D4D4 40%, #888888 100%)',
+        'gradient-cta': 'linear-gradient(135deg, #2A2A2A 0%, #1A1A1A 100%)',
+        'glass-sheen': 'linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.04) 40%, rgba(255,255,255,0) 100%)',
       },
       borderRadius: {
         card: '20px',
@@ -60,12 +60,12 @@ const config: Config = {
         btn: '8px',
       },
       boxShadow: {
-        glass: '0 8px 32px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.15), inset 0 0 20px rgba(255,255,255,0.03)',
-        'glass-hover': '0 16px 48px rgba(0,0,0,0.60), 0 0 40px rgba(229,62,62,0.10), inset 0 1px 0 rgba(255,255,255,0.25), inset 0 0 30px rgba(255,255,255,0.05)',
+        glass: '0 8px 32px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.18), inset 0 0 24px rgba(255,255,255,0.04)',
+        'glass-hover': '0 16px 48px rgba(0,0,0,0.60), 0 0 40px rgba(255,255,255,0.06), inset 0 1px 0 rgba(255,255,255,0.28), inset 0 0 30px rgba(255,255,255,0.06)',
         neo: '8px 8px 24px rgba(0,0,0,0.60), -4px -4px 16px rgba(255,255,255,0.04)',
-        'glow-red': '0 0 50px rgba(229,62,62,0.30)',
-        'btn-red': '0 4px 20px rgba(229,62,62,0.40), inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -1px 0 rgba(0,0,0,0.15)',
-        'btn-red-hover': '0 8px 36px rgba(229,62,62,0.55), 0 0 20px rgba(229,62,62,0.25), inset 0 1px 0 rgba(255,255,255,0.30)',
+        'glow-white': '0 0 50px rgba(255,255,255,0.12)',
+        'btn-dark': '0 4px 20px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.20), inset 0 -1px 0 rgba(0,0,0,0.30)',
+        'btn-dark-hover': '0 8px 36px rgba(0,0,0,0.60), 0 0 20px rgba(255,255,255,0.08), inset 0 1px 0 rgba(255,255,255,0.28)',
         nav: '0 1px 0 rgba(255,255,255,0.10)',
       },
       animation: {
