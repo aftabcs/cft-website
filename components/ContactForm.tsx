@@ -80,10 +80,25 @@ export default function ContactForm() {
     }
 
     setStatus('submitting');
-    // Simulate form submission — replace with actual API endpoint
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setStatus('success');
-    setForm(initialForm);
+    try {
+      const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: form.fullName,
+          email: form.email,
+          phone: form.phone,
+          company: form.company,
+          service: form.service,
+          message: form.message,
+        }),
+      });
+      if (!res.ok) throw new Error('Submission failed');
+      setStatus('success');
+      setForm(initialForm);
+    } catch {
+      setStatus('error');
+    }
   }
 
   const inputClass = (field: keyof FormState) =>
@@ -94,6 +109,30 @@ export default function ContactForm() {
     }`;
 
   const labelClass = 'block text-sm font-medium text-text-secondary mb-1.5';
+
+  if (status === 'error') {
+    return (
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="flex flex-col items-center text-center py-12"
+      >
+        <div className="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center mb-4">
+          <AlertCircle className="w-8 h-8 text-red-400" aria-hidden="true" />
+        </div>
+        <h3 className="font-semibold text-text-primary text-xl mb-2">Something went wrong</h3>
+        <p className="text-text-secondary text-sm max-w-sm">
+          We could not send your message. Please try again or email us directly.
+        </p>
+        <button
+          onClick={() => setStatus('idle')}
+          className="mt-6 text-sm text-accent-primary-400 hover:text-accent-primary-300 font-medium transition-colors"
+        >
+          Try again
+        </button>
+      </motion.div>
+    );
+  }
 
   if (status === 'success') {
     return (
