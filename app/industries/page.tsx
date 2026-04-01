@@ -14,6 +14,8 @@ import {
   ArrowRight,
 } from 'lucide-react';
 import BackgroundBlobs from '@/components/BackgroundBlobs';
+import AnimatedServiceCard from '@/components/AnimatedServiceCard';
+import AnimatedSection from '@/components/AnimatedSection';
 
 export const metadata: Metadata = {
   title: 'Industries We Serve',
@@ -199,12 +201,12 @@ export default function IndustriesPage() {
       {/* INDUSTRY SECTIONS */}
       <section className="bg-bg-base py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-          {industries.map(({ id, icon: Icon, title, tagline, challenge, solution, focusAreas, clients }) => (
-            <div
-              key={id}
-              id={id}
-              className="glass-card p-8 scroll-mt-36 group"
-            >
+          {industries.map(({ id, icon: Icon, title, tagline, challenge, solution, focusAreas, clients }, i) => (
+            <AnimatedServiceCard key={id} index={i} className="scroll-mt-36">
+              <div
+                id={id}
+                className="glass-card p-8 group"
+              >
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/10 group-hover:bg-accent-primary-500/20 transition-colors">
@@ -269,6 +271,7 @@ export default function IndustriesPage() {
                 </div>
               </div>
             </div>
+            </AnimatedServiceCard>
           ))}
         </div>
       </section>
@@ -277,6 +280,7 @@ export default function IndustriesPage() {
       <section className="bg-bg-base py-20 relative overflow-hidden">
         <BackgroundBlobs page="contact" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <AnimatedSection>
           <div className="glass-card p-10 sm:p-14">
             <div className="relative z-10">
               <h2 className="font-sans font-bold text-h2 text-white mb-4">
@@ -295,6 +299,7 @@ export default function IndustriesPage() {
               </Link>
             </div>
           </div>
+          </AnimatedSection>
         </div>
       </section>
     </>

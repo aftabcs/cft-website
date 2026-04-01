@@ -2,16 +2,17 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
   CheckCircle,
-  Globe,
   Award,
   Users,
-  TrendingUp,
   ArrowRight,
   Lightbulb,
   Shield,
   Handshake,
 } from 'lucide-react';
 import BackgroundBlobs from '@/components/BackgroundBlobs';
+import AnimatedAboutStats from '@/components/AnimatedAboutStats';
+import AnimatedServiceCard from '@/components/AnimatedServiceCard';
+import AnimatedSection from '@/components/AnimatedSection';
 
 export const metadata: Metadata = {
   title: 'About Us',
@@ -101,10 +102,10 @@ const clients = [
 ];
 
 const stats = [
-  { value: '50+', label: 'Enterprise Clients', icon: Users },
-  { value: '10+', label: 'Countries Served', icon: Globe },
-  { value: '8', label: 'Industry Verticals', icon: TrendingUp },
-  { value: '15+', label: 'Years of Excellence', icon: Award },
+  { value: '50+', label: 'Enterprise Clients', iconName: 'Users' },
+  { value: '10+', label: 'Countries Served', iconName: 'Globe' },
+  { value: '8', label: 'Industry Verticals', iconName: 'TrendingUp' },
+  { value: '15+', label: 'Years of Excellence', iconName: 'Award' },
 ];
 
 export default function AboutPage() {
@@ -139,7 +140,7 @@ export default function AboutPage() {
       <section className="bg-bg-base py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <AnimatedSection>
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
                 Who We Are
               </p>
@@ -160,21 +161,8 @@ export default function AboutPage() {
                 development, AI-driven automation, cloud infrastructure, or API integrations, we
                 deliver solutions that drive efficiency, innovation, and business growth.
               </p>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              {stats.map(({ value, label, icon: Icon }) => (
-                <div
-                  key={label}
-                  className="glass-card p-6 text-center group"
-                >
-                  <div className="relative z-10">
-                    <Icon className="w-8 h-8 text-accent-primary-400 mx-auto mb-3 group-hover:text-accent-primary-300 transition-colors" aria-hidden="true" />
-                    <p className="font-sans font-bold text-4xl text-white mb-1">{value}</p>
-                    <p className="text-text-muted text-sm">{label}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            </AnimatedSection>
+            <AnimatedAboutStats stats={stats} />
           </div>
         </div>
       </section>
@@ -182,25 +170,24 @@ export default function AboutPage() {
       {/* EXPERTISE */}
       <section className="bg-bg-base py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <AnimatedSection className="text-center mb-16">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
               Our Expertise
             </p>
             <h2 className="font-sans font-bold text-h2 text-white">
               Deep Capability Across Every Technology Domain
             </h2>
-          </div>
+          </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {expertise.map(({ domain, capabilities }) => (
-              <div
-                key={domain}
-                className="glass-card p-6 group"
-              >
-                <div className="relative z-10">
-                  <h3 className="font-semibold text-white text-base mb-2">{domain}</h3>
-                  <p className="text-text-secondary text-sm leading-relaxed">{capabilities}</p>
+            {expertise.map(({ domain, capabilities }, i) => (
+              <AnimatedServiceCard key={domain} index={i}>
+                <div className="glass-card p-6 group h-full">
+                  <div className="relative z-10">
+                    <h3 className="font-semibold text-white text-base mb-2">{domain}</h3>
+                    <p className="text-text-secondary text-sm leading-relaxed">{capabilities}</p>
+                  </div>
                 </div>
-              </div>
+              </AnimatedServiceCard>
             ))}
           </div>
         </div>
@@ -289,19 +276,18 @@ export default function AboutPage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {values.map(({ icon: Icon, title, description }) => (
-              <div
-                key={title}
-                className="glass-card p-6 text-center group"
-              >
-                <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-accent-primary-500/10 group-hover:bg-accent-primary-500/20 transition-colors">
-                    <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
+            {values.map(({ icon: Icon, title, description }, i) => (
+              <AnimatedServiceCard key={title} index={i}>
+                <div className="glass-card p-6 text-center group h-full">
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-accent-primary-500/10 group-hover:bg-accent-primary-500/20 transition-colors">
+                      <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
+                    </div>
+                    <h3 className="font-semibold text-white text-base mb-2">{title}</h3>
+                    <p className="text-text-muted text-sm leading-relaxed">{description}</p>
                   </div>
-                  <h3 className="font-semibold text-white text-base mb-2">{title}</h3>
-                  <p className="text-text-muted text-sm leading-relaxed">{description}</p>
                 </div>
-              </div>
+              </AnimatedServiceCard>
             ))}
           </div>
         </div>
@@ -335,6 +321,7 @@ export default function AboutPage() {
       <section className="bg-bg-base py-20 relative overflow-hidden">
         <BackgroundBlobs page="contact" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <AnimatedSection>
           <div className="glass-card p-10 sm:p-14">
             <div className="relative z-10">
               <h2 className="font-sans font-bold text-h2 text-white mb-4">
@@ -362,6 +349,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+          </AnimatedSection>
         </div>
       </section>
     </>

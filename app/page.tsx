@@ -16,6 +16,9 @@ import {
 } from 'lucide-react';
 import HomeAnimations from '@/components/HomeAnimations';
 import BackgroundBlobs from '@/components/BackgroundBlobs';
+import AnimatedStats from '@/components/AnimatedStats';
+import AnimatedServiceCard from '@/components/AnimatedServiceCard';
+import AnimatedSection from '@/components/AnimatedSection';
 
 export const metadata: Metadata = {
   title: 'CodeFlick Technologies — From Software to AI, We Build Everything',
@@ -132,7 +135,7 @@ export default function HomePage() {
       {/* SERVICES */}
       <section className="bg-bg-base py-28 relative overflow-hidden" id="services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
+          <AnimatedSection className="text-center mb-16">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
               What We Build
             </p>
@@ -143,22 +146,21 @@ export default function HomePage() {
               From intelligent automation to enterprise platforms — we cover every layer of your
               digital stack.
             </p>
-          </div>
+          </AnimatedSection>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {services.map(({ icon: Icon, title, description }) => (
-              <div
-                key={title}
-                className="glass-card p-6 group"
-              >
-                <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/10 group-hover:bg-accent-primary-500/20 transition-colors">
-                    <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
+            {services.map(({ icon: Icon, title, description }, i) => (
+              <AnimatedServiceCard key={title} index={i}>
+                <div className="glass-card p-6 group h-full">
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/10 group-hover:bg-accent-primary-500/20 transition-colors">
+                      <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
+                    </div>
+                    <h3 className="font-semibold text-white text-sm mb-2">{title}</h3>
+                    <p className="text-text-muted text-xs leading-relaxed">{description}</p>
                   </div>
-                  <h3 className="font-semibold text-white text-sm mb-2">{title}</h3>
-                  <p className="text-text-muted text-xs leading-relaxed">{description}</p>
                 </div>
-              </div>
+              </AnimatedServiceCard>
             ))}
           </div>
 
@@ -177,23 +179,14 @@ export default function HomePage() {
       {/* STATS */}
       <section className="bg-bg-base py-20 relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="glass-card p-8 sm:p-12">
-            <div className="relative z-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
-              {stats.map(({ value, label }, i) => (
-                <div key={label} className={`text-center ${i < stats.length - 1 ? 'lg:border-r lg:border-white/[0.06]' : ''}`}>
-                  <p className="font-sans font-black text-display gradient-text mb-2">{value}</p>
-                  <p className="text-text-secondary text-sm font-medium">{label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+          <AnimatedStats stats={stats} />
         </div>
       </section>
 
       {/* CLIENT LOGOS */}
       <section className="bg-bg-base py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <AnimatedSection className="text-center mb-12">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-text-muted mb-3">
               Trusted by
             </p>
@@ -203,7 +196,7 @@ export default function HomePage() {
             <p className="text-text-secondary mt-2">
               Banks, airlines, governments, and enterprises across 10+ countries
             </p>
-          </div>
+          </AnimatedSection>
           <div className="glass-card p-4 sm:p-6">
             <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-4">
               {clients.map((client) => (
@@ -222,15 +215,17 @@ export default function HomePage() {
       {/* TESTIMONIAL */}
       <section className="bg-bg-base py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="glass-card p-8 sm:p-10">
-            <div className="relative z-10">
-              <span className="text-6xl text-accent-primary-500/20 leading-none">&ldquo;</span>
-              <blockquote className="text-text-secondary text-lg italic leading-relaxed mb-4 -mt-4">
-                They delivered a complex digital onboarding solution for our bank with exceptional quality and speed.
-              </blockquote>
-              <p className="text-accent-primary-400 font-semibold text-sm">— Ajman Bank Team</p>
+          <AnimatedSection>
+            <div className="glass-card p-8 sm:p-10">
+              <div className="relative z-10">
+                <span className="text-6xl text-accent-primary-500/20 leading-none">&ldquo;</span>
+                <blockquote className="text-text-secondary text-lg italic leading-relaxed mb-4 -mt-4">
+                  They delivered a complex digital onboarding solution for our bank with exceptional quality and speed.
+                </blockquote>
+                <p className="text-accent-primary-400 font-semibold text-sm">— Ajman Bank Team</p>
+              </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -238,7 +233,7 @@ export default function HomePage() {
       <section className="bg-bg-base py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <AnimatedSection>
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
                 Why CodeFlick
               </p>
@@ -269,7 +264,7 @@ export default function HomePage() {
                   <ArrowRight className="w-4 h-4" aria-hidden="true" />
                 </Link>
               </div>
-            </div>
+            </AnimatedSection>
 
             <div className="grid grid-cols-2 gap-4">
               {[
@@ -277,17 +272,16 @@ export default function HomePage() {
                 { icon: Globe, label: 'Global Reach', sub: '10+ Countries, 50+ Clients' },
                 { icon: Award, label: 'Enterprise Grade', sub: 'ISO-ready, Secure, Scalable' },
                 { icon: TrendingUp, label: 'Proven Growth', sub: '15+ Years of Delivery' },
-              ].map(({ icon: Icon, label, sub }) => (
-                <div
-                  key={label}
-                  className="glass-card p-6 group"
-                >
-                  <div className="relative z-10">
-                    <Icon className="w-8 h-8 text-accent-primary-400 mb-3 group-hover:text-accent-primary-300 transition-colors" aria-hidden="true" />
-                    <p className="font-semibold text-white text-sm mb-1">{label}</p>
-                    <p className="text-text-muted text-xs">{sub}</p>
+              ].map(({ icon: Icon, label, sub }, i) => (
+                <AnimatedServiceCard key={label} index={i}>
+                  <div className="glass-card p-6 group h-full">
+                    <div className="relative z-10">
+                      <Icon className="w-8 h-8 text-accent-primary-400 mb-3 group-hover:text-accent-primary-300 transition-colors" aria-hidden="true" />
+                      <p className="font-semibold text-white text-sm mb-1">{label}</p>
+                      <p className="text-text-muted text-xs">{sub}</p>
+                    </div>
                   </div>
-                </div>
+                </AnimatedServiceCard>
               ))}
             </div>
           </div>
@@ -298,11 +292,12 @@ export default function HomePage() {
       <section className="bg-bg-base py-20 relative overflow-hidden">
         <BackgroundBlobs page="contact" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="glass-card p-10 sm:p-14">
-            <div className="relative z-10">
-              <h2 className="font-sans font-bold text-h2 text-white mb-4">
-                Ready to Transform Your Business?
-              </h2>
+          <AnimatedSection>
+            <div className="glass-card p-10 sm:p-14">
+              <div className="relative z-10">
+                <h2 className="font-sans font-bold text-h2 text-white mb-4">
+                  Ready to Transform Your Business?
+                </h2>
               <p className="text-text-secondary text-lg mb-10 max-w-2xl mx-auto">
                 Talk to our experts and discover how CodeFlick Technologies can accelerate your digital
                 journey.
@@ -322,8 +317,9 @@ export default function HomePage() {
                   Browse Services
                 </Link>
               </div>
+              </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
     </>
