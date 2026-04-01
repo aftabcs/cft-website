@@ -1,3 +1,7 @@
+'use client';
+
+import { useTheme } from '@/components/ThemeProvider';
+
 interface Blob {
   color: string;
   size: number;
@@ -10,7 +14,9 @@ interface Blob {
   delay?: number;
 }
 
-const blobConfigs: Record<string, Blob[]> = {
+type PageKey = 'home' | 'services' | 'about' | 'industries' | 'contact';
+
+const darkBlobs: Record<PageKey, Blob[]> = {
   home: [
     { color: '#E11D48', size: 900, top: '-15%', right: '-10%', blur: 160, opacity: 0.12 },
     { color: '#9F1239', size: 600, top: '40%', left: '-15%', blur: 120, opacity: 0.10, delay: 2 },
@@ -35,14 +41,42 @@ const blobConfigs: Record<string, Blob[]> = {
   ],
 };
 
-export default function BackgroundBlobs({ page }: { page: keyof typeof blobConfigs }) {
-  const blobs = blobConfigs[page] ?? blobConfigs.home;
+const lightBlobs: Record<PageKey, Blob[]> = {
+  home: [
+    { color: '#818CF8', size: 900, top: '-15%', right: '-10%', blur: 160, opacity: 0.15 },
+    { color: '#6366F1', size: 600, top: '40%', left: '-15%', blur: 120, opacity: 0.12, delay: 2 },
+    { color: '#2DD4BF', size: 500, bottom: '5%', right: '20%', blur: 140, opacity: 0.10, delay: 4 },
+    { color: '#A78BFA', size: 350, top: '15%', right: '35%', blur: 80, opacity: 0.08, delay: 6 },
+  ],
+  services: [
+    { color: '#818CF8', size: 700, top: '-8%', left: '5%', blur: 140, opacity: 0.12 },
+    { color: '#2DD4BF', size: 550, top: '50%', right: '-10%', blur: 120, opacity: 0.10, delay: 3 },
+  ],
+  about: [
+    { color: '#6366F1', size: 650, top: '-10%', right: '10%', blur: 130, opacity: 0.12 },
+    { color: '#818CF8', size: 500, bottom: '10%', left: '-8%', blur: 110, opacity: 0.09, delay: 2 },
+  ],
+  industries: [
+    { color: '#A78BFA', size: 600, top: '3%', right: '-12%', blur: 130, opacity: 0.11 },
+    { color: '#2DD4BF', size: 650, bottom: '0%', left: '0%', blur: 140, opacity: 0.12, delay: 3 },
+  ],
+  contact: [
+    { color: '#6366F1', size: 550, top: '-8%', left: '15%', blur: 120, opacity: 0.12 },
+    { color: '#818CF8', size: 500, top: '35%', right: '-8%', blur: 100, opacity: 0.09, delay: 2 },
+  ],
+};
+
+export default function BackgroundBlobs({ page }: { page: PageKey }) {
+  const { theme } = useTheme();
+  const blobs = theme === 'dark'
+    ? (darkBlobs[page] ?? darkBlobs.home)
+    : (lightBlobs[page] ?? lightBlobs.home);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none dark:opacity-100 opacity-50 transition-opacity duration-300" aria-hidden="true">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none transition-opacity duration-500" aria-hidden="true">
       {blobs.map((blob, i) => (
         <div
-          key={i}
+          key={`${theme}-${i}`}
           className="absolute rounded-full animate-blob-float"
           style={{
             background: `radial-gradient(circle, ${blob.color} 0%, transparent 70%)`,

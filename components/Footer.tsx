@@ -24,8 +24,7 @@ export default function Footer() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-primary-500/30 to-transparent" aria-hidden="true" />
 
       <div
-        className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none dark:opacity-100 opacity-50"
-        style={{ background: 'radial-gradient(circle, #E11D48 0%, transparent 70%)', filter: 'blur(180px)', opacity: 0.04 }}
+        className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none opacity-[0.04] dark:bg-[radial-gradient(circle,#E11D48_0%,transparent_70%)] bg-[radial-gradient(circle,#6366F1_0%,transparent_70%)] blur-[180px]"
         aria-hidden="true"
       />
 
@@ -36,7 +35,12 @@ export default function Footer() {
               <img
                 src="/logo.svg"
                 alt="CodeFlick Technologies"
-                className="h-10 w-auto drop-shadow-[0_0_15px_rgba(225,29,72,0.10)]"
+                className="h-10 w-auto drop-shadow-[0_0_15px_rgba(225,29,72,0.10)] hidden dark:block"
+              />
+              <img
+                src="/logo-light.svg"
+                alt="CodeFlick Technologies"
+                className="h-10 w-auto drop-shadow-[0_0_15px_rgba(225,29,72,0.10)] block dark:hidden"
               />
             </Link>
             <p className="text-text-muted text-sm leading-relaxed mb-6">

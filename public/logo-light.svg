@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120">
+  <circle cx="60" cy="60" r="52" fill="#1a1a1a"/>
+  <path d="M44 36L32 60L44 84" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="56" y="40" width="34" height="6" rx="3" fill="#ffffff" opacity="0.55"/>
+  <rect x="56" y="57" width="22" height="6" rx="3" fill="#ffffff" opacity="0.38"/>
+  <rect x="56" y="74" width="30" height="6" rx="3" fill="#ffffff" opacity="0.55"/>
+  <text x="130" y="68" font-family="Poppins,sans-serif" font-size="48" font-weight="700" fill="#1a1a1a" letter-spacing="1">CODE</text>
+  <text x="290" y="68" font-family="Poppins,sans-serif" font-size="48" font-weight="300" fill="#666666" letter-spacing="1">FLICK</text>
+  <text x="132" y="90" font-family="Poppins,sans-serif" font-size="13" font-weight="400" fill="#aaaaaa" letter-spacing="4">TECHNOLOGIES</text>
+</svg>
