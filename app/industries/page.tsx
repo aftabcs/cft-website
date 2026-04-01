@@ -16,6 +16,8 @@ import {
 import BackgroundBlobs from '@/components/BackgroundBlobs';
 import AnimatedServiceCard from '@/components/AnimatedServiceCard';
 import AnimatedSection from '@/components/AnimatedSection';
+import GridPattern from '@/components/GridPattern';
+import GradientDivider from '@/components/GradientDivider';
 
 export const metadata: Metadata = {
   title: 'Industries We Serve | Code Flick Technologies',
@@ -197,9 +199,12 @@ export default function IndustriesPage() {
         </div>
       </section>
 
+      <GradientDivider />
+
       {/* INDUSTRY SECTIONS */}
-      <section className="bg-bg-base py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <section className="bg-bg-base py-20 relative overflow-hidden">
+        <GridPattern />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 relative">
           {industries.map(({ id, icon: Icon, title, tagline, challenge, solution, focusAreas, clients }, i) => (
             <AnimatedServiceCard key={id} index={i} className="scroll-mt-36">
               <div

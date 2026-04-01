@@ -14,6 +14,9 @@ import BackgroundBlobs from '@/components/BackgroundBlobs';
 import AnimatedAboutStats from '@/components/AnimatedAboutStats';
 import AnimatedServiceCard from '@/components/AnimatedServiceCard';
 import AnimatedSection from '@/components/AnimatedSection';
+import GridPattern from '@/components/GridPattern';
+import GradientDivider from '@/components/GradientDivider';
+import TechCircuit from '@/components/TechCircuit';
 
 export const metadata: Metadata = {
   title: 'About Us',
@@ -105,7 +108,7 @@ const clients = [
 const stats = [
   { value: '50+', label: 'Enterprise Clients', iconName: 'Users' },
   { value: '10+', label: 'Countries Served', iconName: 'Globe' },
-  { value: '8', label: 'Industry Verticals', iconName: 'TrendingUp' },
+  { value: '10+', label: 'Industry Verticals', iconName: 'TrendingUp' },
   { value: '15+', label: 'Years of Excellence', iconName: 'Award' },
 ];
 
@@ -168,9 +171,13 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <GradientDivider />
+
       {/* EXPERTISE */}
-      <section className="bg-bg-base py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-bg-base py-28 relative overflow-hidden">
+        <GridPattern />
+        <TechCircuit className="left-0 top-1/4 -translate-x-1/4" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-16">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
               Our Expertise
@@ -299,9 +306,12 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <GradientDivider />
+
       {/* VALUES */}
-      <section className="bg-bg-base py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-bg-base py-28 relative overflow-hidden">
+        <TechCircuit className="right-0 bottom-0 translate-x-1/4 translate-y-1/4" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
               Our Values

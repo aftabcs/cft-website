@@ -19,6 +19,9 @@ import BackgroundBlobs from '@/components/BackgroundBlobs';
 import AnimatedStats from '@/components/AnimatedStats';
 import AnimatedServiceCard from '@/components/AnimatedServiceCard';
 import AnimatedSection from '@/components/AnimatedSection';
+import GridPattern from '@/components/GridPattern';
+import GradientDivider from '@/components/GradientDivider';
+import TechCircuit from '@/components/TechCircuit';
 
 export const metadata: Metadata = {
   title: 'Code Flick Technologies — From Software to AI, We Build Everything',
@@ -132,8 +135,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      <GradientDivider />
+
       {/* SERVICES */}
       <section className="bg-bg-base py-28 relative overflow-hidden" id="services">
+        <GridPattern />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-16">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
@@ -229,9 +235,12 @@ export default function HomePage() {
         </div>
       </section>
 
+      <GradientDivider />
+
       {/* WHY CODEFLICK */}
-      <section className="bg-bg-base py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-bg-base py-28 relative overflow-hidden">
+        <TechCircuit className="right-0 top-0 opacity-50" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
