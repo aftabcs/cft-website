@@ -103,7 +103,7 @@ export default function ContactPage() {
                       Phone
                     </p>
                     <p className="text-text-primary text-sm">+91 7987421429</p>
-                    <p className="text-text-primary text-sm">+91 9807950347</p>
+                    <p className="text-text-primary text-sm">+91 7376766613</p>
                   </div>
                 </div>
 

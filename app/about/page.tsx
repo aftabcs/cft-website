@@ -249,7 +249,7 @@ export default function AboutPage() {
                 <p className="text-text-secondary text-sm mb-1">Bhopal, Madhya Pradesh, India</p>
                 <p className="text-text-muted text-xs mb-1">Core Development, AI Research, Global Operations</p>
                 <p className="text-accent-primary-400 text-sm mt-3">+91 7987421429</p>
-                <p className="text-accent-primary-400 text-sm">+91 9807950347</p>
+                <p className="text-accent-primary-400 text-sm">+91 7376766613</p>
               </div>
             </div>
             <div className="glass-card p-6 group">
