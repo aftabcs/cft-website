@@ -103,14 +103,14 @@ export default function HomeAnimations({ clients }: Props) {
 
         <motion.div variants={fadeUpVariant} className="flex flex-col sm:flex-row gap-4">
           <Link
-            href="/contact"
+            href="/services"
             className="btn-primary inline-flex items-center justify-center gap-2 text-base hover:scale-[1.02] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-primary-500"
           >
             View Our Work
             <ArrowRight className="w-5 h-5" aria-hidden="true" />
           </Link>
           <Link
-            href="/services"
+            href="/contact"
             className="btn-secondary inline-flex items-center justify-center gap-2 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-primary-400"
           >
             Let&apos;s Talk
