@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   CheckCircle,
   Award,
@@ -204,11 +205,11 @@ export default function AboutPage() {
               Core Team
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="glass-card p-6 text-center group">
               <div className="relative z-10">
-                <div className="w-16 h-16 rounded-full neo-icon-box flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-accent-primary-400" aria-hidden="true" />
+                <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-accent-primary-400/30">
+                  <Image src="/team-zen.svg" alt="Zen Hadi" width={80} height={80} className="w-full h-full object-cover" />
                 </div>
                 <h3 className="font-semibold text-text-primary text-lg mb-1">Zen Hadi</h3>
                 <p className="text-text-muted text-xs mb-2">(&#x632;&#x64A;&#x646; &#x647;&#x627;&#x62F;&#x64A;)</p>
@@ -218,12 +219,42 @@ export default function AboutPage() {
             </div>
             <div className="glass-card p-6 text-center group">
               <div className="relative z-10">
-                <div className="w-16 h-16 rounded-full neo-icon-box flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-accent-primary-400" aria-hidden="true" />
+                <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-accent-primary-400/30">
+                  <Image src="/team-faris.svg" alt="Faris Marwan" width={80} height={80} className="w-full h-full object-cover" />
                 </div>
                 <h3 className="font-semibold text-text-primary text-lg mb-1">Faris Marwan</h3>
                 <p className="text-text-muted text-xs mb-2">(&#x641;&#x627;&#x631;&#x633; &#x645;&#x631;&#x648;&#x627;&#x646;)</p>
                 <p className="text-accent-primary-400 text-sm font-medium">AI/ML & Automation Expert</p>
+                <p className="text-text-muted text-xs mt-1">India</p>
+              </div>
+            </div>
+            <div className="glass-card p-6 text-center group">
+              <div className="relative z-10">
+                <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-accent-primary-400/30">
+                  <Image src="/team-shah.svg" alt="Shah Alam" width={80} height={80} className="w-full h-full object-cover" />
+                </div>
+                <h3 className="font-semibold text-text-primary text-lg mb-1">Shah Alam</h3>
+                <p className="text-accent-primary-400 text-sm font-medium">Solution Architect</p>
+                <p className="text-text-muted text-xs mt-1">India</p>
+              </div>
+            </div>
+            <div className="glass-card p-6 text-center group sm:col-start-1 lg:col-start-1">
+              <div className="relative z-10">
+                <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-accent-primary-400/30">
+                  <Image src="/team-sana.svg" alt="Sana Khan" width={80} height={80} className="w-full h-full object-cover" />
+                </div>
+                <h3 className="font-semibold text-text-primary text-lg mb-1">Sana Khan</h3>
+                <p className="text-accent-primary-400 text-sm font-medium">CHRO</p>
+                <p className="text-text-muted text-xs mt-1">India</p>
+              </div>
+            </div>
+            <div className="glass-card p-6 text-center group">
+              <div className="relative z-10">
+                <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-accent-primary-400/30">
+                  <Image src="/team-haris.svg" alt="Syyed Haris" width={80} height={80} className="w-full h-full object-cover" />
+                </div>
+                <h3 className="font-semibold text-text-primary text-lg mb-1">Syyed Haris</h3>
+                <p className="text-accent-primary-400 text-sm font-medium">Sales & Marketing</p>
                 <p className="text-text-muted text-xs mt-1">India</p>
               </div>
             </div>

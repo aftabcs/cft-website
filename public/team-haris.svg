@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="100" fill="url(#bg)"/>
+  <circle cx="100" cy="100" r="96" fill="none" stroke="url(#accent)" stroke-width="2" opacity="0.4"/>
+  <circle cx="100" cy="78" r="32" fill="url(#accent)" opacity="0.15"/>
+  <circle cx="100" cy="78" r="30" fill="url(#accent)" opacity="0.25"/>
+  <text x="100" y="88" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="#fcd34d" letter-spacing="2">SH</text>
+  <ellipse cx="100" cy="155" rx="45" ry="30" fill="url(#accent)" opacity="0.15"/>
+  <ellipse cx="100" cy="155" rx="43" ry="28" fill="url(#accent)" opacity="0.2"/>
+</svg>
