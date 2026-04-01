@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ThemeProvider from '@/components/ThemeProvider';
+import PageLoader from '@/components/PageLoader';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -84,6 +85,7 @@ export default function RootLayout({
       </head>
       <body>
         <ThemeProvider>
+          <PageLoader />
           <a
             href="#main"
             className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent-primary-500 focus:text-bg-base focus:rounded-btn focus:font-semibold"

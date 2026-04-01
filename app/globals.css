@@ -350,6 +350,63 @@
   }
 }
 
+/* Page loader animations */
+@keyframes loaderSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes loaderBar {
+  0% { width: 0%; transform: translateX(0); }
+  50% { width: 70%; }
+  80% { width: 90%; }
+  100% { width: 100%; transform: translateX(0); }
+}
+
+@keyframes loaderBracket {
+  0%, 100% { opacity: 1; transform: translateX(0); }
+  50% { opacity: 0.6; transform: translateX(-2px); }
+}
+
+@keyframes loaderLineFlicker {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.9; }
+}
+
+@keyframes loaderLineFlicker2 {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+@keyframes loaderLineFlicker3 {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.7; }
+}
+
+.animate-loader-spin {
+  animation: loaderSpin 1.2s linear infinite;
+}
+
+.animate-loader-bar {
+  animation: loaderBar 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-loader-bracket-left {
+  animation: loaderBracket 1.5s ease-in-out infinite;
+}
+
+.animate-loader-line-1 {
+  animation: loaderLineFlicker 2s ease-in-out infinite;
+}
+
+.animate-loader-line-2 {
+  animation: loaderLineFlicker2 1.8s ease-in-out infinite 0.2s;
+}
+
+.animate-loader-line-3 {
+  animation: loaderLineFlicker3 2.2s ease-in-out infinite 0.4s;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   ::before,
