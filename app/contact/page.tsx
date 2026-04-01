@@ -102,8 +102,8 @@ export default function ContactPage() {
                     <p className="text-xs font-semibold uppercase tracking-[0.15em] text-text-muted mb-0.5">
                       Phone
                     </p>
-                    <p className="text-text-primary text-sm">+91 7987421429</p>
-                    <p className="text-text-primary text-sm">+91 7376766613</p>
+                    <a href="tel:+917987421429" className="block text-text-primary text-sm hover:text-accent-primary-400 transition-colors">+91 7987421429</a>
+                    <a href="tel:+917376766613" className="block text-text-primary text-sm hover:text-accent-primary-400 transition-colors">+91 7376766613</a>
                   </div>
                 </div>
 
@@ -113,7 +113,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.15em] text-text-muted mb-0.5">
-                      India Office (HQ)
+                      India Office
                     </p>
                     <p className="text-text-primary text-sm">Bhopal, Madhya Pradesh, India</p>
                   </div>
@@ -128,7 +128,7 @@ export default function ContactPage() {
                       Qatar Office
                     </p>
                     <p className="text-text-primary text-sm">Alsaad Street, Doha, Qatar</p>
-                    <p className="text-text-primary text-sm">+974 5540 2909</p>
+                    <a href="tel:+97455402909" className="block text-text-primary text-sm hover:text-accent-primary-400 transition-colors">+974 5540 2909</a>
                   </div>
                 </div>
               </div>

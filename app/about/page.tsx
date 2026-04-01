@@ -245,11 +245,11 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <div className="glass-card p-6 group">
               <div className="relative z-10">
-                <h3 className="font-semibold text-text-primary text-base mb-2">India (HQ)</h3>
+                <h3 className="font-semibold text-text-primary text-base mb-2">India</h3>
                 <p className="text-text-secondary text-sm mb-1">Bhopal, Madhya Pradesh, India</p>
                 <p className="text-text-muted text-xs mb-1">Core Development, AI Research, Global Operations</p>
-                <p className="text-accent-primary-400 text-sm mt-3">+91 7987421429</p>
-                <p className="text-accent-primary-400 text-sm">+91 7376766613</p>
+                <a href="tel:+917987421429" className="block text-accent-primary-400 text-sm mt-3 hover:text-accent-primary-300 transition-colors">+91 7987421429</a>
+                <a href="tel:+917376766613" className="block text-accent-primary-400 text-sm hover:text-accent-primary-300 transition-colors">+91 7376766613</a>
               </div>
             </div>
             <div className="glass-card p-6 group">
@@ -257,7 +257,7 @@ export default function AboutPage() {
                 <h3 className="font-semibold text-text-primary text-base mb-2">Qatar</h3>
                 <p className="text-text-secondary text-sm mb-1">Alsaad Street, Doha, Qatar</p>
                 <p className="text-text-muted text-xs mb-1">Middle East Sales, Client Success, Strategic Partnerships</p>
-                <p className="text-accent-primary-400 text-sm mt-3">+974 5540 2909</p>
+                <a href="tel:+97455402909" className="block text-accent-primary-400 text-sm mt-3 hover:text-accent-primary-300 transition-colors">+974 5540 2909</a>
               </div>
             </div>
           </div>
