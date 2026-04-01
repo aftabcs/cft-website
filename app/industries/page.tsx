@@ -18,9 +18,9 @@ import AnimatedServiceCard from '@/components/AnimatedServiceCard';
 import AnimatedSection from '@/components/AnimatedSection';
 
 export const metadata: Metadata = {
-  title: 'Industries We Serve',
+  title: 'Industries We Serve | Code Flick Technologies',
   description:
-    'Code Flick Technologies serves Banking, FinTech, E-commerce, Manufacturing, CRM, Healthcare, Government, Aviation, Logistics, and Startups — delivering specialized IT solutions for every sector.',
+    'Code Flick Technologies delivers enterprise-grade AI, automation, FinTech, and digital transformation solutions across banking, healthcare, aviation, government, manufacturing, and more.',
 };
 
 const industries = [
@@ -28,120 +28,120 @@ const industries = [
     id: 'banking',
     icon: Banknote,
     title: 'Banking & Financial Services',
-    tagline: 'Secure, compliant, and scalable FinTech',
+    tagline: 'Powering the next generation of digital banking',
     challenge:
-      'Banks face mounting pressure to modernize core systems, meet compliance requirements, and deliver digital-first customer experiences while managing legacy infrastructure.',
+      'Financial institutions face a dual mandate: modernize decades-old core infrastructure while delivering the seamless, mobile-first experiences customers now expect — all under intensifying regulatory scrutiny.',
     solution:
-      'We deliver end-to-end banking solutions — from core banking integration (Temenos T24) to mobile banking apps, KYC/AML systems, payment gateways, and AI-driven fraud detection.',
-    focusAreas: 'Digital banking, core integration, compliance, fraud detection',
+      'We engineer end-to-end banking platforms spanning core banking integration (Temenos T24), mobile and internet banking, real-time payment gateways, KYC/AML compliance engines, and AI-driven fraud detection — helping institutions move faster without compromising security.',
+    focusAreas: 'Core banking modernization, digital payments, regulatory compliance, fraud detection',
     clients: ['Ajman Bank', 'National Bank of Iraq (NBI)', 'Invest Bank', 'Capital Bank of Jordan'],
   },
   {
     id: 'fintech',
     icon: Wallet,
     title: 'FinTech',
-    tagline: 'Payments, lending, and neobanking platforms',
+    tagline: 'From neobanking to embedded finance — built to scale',
     challenge:
-      'FinTech companies need rapid-to-market payment solutions, robust lending platforms, and seamless KYC automation to stay competitive in a fast-moving market.',
+      'FinTech disruptors operate in a market where speed-to-launch defines survival. They need production-grade payment rails, intelligent lending engines, and automated KYC pipelines that can handle millions of transactions from day one.',
     solution:
-      'We build payment solutions, lending platforms, KYC automation systems, and neobanking infrastructure that scales with your growth.',
-    focusAreas: 'Payment solutions, lending, KYC automation, neobanking',
+      'We architect and deliver payment processing platforms, AI-powered credit scoring and lending systems, digital wallet infrastructure, and end-to-end KYC automation — enabling FinTech companies to launch faster and scale without re-platforming.',
+    focusAreas: 'Payment infrastructure, lending platforms, KYC automation, neobanking, embedded finance',
     clients: [],
   },
   {
     id: 'ecommerce',
     icon: ShoppingBag,
     title: 'E-commerce',
-    tagline: 'Commerce that converts everywhere',
+    tagline: 'Omnichannel commerce engineered for conversion',
     challenge:
-      'E-commerce businesses must deliver seamless omnichannel experiences, manage complex inventory across channels, and personalize customer journeys at scale.',
+      'Today\'s consumers expect frictionless shopping across every channel. Retailers must unify inventory, personalize experiences at scale, and manage complex fulfillment networks — all while keeping margins intact.',
     solution:
-      'We build Shopify, WooCommerce, and Magento stores, custom marketplace platforms, headless commerce architecture, and unified inventory management systems.',
-    focusAreas: 'Shopify, WooCommerce, Magento, marketplaces',
+      'We build high-performance storefronts on Shopify, WooCommerce, and Magento, design custom marketplace platforms, implement headless commerce architectures, and integrate AI-powered recommendation engines that drive measurable revenue growth.',
+    focusAreas: 'Headless commerce, marketplace development, AI personalization, inventory unification',
     clients: [],
   },
   {
     id: 'manufacturing',
     icon: Factory,
     title: 'Manufacturing',
-    tagline: 'Smart factories powered by data',
+    tagline: 'Industry 4.0 — from shop floor to boardroom',
     challenge:
-      'Manufacturers struggle with production visibility, predictive maintenance, supply chain disruptions, and the shift from legacy MES to modern Industry 4.0 frameworks.',
+      'Manufacturers contend with fragmented production data, unpredictable equipment failures, and supply chain volatility — all while racing to adopt Industry 4.0 frameworks that demand real-time visibility across operations.',
     solution:
-      'We implement MES systems, supply chain automation, IoT sensor integration, predictive maintenance ML models, and Industry 4.0 digital twin technology.',
-    focusAreas: 'MES, supply chain automation, IoT, Industry 4.0',
+      'We deploy MES platforms, IoT-enabled production monitoring, predictive maintenance models powered by machine learning, supply chain automation workflows, and digital twin simulations that turn raw operational data into actionable intelligence.',
+    focusAreas: 'MES, IoT integration, predictive maintenance, supply chain automation, digital twins',
     clients: [],
   },
   {
     id: 'crm',
     icon: Globe,
-    title: 'CRM & Sales',
-    tagline: 'Unified business operations at scale',
+    title: 'CRM & Enterprise Systems',
+    tagline: 'Unified operations that drive growth',
     challenge:
-      'Sales teams need unified CRM platforms that connect marketing, sales, and service across the organization for a 360-degree customer view.',
+      'Enterprises operate across siloed tools that fragment the customer journey. Sales, marketing, and service teams need a single source of truth to deliver consistent experiences and make data-driven decisions at every touchpoint.',
     solution:
-      'We implement and customize Salesforce, Odoo, Microsoft Dynamics, Zoho, and HubSpot with full integration across your business systems.',
-    focusAreas: 'Salesforce, Odoo, Microsoft Dynamics',
+      'We implement, customize, and integrate leading CRM platforms — Salesforce, Odoo, Microsoft Dynamics, Zoho, and HubSpot — with your existing ERP, marketing automation, and support systems to create a true 360-degree customer view.',
+    focusAreas: 'CRM implementation, ERP integration, sales automation, customer analytics',
     clients: [],
   },
   {
     id: 'healthcare',
     icon: HeartPulse,
     title: 'Healthcare',
-    tagline: 'Technology that improves patient outcomes',
+    tagline: 'Secure, interoperable systems that improve outcomes',
     challenge:
-      'Healthcare providers need interoperable systems, compliant data management, telemedicine infrastructure, and AI tools that augment clinical decision-making.',
+      'Healthcare organizations must navigate strict compliance mandates (HIPAA, HL7, FHIR), bridge interoperability gaps between clinical systems, and adopt telehealth and AI diagnostics — all while keeping patient data secure.',
     solution:
-      'We build EMR/EHR systems, telemedicine platforms, EHS compliance tools, patient portals, and HL7/FHIR integration layers.',
-    focusAreas: 'EMR, EHR, EHS, telemedicine, HL7/FHIR',
+      'We build EMR/EHR platforms, HIPAA-compliant telemedicine solutions, patient engagement portals, clinical decision support tools, and HL7/FHIR integration layers that enable seamless data exchange across the care continuum.',
+    focusAreas: 'EMR/EHR, telemedicine, HL7/FHIR interoperability, clinical AI, compliance',
     clients: [],
   },
   {
     id: 'government',
     icon: Building2,
-    title: 'Government',
-    tagline: 'Digital government that serves citizens',
+    title: 'Government & Public Sector',
+    tagline: 'Citizen-centric digital transformation at national scale',
     challenge:
-      'Government agencies need secure, accessible, and scalable digital infrastructure to deliver public services, manage data, and automate processes across departments.',
+      'Government agencies must digitize public services, ensure data sovereignty, maintain accessibility standards, and coordinate complex inter-departmental workflows — often across legacy systems with limited modernization budgets.',
     solution:
-      'We design digital identity systems, e-governance platforms, citizen service portals, and inter-departmental integrations.',
-    focusAreas: 'Digital identity, e-governance, citizen services',
+      'We deliver digital identity platforms, e-governance portals, citizen service automation, secure document management systems, and cross-agency integration frameworks that make public services faster, more transparent, and universally accessible.',
+    focusAreas: 'Digital identity, e-governance, citizen services, inter-agency integration',
     clients: ['Government of Uganda', 'Government of India', 'MPSEDC'],
   },
   {
     id: 'aviation',
     icon: Plane,
     title: 'Aviation',
-    tagline: 'Technology that keeps operations airborne',
+    tagline: 'Elevating passenger experience and operational efficiency',
     challenge:
-      'Aviation enterprises need real-time operational systems, seamless passenger experiences, and complex integrations across global supply chains.',
+      'Airlines and aviation enterprises operate in a high-stakes, real-time environment where system downtime means grounded flights, lost revenue, and damaged trust. They need technology that scales globally while delivering personalized passenger experiences.',
     solution:
-      'We build booking system integrations, customer experience platforms, loyalty programs, and AI-powered operations optimization.',
-    focusAreas: 'Booking systems, customer experience, loyalty programs',
+      'We build reservation and booking system integrations, passenger experience platforms, loyalty and frequent flyer programs, crew management tools, and AI-powered operations optimization that keeps airlines running smoothly at scale.',
+    focusAreas: 'Booking systems, passenger experience, loyalty programs, operations AI',
     clients: ['Qatar Airways'],
   },
   {
     id: 'logistics',
     icon: Truck,
-    title: 'Logistics',
-    tagline: 'Visibility and efficiency across your supply chain',
+    title: 'Logistics & Supply Chain',
+    tagline: 'End-to-end visibility from warehouse to last mile',
     challenge:
-      'Logistics companies need real-time shipment tracking, route optimization, warehouse automation, and seamless carrier integrations to stay competitive.',
+      'Logistics providers must deliver real-time shipment visibility, optimize routes across complex networks, automate warehouse operations, and integrate with dozens of carriers — all while customer expectations for speed continue to rise.',
     solution:
-      'We build tracking systems, warehouse automation platforms, fleet management tools, and last-mile delivery solutions.',
-    focusAreas: 'Tracking systems, warehouse automation, fleet management',
+      'We engineer real-time tracking platforms, intelligent route optimization systems, warehouse management and automation solutions, fleet management dashboards, and last-mile delivery applications that reduce cost and improve delivery reliability.',
+    focusAreas: 'Real-time tracking, route optimization, warehouse automation, fleet management',
     clients: [],
   },
   {
     id: 'startups',
     icon: Rocket,
-    title: 'Startups',
-    tagline: 'Move fast with the right foundation',
+    title: 'Startups & Scale-ups',
+    tagline: 'Ship fast, scale smart, stay lean',
     challenge:
-      'Startups need to validate ideas quickly with MVPs, build scalable architecture from day one, and iterate rapidly without burning through their runway.',
+      'Early-stage companies must validate product-market fit rapidly, build architecture that won\'t collapse at scale, and make every engineering dollar count — all without the luxury of large in-house teams.',
     solution:
-      'We deliver MVP development, scalable architecture design, rapid prototyping, and ongoing technical partnership as you scale.',
-    focusAreas: 'MVP development, scalable architecture, rapid prototyping',
+      'We serve as your extended engineering team — delivering rapid MVP development, cloud-native architecture design, CI/CD pipeline setup, and ongoing technical partnership that grows with you from seed to Series B and beyond.',
+    focusAreas: 'MVP development, cloud-native architecture, rapid prototyping, fractional CTO',
     clients: [],
   },
 ];
@@ -168,11 +168,10 @@ export default function IndustriesPage() {
             Industry Expertise
           </span>
           <h1 className="font-sans font-bold text-hero text-text-primary max-w-2xl mb-4">
-            Built for <span className="gradient-text">Your Industry</span>
+            Engineered for <span className="gradient-text">Your Industry</span>
           </h1>
           <p className="text-text-secondary text-lg max-w-xl">
-            Domain-specific technology solutions for banking, aviation, government, manufacturing,
-            healthcare, and more.
+            We combine deep domain expertise with cutting-edge AI, automation, and enterprise engineering to deliver solutions purpose-built for your sector.
           </p>
         </div>
       </section>
@@ -287,8 +286,7 @@ export default function IndustriesPage() {
                 Don&apos;t See Your Industry?
               </h2>
               <p className="text-text-secondary text-lg mb-8 max-w-xl mx-auto">
-                We work across all sectors. Contact us to discuss how we can solve your specific
-                technology challenges.
+                Our expertise spans every sector. Whether you need AI integration, process automation, or a full digital transformation — let&apos;s build it together.
               </p>
               <Link
                 href="/contact"

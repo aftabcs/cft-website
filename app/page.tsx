@@ -80,7 +80,7 @@ const services = [
 const stats = [
   { value: '50+', label: 'Enterprise Clients' },
   { value: '10+', label: 'Countries Served' },
-  { value: '8', label: 'Industry Verticals' },
+  { value: '10+', label: 'Industry Verticals' },
   { value: '15+', label: 'Years of Excellence' },
 ];
 
