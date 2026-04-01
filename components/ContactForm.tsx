@@ -102,10 +102,10 @@ export default function ContactForm() {
   }
 
   const inputClass = (field: keyof FormState) =>
-    `w-full px-4 py-3 bg-[rgba(255,255,255,0.04)] backdrop-blur-sm border rounded-[10px] text-white placeholder:text-text-subtle text-sm transition-all focus:outline-none shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${
+    `w-full px-4 py-3 bg-bg-surface backdrop-blur-sm border rounded-[10px] text-text-primary placeholder:text-text-subtle text-sm transition-all focus:outline-none ${
       errors[field]
         ? 'border-accent-primary-500 focus:border-accent-primary-400 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.15)]'
-        : 'border-[rgba(255,255,255,0.08)] focus:border-accent-primary-500 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.10),inset_0_1px_0_rgba(255,255,255,0.06)] focus:bg-[rgba(255,255,255,0.06)] hover:border-[rgba(255,255,255,0.15)] hover:bg-[rgba(255,255,255,0.05)]'
+        : 'border-glass-border focus:border-accent-primary-500 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.10)] hover:border-glass-border-hover'
     }`;
 
   const labelClass = 'block text-sm font-medium text-text-secondary mb-1.5';
@@ -120,13 +120,13 @@ export default function ContactForm() {
         <div className="w-16 h-16 rounded-full bg-accent-primary-500/10 flex items-center justify-center mb-4">
           <AlertCircle className="w-8 h-8 text-accent-primary-400" aria-hidden="true" />
         </div>
-        <h3 className="font-semibold text-white text-xl mb-2">Something went wrong</h3>
+        <h3 className="font-semibold text-text-primary text-xl mb-2">Something went wrong</h3>
         <p className="text-text-secondary text-sm max-w-sm">
           We could not send your message. Please try again or email us directly.
         </p>
         <button
           onClick={() => setStatus('idle')}
-          className="mt-6 text-sm text-accent-primary-400 hover:text-white font-medium transition-colors"
+          className="mt-6 text-sm text-accent-primary-400 hover:text-text-primary font-medium transition-colors"
         >
           Try again
         </button>
@@ -144,14 +144,14 @@ export default function ContactForm() {
         <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mb-4">
           <CheckCircle className="w-8 h-8 text-green-400" aria-hidden="true" />
         </div>
-        <h3 className="font-semibold text-white text-xl mb-2">Message Sent!</h3>
+        <h3 className="font-semibold text-text-primary text-xl mb-2">Message Sent!</h3>
         <p className="text-text-secondary text-sm max-w-sm">
           Thank you for reaching out. Our team will review your message and get back to you within
           24 hours.
         </p>
         <button
           onClick={() => setStatus('idle')}
-          className="mt-6 text-sm text-accent-primary-400 hover:text-white font-medium transition-colors"
+          className="mt-6 text-sm text-accent-primary-400 hover:text-text-primary font-medium transition-colors"
         >
           Send another message
         </button>

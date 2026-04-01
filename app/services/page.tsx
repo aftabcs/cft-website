@@ -190,13 +190,13 @@ export default function ServicesPage() {
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li className="text-white font-medium">IT Services</li>
+              <li className="text-text-primary font-medium">IT Services</li>
             </ol>
           </nav>
           <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 px-3 py-1 border border-accent-primary-500/15">
             What We Build
           </span>
-          <h1 className="font-sans font-bold text-hero text-white max-w-2xl mb-4">
+          <h1 className="font-sans font-bold text-hero text-text-primary max-w-2xl mb-4">
             Comprehensive IT Services
           </h1>
           <p className="text-text-secondary text-lg max-w-xl">
@@ -221,14 +221,14 @@ export default function ServicesPage() {
                     <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/10 group-hover:bg-accent-primary-500/20 transition-colors">
                       <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
                     </div>
-                    <h2 className="font-sans font-bold text-h3 text-white mb-1">{title}</h2>
+                    <h2 className="font-sans font-bold text-h3 text-text-primary mb-1">{title}</h2>
                     <p className="text-xs font-medium uppercase tracking-[0.15em] mb-3 text-accent-primary-400">
                       {tagline}
                     </p>
                     <p className="text-text-secondary text-sm leading-relaxed">{description}</p>
                     <Link
                       href="/contact"
-                      className="inline-flex items-center gap-2 mt-4 text-sm font-medium transition-colors text-accent-primary-400 hover:text-white"
+                      className="inline-flex items-center gap-2 mt-4 text-sm font-medium transition-colors text-accent-primary-400 hover:text-text-primary"
                     >
                       Get a Quote
                       <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -270,7 +270,7 @@ export default function ServicesPage() {
           <AnimatedSection>
           <div className="glass-card p-10 sm:p-14">
             <div className="relative z-10">
-              <h2 className="font-sans font-bold text-h2 text-white mb-4">
+              <h2 className="font-sans font-bold text-h2 text-text-primary mb-4">
                 Looking for a Specific Solution?
               </h2>
               <p className="text-text-secondary text-lg mb-10 max-w-2xl mx-auto">

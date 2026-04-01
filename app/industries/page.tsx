@@ -161,13 +161,13 @@ export default function IndustriesPage() {
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li className="text-white font-medium">Industries</li>
+              <li className="text-text-primary font-medium">Industries</li>
             </ol>
           </nav>
           <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 px-3 py-1 border border-accent-primary-500/15">
             Industry Expertise
           </span>
-          <h1 className="font-sans font-bold text-hero text-white max-w-2xl mb-4">
+          <h1 className="font-sans font-bold text-hero text-text-primary max-w-2xl mb-4">
             Built for <span className="gradient-text">Your Industry</span>
           </h1>
           <p className="text-text-secondary text-lg max-w-xl">
@@ -178,7 +178,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* INDUSTRY QUICK NAV */}
-      <section className="bg-[rgba(5,5,5,0.70)] backdrop-blur-[40px] saturate-[180%] py-4 border-b border-white/[0.06] sticky top-20 z-30">
+      <section className="bg-[var(--nav-bg-scrolled)] backdrop-blur-[40px] saturate-[180%] py-4 border-b border-glass-border sticky top-20 z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav aria-label="Industry sections" className="overflow-x-auto scrollbar-hide">
             <ul className="flex items-center gap-2 min-w-max" role="list">
@@ -212,7 +212,7 @@ export default function IndustriesPage() {
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/10 group-hover:bg-accent-primary-500/20 transition-colors">
                     <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
                   </div>
-                  <h2 className="font-sans font-bold text-h3 text-white mb-1">{title}</h2>
+                  <h2 className="font-sans font-bold text-h3 text-text-primary mb-1">{title}</h2>
                   <p className="text-xs font-medium uppercase tracking-[0.15em] mb-4 text-accent-primary-400">
                     {tagline}
                   </p>
@@ -228,7 +228,7 @@ export default function IndustriesPage() {
                     <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-text-muted mb-2">
                       Our Solution
                     </h3>
-                    <p className="text-white text-sm leading-relaxed">{solution}</p>
+                    <p className="text-text-primary text-sm leading-relaxed">{solution}</p>
                   </div>
                 </div>
 
@@ -256,13 +256,13 @@ export default function IndustriesPage() {
                       </div>
                     </div>
                   )}
-                  <div className="mt-auto p-6 rounded-card bg-white/[0.02] border border-white/[0.06]">
+                  <div className="mt-auto p-6 rounded-card bg-glass-light border border-glass-border">
                     <p className="text-text-secondary text-sm mb-4">
                       Ready to modernize your {title.toLowerCase()} operations?
                     </p>
                     <Link
                       href="/contact"
-                      className="inline-flex items-center gap-2 text-sm font-semibold transition-colors text-accent-primary-400 hover:text-white"
+                      className="inline-flex items-center gap-2 text-sm font-semibold transition-colors text-accent-primary-400 hover:text-text-primary"
                     >
                       Discuss Your Project
                       <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -283,7 +283,7 @@ export default function IndustriesPage() {
           <AnimatedSection>
           <div className="glass-card p-10 sm:p-14">
             <div className="relative z-10">
-              <h2 className="font-sans font-bold text-h2 text-white mb-4">
+              <h2 className="font-sans font-bold text-h2 text-text-primary mb-4">
                 Don&apos;t See Your Industry?
               </h2>
               <p className="text-text-secondary text-lg mb-8 max-w-xl mx-auto">

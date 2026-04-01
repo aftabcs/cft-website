@@ -139,7 +139,7 @@ export default function HomePage() {
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
               What We Build
             </p>
-            <h2 className="font-sans font-bold text-h2 text-white">
+            <h2 className="font-sans font-bold text-h2 text-text-primary">
               End-to-End Technology Services
             </h2>
             <p className="mt-4 text-text-secondary text-lg max-w-2xl mx-auto">
@@ -156,7 +156,7 @@ export default function HomePage() {
                     <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/10 group-hover:bg-accent-primary-500/20 transition-colors">
                       <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
                     </div>
-                    <h3 className="font-semibold text-white text-sm mb-2">{title}</h3>
+                    <h3 className="font-semibold text-text-primary text-sm mb-2">{title}</h3>
                     <p className="text-text-muted text-xs leading-relaxed">{description}</p>
                   </div>
                 </div>
@@ -167,7 +167,7 @@ export default function HomePage() {
           <div className="text-center mt-10">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-accent-primary-400 font-semibold text-sm hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 text-accent-primary-400 font-semibold text-sm hover:text-text-primary transition-colors"
             >
               View all services
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -190,7 +190,7 @@ export default function HomePage() {
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-text-muted mb-3">
               Trusted by
             </p>
-            <h2 className="font-sans font-bold text-h2 text-white">
+            <h2 className="font-sans font-bold text-h2 text-text-primary">
               Global Leaders
             </h2>
             <p className="text-text-secondary mt-2">
@@ -202,7 +202,7 @@ export default function HomePage() {
               {clients.map((client) => (
                 <div
                   key={client}
-                  className="flex items-center justify-center h-16 rounded-btn border border-white/[0.06] px-4 hover:border-accent-primary-500/25 hover:bg-accent-primary-500/5 transition-all duration-200"
+                  className="flex items-center justify-center h-16 rounded-btn border border-glass-border px-4 hover:border-accent-primary-500/25 hover:bg-accent-primary-500/5 transition-all duration-200"
                 >
                   <span className="text-text-secondary font-medium text-sm text-center">{client}</span>
                 </div>
@@ -237,7 +237,7 @@ export default function HomePage() {
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
                 Why CodeFlick
               </p>
-              <h2 className="font-sans font-bold text-h2 text-white mb-6">
+              <h2 className="font-sans font-bold text-h2 text-text-primary mb-6">
                 A Technology Partner You Can Trust
               </h2>
               <p className="text-text-secondary text-lg leading-relaxed mb-8">
@@ -258,7 +258,7 @@ export default function HomePage() {
               <div className="mt-10">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 text-accent-primary-400 font-semibold hover:text-white transition-colors"
+                  className="inline-flex items-center gap-2 text-accent-primary-400 font-semibold hover:text-text-primary transition-colors"
                 >
                   Learn more about us
                   <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -277,7 +277,7 @@ export default function HomePage() {
                   <div className="glass-card p-6 group h-full">
                     <div className="relative z-10">
                       <Icon className="w-8 h-8 text-accent-primary-400 mb-3 group-hover:text-accent-primary-300 transition-colors" aria-hidden="true" />
-                      <p className="font-semibold text-white text-sm mb-1">{label}</p>
+                      <p className="font-semibold text-text-primary text-sm mb-1">{label}</p>
                       <p className="text-text-muted text-xs">{sub}</p>
                     </div>
                   </div>
@@ -295,7 +295,7 @@ export default function HomePage() {
           <AnimatedSection>
             <div className="glass-card p-10 sm:p-14">
               <div className="relative z-10">
-                <h2 className="font-sans font-bold text-h2 text-white mb-4">
+                <h2 className="font-sans font-bold text-h2 text-text-primary mb-4">
                   Ready to Transform Your Business?
                 </h2>
               <p className="text-text-secondary text-lg mb-10 max-w-2xl mx-auto">

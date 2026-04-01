@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
+import { useTheme } from '@/components/ThemeProvider';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -18,6 +19,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -33,7 +35,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || mobileOpen
-          ? 'bg-[rgba(5,5,5,0.70)] backdrop-blur-[40px] saturate-[180%] border-b border-white/[0.08] shadow-nav'
+          ? 'bg-[var(--nav-bg-scrolled)] backdrop-blur-[40px] saturate-[180%] border-b border-[var(--nav-border)] shadow-nav'
           : 'bg-transparent'
       }`}
     >
@@ -58,8 +60,8 @@ export default function Navbar() {
                   href={href}
                   className={`text-sm font-medium transition-colors duration-200 pb-0.5 ${
                     isActive
-                      ? 'text-white border-b-2 border-accent-primary-500'
-                      : 'text-text-muted hover:text-white'
+                      ? 'text-text-primary border-b-2 border-accent-primary-500'
+                      : 'text-text-muted hover:text-text-primary'
                   }`}
                 >
                   {label}
@@ -69,7 +71,18 @@ export default function Navbar() {
           })}
         </ul>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex items-center gap-3">
+          <button
+            onClick={toggleTheme}
+            className="p-2.5 rounded-btn border border-glass-border hover:border-accent-primary-500/30 hover:bg-accent-primary-500/10 text-text-muted hover:text-accent-primary-400 transition-all duration-200"
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {theme === 'dark' ? (
+              <Sun className="w-4 h-4" aria-hidden="true" />
+            ) : (
+              <Moon className="w-4 h-4" aria-hidden="true" />
+            )}
+          </button>
           <Link
             href="/contact"
             className="btn-primary inline-flex items-center gap-2 text-sm !py-2.5 !px-5"
@@ -78,19 +91,32 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <button
-          className="lg:hidden p-2 text-text-muted hover:text-white transition-colors"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-expanded={mobileOpen}
-          aria-controls="mobile-menu"
-          aria-label="Main menu"
-        >
-          {mobileOpen ? (
-            <X className="w-6 h-6" aria-hidden="true" />
-          ) : (
-            <Menu className="w-6 h-6" aria-hidden="true" />
-          )}
-        </button>
+        <div className="lg:hidden flex items-center gap-2">
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-btn border border-glass-border text-text-muted hover:text-accent-primary-400 transition-colors"
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {theme === 'dark' ? (
+              <Sun className="w-5 h-5" aria-hidden="true" />
+            ) : (
+              <Moon className="w-5 h-5" aria-hidden="true" />
+            )}
+          </button>
+          <button
+            className="p-2 text-text-muted hover:text-text-primary transition-colors"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
+            aria-label="Main menu"
+          >
+            {mobileOpen ? (
+              <X className="w-6 h-6" aria-hidden="true" />
+            ) : (
+              <Menu className="w-6 h-6" aria-hidden="true" />
+            )}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>
@@ -101,7 +127,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden bg-[rgba(5,5,5,0.85)] backdrop-blur-[40px] saturate-[180%] border-t border-white/[0.08] overflow-hidden"
+            className="lg:hidden bg-[var(--mobile-menu-bg)] backdrop-blur-[40px] saturate-[180%] border-t border-[var(--nav-border)] overflow-hidden"
           >
             <ul className="flex flex-col px-4 pb-6 pt-4 gap-1" role="list">
               {navLinks.map(({ href, label }) => {
@@ -112,8 +138,8 @@ export default function Navbar() {
                       href={href}
                       className={`block px-4 py-3 text-base font-medium rounded-btn transition-colors ${
                         isActive
-                          ? 'text-white bg-accent-primary-500/10'
-                          : 'text-text-muted hover:text-white hover:bg-white/[0.04]'
+                          ? 'text-text-primary bg-accent-primary-500/10'
+                          : 'text-text-muted hover:text-text-primary hover:bg-glass-light'
                       }`}
                     >
                       {label}

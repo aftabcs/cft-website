@@ -43,7 +43,7 @@ export default function AnimatedAboutStats({ stats }: Props) {
               />
               <CountUp
                 value={value}
-                className="font-sans font-bold text-4xl text-white mb-1 block"
+                className="font-sans font-bold text-4xl text-text-primary mb-1 block"
               />
               <p className="text-text-muted text-sm">{label}</p>
             </div>

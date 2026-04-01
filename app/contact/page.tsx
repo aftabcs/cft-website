@@ -45,13 +45,13 @@ export default function ContactPage() {
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li className="text-white font-medium">Contact</li>
+              <li className="text-text-primary font-medium">Contact</li>
             </ol>
           </nav>
           <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 px-3 py-1 border border-accent-primary-500/15">
             Get in Touch
           </span>
-          <h1 className="font-sans font-bold text-hero text-white max-w-2xl mb-4">
+          <h1 className="font-sans font-bold text-hero text-text-primary max-w-2xl mb-4">
             Let&apos;s Build Something{' '}
             <span className="gradient-text">Together</span>
           </h1>
@@ -67,7 +67,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             <div className="lg:col-span-2 space-y-8">
               <div>
-                <h2 className="font-sans font-bold text-h3 text-white mb-2">
+                <h2 className="font-sans font-bold text-h3 text-text-primary mb-2">
                   Contact Information
                 </h2>
                 <p className="text-text-secondary text-sm">
@@ -88,7 +88,7 @@ export default function ContactPage() {
                     <p className="text-xs font-semibold uppercase tracking-[0.15em] text-text-muted mb-0.5">
                       Email
                     </p>
-                    <p className="text-white text-sm font-medium group-hover:text-accent-primary-400 transition-colors">
+                    <p className="text-text-primary text-sm font-medium group-hover:text-accent-primary-400 transition-colors">
                       info@codeftech.com
                     </p>
                   </div>
@@ -102,8 +102,8 @@ export default function ContactPage() {
                     <p className="text-xs font-semibold uppercase tracking-[0.15em] text-text-muted mb-0.5">
                       Phone
                     </p>
-                    <p className="text-white text-sm">+91 7987421429</p>
-                    <p className="text-white text-sm">+91 9807950347</p>
+                    <p className="text-text-primary text-sm">+91 7987421429</p>
+                    <p className="text-text-primary text-sm">+91 9807950347</p>
                   </div>
                 </div>
 
@@ -115,7 +115,7 @@ export default function ContactPage() {
                     <p className="text-xs font-semibold uppercase tracking-[0.15em] text-text-muted mb-0.5">
                       India Office (HQ)
                     </p>
-                    <p className="text-white text-sm">Bhopal, Madhya Pradesh, India</p>
+                    <p className="text-text-primary text-sm">Bhopal, Madhya Pradesh, India</p>
                   </div>
                 </div>
 
@@ -127,8 +127,8 @@ export default function ContactPage() {
                     <p className="text-xs font-semibold uppercase tracking-[0.15em] text-text-muted mb-0.5">
                       Qatar Office
                     </p>
-                    <p className="text-white text-sm">Alsaad Street, Doha, Qatar</p>
-                    <p className="text-white text-sm">+974 5540 2909</p>
+                    <p className="text-text-primary text-sm">Alsaad Street, Doha, Qatar</p>
+                    <p className="text-text-primary text-sm">+974 5540 2909</p>
                   </div>
                 </div>
               </div>
@@ -149,7 +149,7 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`CodeFlick Technologies on ${label}`}
-                      className="w-10 h-10 rounded-btn bg-white/[0.04] border border-white/[0.06] flex items-center justify-center text-text-muted hover:text-accent-primary-400 hover:border-accent-primary-500/30 hover:bg-accent-primary-500/10 transition-all duration-200"
+                      className="w-10 h-10 rounded-btn bg-glass-light border border-glass-border flex items-center justify-center text-text-muted hover:text-accent-primary-400 hover:border-accent-primary-500/30 hover:bg-accent-primary-500/10 transition-all duration-200"
                     >
                       <Icon className="w-4 h-4" aria-hidden="true" />
                     </a>
@@ -160,7 +160,7 @@ export default function ContactPage() {
               <div className="glass-card p-5">
                 <div className="relative z-10 flex items-start gap-3">
                   <div className="w-8 h-8 rounded-lg bg-gradient-cta flex items-center justify-center flex-shrink-0 mt-0.5 shadow-glow-red-sm">
-                    <Zap className="w-4 h-4 text-white" fill="currentColor" aria-hidden="true" />
+                    <Zap className="w-4 h-4 text-text-primary" fill="currentColor" aria-hidden="true" />
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed">
                     <span className="font-semibold text-accent-primary-400">Free consultation:</span>{' '}
@@ -174,7 +174,7 @@ export default function ContactPage() {
             <div className="lg:col-span-3">
               <div className="glass-card p-8">
                 <div className="relative z-10">
-                  <h2 className="font-sans font-bold text-h3 text-white mb-6">
+                  <h2 className="font-sans font-bold text-h3 text-text-primary mb-6">
                     Send Us a Message
                   </h2>
                   <ContactForm />

@@ -6,14 +6,15 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         bg: {
-          base: '#050505',
-          surface: '#0A0A0A',
-          elevated: '#111111',
-          overlay: '#1A1A1A',
+          base: 'var(--bg-base)',
+          surface: 'var(--bg-surface)',
+          elevated: 'var(--bg-elevated)',
+          overlay: 'var(--bg-overlay)',
         },
         accent: {
           primary: {
@@ -25,18 +26,18 @@ const config: Config = {
           },
         },
         glass: {
-          light: 'rgba(255,255,255,0.06)',
-          medium: 'rgba(255,255,255,0.10)',
-          heavy: 'rgba(255,255,255,0.16)',
-          border: 'rgba(255,255,255,0.12)',
-          'border-hover': 'rgba(255,255,255,0.22)',
+          light: 'var(--glass-light)',
+          medium: 'var(--glass-medium)',
+          heavy: 'var(--glass-heavy)',
+          border: 'var(--glass-border)',
+          'border-hover': 'var(--glass-border-hover)',
           'border-accent': 'rgba(225,29,72,0.30)',
         },
         text: {
-          primary: '#FFFFFF',
-          secondary: '#D4D4D4',
-          muted: '#888888',
-          subtle: '#555555',
+          primary: 'var(--text-primary)',
+          secondary: 'var(--text-secondary)',
+          muted: 'var(--text-muted)',
+          subtle: 'var(--text-subtle)',
         },
       },
       fontFamily: {
@@ -50,7 +51,7 @@ const config: Config = {
         h3: ['1.625rem', { lineHeight: '1.2', letterSpacing: '-0.02em', fontWeight: '700' }],
       },
       backgroundImage: {
-        'gradient-hero-text': 'linear-gradient(135deg, #FFFFFF 0%, #F43F5E 50%, #E11D48 100%)',
+        'gradient-hero-text': 'var(--gradient-hero-text)',
         'gradient-cta': 'linear-gradient(135deg, #E11D48 0%, #BE123C 50%, #9F1239 100%)',
         'gradient-cta-hover': 'linear-gradient(135deg, #F43F5E 0%, #E11D48 50%, #BE123C 100%)',
         'glass-sheen': 'linear-gradient(180deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.02) 40%, rgba(255,255,255,0) 100%)',
@@ -62,14 +63,14 @@ const config: Config = {
         btn: '10px',
       },
       boxShadow: {
-        glass: '0 8px 32px rgba(0,0,0,0.60), inset 0 1px 0 rgba(255,255,255,0.10), inset 0 0 20px rgba(255,255,255,0.02)',
-        'glass-hover': '0 16px 48px rgba(0,0,0,0.70), 0 0 40px rgba(225,29,72,0.08), inset 0 1px 0 rgba(255,255,255,0.18), inset 0 0 30px rgba(255,255,255,0.04)',
-        neo: '8px 8px 24px rgba(0,0,0,0.70), -4px -4px 16px rgba(255,255,255,0.02)',
+        glass: 'var(--shadow-glass)',
+        'glass-hover': 'var(--shadow-glass-hover)',
+        neo: 'var(--shadow-neo)',
         'glow-red': '0 0 60px rgba(225,29,72,0.20), 0 0 120px rgba(225,29,72,0.08)',
         'glow-red-sm': '0 0 30px rgba(225,29,72,0.15)',
         'btn-primary': '0 4px 20px rgba(225,29,72,0.30), 0 0 40px rgba(225,29,72,0.10), inset 0 1px 0 rgba(255,255,255,0.15)',
         'btn-primary-hover': '0 8px 36px rgba(225,29,72,0.40), 0 0 60px rgba(225,29,72,0.15), inset 0 1px 0 rgba(255,255,255,0.20)',
-        nav: '0 1px 0 rgba(255,255,255,0.06)',
+        nav: 'var(--shadow-nav)',
         'code-float': '0 8px 32px rgba(0,0,0,0.80), 0 0 20px rgba(225,29,72,0.06)',
       },
       animation: {

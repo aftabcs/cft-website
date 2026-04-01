@@ -91,7 +91,7 @@ export default function HomeAnimations({ clients }: Props) {
         >
           <span className="text-accent-primary-400">CodeFlick</span>
           <br />
-          <span className="text-white">Technologies.</span>
+          <span className="text-text-primary">Technologies.</span>
         </motion.h1>
 
         <motion.p
@@ -117,7 +117,7 @@ export default function HomeAnimations({ clients }: Props) {
           </Link>
         </motion.div>
 
-        <motion.div variants={fadeUpVariant} className="mt-20 pt-8 border-t border-white/[0.06]">
+        <motion.div variants={fadeUpVariant} className="mt-20 pt-8 border-t border-glass-border">
           <p className="text-xs font-semibold text-text-muted uppercase tracking-[0.2em] mb-6">
             Trusted by global leaders
           </p>

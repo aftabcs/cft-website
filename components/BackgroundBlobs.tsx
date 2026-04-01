@@ -39,7 +39,7 @@ export default function BackgroundBlobs({ page }: { page: keyof typeof blobConfi
   const blobs = blobConfigs[page] ?? blobConfigs.home;
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none dark:opacity-100 opacity-50 transition-opacity duration-300" aria-hidden="true">
       {blobs.map((blob, i) => (
         <div
           key={i}

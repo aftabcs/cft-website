@@ -20,11 +20,11 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-base border-t border-white/[0.06] relative overflow-hidden">
+    <footer className="bg-bg-base border-t border-glass-border relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-primary-500/30 to-transparent" aria-hidden="true" />
 
       <div
-        className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none"
+        className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none dark:opacity-100 opacity-50"
         style={{ background: 'radial-gradient(circle, #E11D48 0%, transparent 70%)', filter: 'blur(180px)', opacity: 0.04 }}
         aria-hidden="true"
       />
@@ -54,7 +54,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`CodeFlick Technologies on ${label}`}
-                  className="w-9 h-9 rounded-btn bg-white/[0.04] border border-white/[0.06] flex items-center justify-center text-text-muted hover:text-accent-primary-400 hover:border-accent-primary-500/30 hover:bg-accent-primary-500/10 transition-all duration-200"
+                  className="w-9 h-9 rounded-btn bg-glass-light border border-glass-border flex items-center justify-center text-text-muted hover:text-accent-primary-400 hover:border-accent-primary-500/30 hover:bg-accent-primary-500/10 transition-all duration-200"
                 >
                   <Icon className="w-4 h-4" aria-hidden="true" />
                 </a>
@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xs font-semibold text-white uppercase tracking-[0.2em] mb-4">
+            <h3 className="text-xs font-semibold text-text-primary uppercase tracking-[0.2em] mb-4">
               Company
             </h3>
             <ul className="space-y-3" role="list">
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xs font-semibold text-white uppercase tracking-[0.2em] mb-4">
+            <h3 className="text-xs font-semibold text-text-primary uppercase tracking-[0.2em] mb-4">
               Services
             </h3>
             <ul className="space-y-3" role="list">
@@ -99,14 +99,14 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xs font-semibold text-white uppercase tracking-[0.2em] mb-4">
+            <h3 className="text-xs font-semibold text-text-primary uppercase tracking-[0.2em] mb-4">
               Contact
             </h3>
             <ul className="space-y-4" role="list">
               <li>
                 <a
                   href="mailto:info@codeftech.com"
-                  className="flex items-start gap-3 text-text-muted text-sm hover:text-white transition-colors group"
+                  className="flex items-start gap-3 text-text-muted text-sm hover:text-text-primary transition-colors group"
                 >
                   <Mail className="w-4 h-4 mt-0.5 text-accent-primary-500 flex-shrink-0" aria-hidden="true" />
                   <span>info@codeftech.com</span>
@@ -115,7 +115,7 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+917987421429"
-                  className="flex items-start gap-3 text-text-muted text-sm hover:text-white transition-colors group"
+                  className="flex items-start gap-3 text-text-muted text-sm hover:text-text-primary transition-colors group"
                 >
                   <Phone className="w-4 h-4 mt-0.5 text-accent-primary-500 flex-shrink-0" aria-hidden="true" />
                   <span>+91 7987421429</span>
@@ -131,7 +131,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/[0.04] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="border-t border-glass-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-text-subtle text-sm">
             &copy; {new Date().getFullYear()} CodeFlick Technologies. All rights reserved.
           </p>
