@@ -20,7 +20,7 @@ import AnimatedSection from '@/components/AnimatedSection';
 export const metadata: Metadata = {
   title: 'Industries We Serve',
   description:
-    'CodeFlick Technologies serves Banking, FinTech, E-commerce, Manufacturing, CRM, Healthcare, Government, Aviation, Logistics, and Startups — delivering specialized IT solutions for every sector.',
+    'Code Flick Technologies serves Banking, FinTech, E-commerce, Manufacturing, CRM, Healthcare, Government, Aviation, Logistics, and Startups — delivering specialized IT solutions for every sector.',
 };
 
 const industries = [

@@ -21,7 +21,7 @@ import AnimatedServiceCard from '@/components/AnimatedServiceCard';
 import AnimatedSection from '@/components/AnimatedSection';
 
 export const metadata: Metadata = {
-  title: 'CodeFlick Technologies — From Software to AI, We Build Everything',
+  title: 'Code Flick Technologies — From Software to AI, We Build Everything',
   description:
     'End-to-end IT solutions across AI, Automation, FinTech, E-commerce, Manufacturing, CRM, and Healthcare. Trusted by Ajman Bank, Qatar Airways, and global enterprises.',
 };
@@ -99,18 +99,18 @@ const whyUs = [
   'Deep domain expertise — AI, Automation, FinTech, E-commerce, Manufacturing, CRM, Healthcare',
   'Global client base — Ajman Bank, NBI, Qatar Airways, Government of India, and more',
   'End-to-end IT solutions — from strategy to execution, software to AI',
-  'Global presence — offices in India (Bhopal) and Qatar (Doha)',
+  'Global presence — offices in Bhopal, Lucknow (India) and Doha (Qatar)',
 ];
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'CodeFlick Technologies',
+  name: 'Code Flick Technologies',
   url: 'https://codeftech.com',
   logo: 'https://codeftech.com/logo.png',
   email: 'info@codeftech.com',
   description:
-    'CodeFlick Technologies delivers end-to-end IT solutions across AI, Automation, FinTech, E-commerce, Manufacturing, CRM, and Healthcare.',
+    'Code Flick Technologies delivers end-to-end IT solutions across AI, Automation, FinTech, E-commerce, Manufacturing, CRM, and Healthcare.',
   slogan: 'From Software to AI — We Build Everything',
   areaServed: ['Middle East', 'Africa', 'South Asia', 'Europe'],
   sameAs: ['https://linkedin.com', 'https://twitter.com'],
@@ -235,7 +235,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3">
-                Why CodeFlick
+                Why Code Flick
               </p>
               <h2 className="font-sans font-bold text-h2 text-text-primary mb-6">
                 A Technology Partner You Can Trust
@@ -299,7 +299,7 @@ export default function HomePage() {
                   Ready to Transform Your Business?
                 </h2>
               <p className="text-text-secondary text-lg mb-10 max-w-2xl mx-auto">
-                Talk to our experts and discover how CodeFlick Technologies can accelerate your digital
+                Talk to our experts and discover how Code Flick Technologies can accelerate your digital
                 journey.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

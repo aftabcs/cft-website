@@ -89,7 +89,7 @@ export default function HomeAnimations({ clients }: Props) {
           variants={fadeUpVariant}
           className="font-sans font-black text-5xl sm:text-6xl xl:text-display leading-[0.95] mb-6 tracking-tight"
         >
-          <span className="text-accent-primary-400">CodeFlick</span>
+          <span className="text-accent-primary-400">Code Flick</span>
           <br />
           <span className="text-text-primary">Technologies.</span>
         </motion.h1>

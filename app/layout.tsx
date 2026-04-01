@@ -20,32 +20,32 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'CodeFlick Technologies — From Software to AI, We Build Everything',
-    template: '%s | CodeFlick Technologies',
+    default: 'Code Flick Technologies — From Software to AI, We Build Everything',
+    template: '%s | Code Flick Technologies',
   },
   description:
-    'CodeFlick Technologies delivers end-to-end IT solutions across AI, Automation, FinTech, E-commerce, Healthcare, and more. Trusted by Ajman Bank, Qatar Airways, Government of Uganda, and leading enterprises worldwide.',
+    'Code Flick Technologies delivers end-to-end IT solutions across AI, Automation, FinTech, E-commerce, Healthcare, and more. Trusted by Ajman Bank, Qatar Airways, Government of Uganda, and leading enterprises worldwide.',
   keywords: [
     'IT solutions',
     'AI development',
     'FinTech',
     'digital transformation',
     'software development',
-    'CodeFlick Technologies',
+    'Code Flick Technologies',
     'codeftech',
     'automation',
     'machine learning',
     'enterprise software',
   ],
-  authors: [{ name: 'CodeFlick Technologies' }],
-  creator: 'CodeFlick Technologies',
+  authors: [{ name: 'Code Flick Technologies' }],
+  creator: 'Code Flick Technologies',
   metadataBase: new URL('https://codeftech.com'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://codeftech.com',
-    siteName: 'CodeFlick Technologies',
-    title: 'CodeFlick Technologies — From Software to AI, We Build Everything',
+    siteName: 'Code Flick Technologies',
+    title: 'Code Flick Technologies — From Software to AI, We Build Everything',
     description:
       'End-to-end IT solutions across AI, Automation, FinTech, and Enterprise systems. Trusted by global leaders.',
     images: [
@@ -53,13 +53,13 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'CodeFlick Technologies',
+        alt: 'Code Flick Technologies',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CodeFlick Technologies',
+    title: 'Code Flick Technologies',
     description: 'From Software to AI — We Build Everything',
     images: ['/og-image.png'],
   },

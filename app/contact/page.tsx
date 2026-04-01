@@ -7,18 +7,18 @@ import BackgroundBlobs from '@/components/BackgroundBlobs';
 export const metadata: Metadata = {
   title: 'Contact Us',
   description:
-    'Get in touch with CodeFlick Technologies. Tell us about your project and our experts will respond within 24 hours. Free initial consultation available.',
+    'Get in touch with Code Flick Technologies. Tell us about your project and our experts will respond within 24 hours. Free initial consultation available.',
 };
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
-  name: 'CodeFlick Technologies — Contact',
+  name: 'Code Flick Technologies — Contact',
   url: 'https://codeftech.com/contact',
-  description: 'Contact CodeFlick Technologies for IT solutions, AI, FinTech, and digital transformation.',
+  description: 'Contact Code Flick Technologies for IT solutions, AI, FinTech, and digital transformation.',
   mainEntity: {
     '@type': 'Organization',
-    name: 'CodeFlick Technologies',
+    name: 'Code Flick Technologies',
     url: 'https://codeftech.com',
     email: 'info@codeftech.com',
     sameAs: ['https://linkedin.com', 'https://twitter.com'],
@@ -127,8 +127,8 @@ export default function ContactPage() {
                     <p className="text-xs font-semibold uppercase tracking-[0.15em] text-text-muted mb-0.5">
                       Qatar Office
                     </p>
-                    <p className="text-text-primary text-sm">Alsaad Street, Doha, Qatar</p>
-                    <a href="tel:+97455402909" className="block text-text-primary text-sm hover:text-accent-primary-400 transition-colors">+974 5540 2909</a>
+                    <p className="text-text-primary text-sm">Al Sadd, Doha, Qatar</p>
+                    <a href="tel:+97455258998" className="block text-text-primary text-sm hover:text-accent-primary-400 transition-colors">+974 5525 8998</a>
                   </div>
                 </div>
               </div>
@@ -148,7 +148,7 @@ export default function ContactPage() {
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={`CodeFlick Technologies on ${label}`}
+                      aria-label={`Code Flick Technologies on ${label}`}
                       className="w-10 h-10 rounded-btn neo-badge flex items-center justify-center text-text-muted hover:text-accent-primary-400 transition-all duration-200"
                     >
                       <Icon className="w-4 h-4" aria-hidden="true" />

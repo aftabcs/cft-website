@@ -20,7 +20,7 @@ import AnimatedSection from '@/components/AnimatedSection';
 export const metadata: Metadata = {
   title: 'IT Services',
   description:
-    'Comprehensive IT services from CodeFlick Technologies: AI & Machine Learning, Automation, Software Development, FinTech, E-commerce, Manufacturing, CRM, Healthcare, Cloud & Infrastructure, and Data & Analytics.',
+    'Comprehensive IT services from Code Flick Technologies: AI & Machine Learning, Automation, Software Development, FinTech, E-commerce, Manufacturing, CRM, Healthcare, Cloud & Infrastructure, and Data & Analytics.',
 };
 
 const serviceCategories = [

@@ -34,12 +34,12 @@ export default function Footer() {
             <Link href="/" className="flex items-center mb-5 group w-fit">
               <img
                 src="/logo.svg"
-                alt="CodeFlick Technologies"
+                alt="Code Flick Technologies"
                 className="h-10 w-auto drop-shadow-[0_0_15px_rgba(225,29,72,0.10)] hidden dark:block"
               />
               <img
                 src="/logo-light.svg"
-                alt="CodeFlick Technologies"
+                alt="Code Flick Technologies"
                 className="h-10 w-auto drop-shadow-[0_0_15px_rgba(225,29,72,0.10)] block dark:hidden"
               />
             </Link>
@@ -57,7 +57,7 @@ export default function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`CodeFlick Technologies on ${label}`}
+                  aria-label={`Code Flick Technologies on ${label}`}
                   className="w-9 h-9 rounded-btn neo-badge flex items-center justify-center text-text-muted hover:text-accent-primary-400 transition-all duration-200"
                 >
                   <Icon className="w-4 h-4" aria-hidden="true" />
@@ -137,7 +137,7 @@ export default function Footer() {
               <li>
                 <div className="flex items-start gap-3 text-text-muted text-sm">
                   <MapPin className="w-4 h-4 mt-0.5 text-accent-primary-500 flex-shrink-0" aria-hidden="true" />
-                  <span>Bhopal, India &middot; Doha, Qatar</span>
+                  <span>India &middot; Qatar</span>
                 </div>
               </li>
             </ul>
@@ -146,7 +146,7 @@ export default function Footer() {
 
         <div className="border-t border-glass-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-text-subtle text-sm">
-            &copy; {new Date().getFullYear()} CodeFlick Technologies. All rights reserved.
+            &copy; {new Date().getFullYear()} Code Flick Technologies. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="text-text-muted text-sm hover:text-accent-primary-400 transition-colors">

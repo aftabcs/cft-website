@@ -17,7 +17,7 @@ import AnimatedSection from '@/components/AnimatedSection';
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'CodeFlick Technologies — a core IT solutions company with 15+ years of expertise delivering AI, FinTech, Automation, and Enterprise software to global leaders including Ajman Bank, Qatar Airways, and governments worldwide.',
+    'Code Flick Technologies — a core IT solutions company with 15+ years of expertise delivering AI, FinTech, Automation, and Enterprise software to global leaders including Ajman Bank, Qatar Airways, and governments worldwide.',
 };
 
 const expertise = [
@@ -148,7 +148,7 @@ export default function AboutPage() {
                 A Core IT Solutions Company
               </h2>
               <p className="text-text-secondary text-lg leading-relaxed mb-6">
-                <strong className="text-text-primary">CodeFlick Technologies</strong> is a core IT solutions company providing
+                <strong className="text-text-primary">Code Flick Technologies</strong> is a core IT solutions company providing
                 end-to-end technology services across multiple industries and domains. With deep
                 expertise across all technology disciplines — including Software Development,
                 Artificial Intelligence, Machine Learning, Automation, Cloud Computing, Data
@@ -242,11 +242,10 @@ export default function AboutPage() {
               Global Presence
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="glass-card p-6 group">
               <div className="relative z-10">
-                <h3 className="font-semibold text-text-primary text-base mb-2">India</h3>
-                <p className="text-text-secondary text-sm mb-1">Bhopal, Madhya Pradesh, India</p>
+                <h3 className="font-semibold text-text-primary text-base mb-2">Bhopal, India</h3>
                 <p className="text-text-muted text-xs mb-1">Core Development, AI Research, Global Operations</p>
                 <a href="tel:+917987421429" className="block text-accent-primary-400 text-sm mt-3 hover:text-accent-primary-300 transition-colors">+91 7987421429</a>
                 <a href="tel:+917376766613" className="block text-accent-primary-400 text-sm hover:text-accent-primary-300 transition-colors">+91 7376766613</a>
@@ -254,10 +253,15 @@ export default function AboutPage() {
             </div>
             <div className="glass-card p-6 group">
               <div className="relative z-10">
-                <h3 className="font-semibold text-text-primary text-base mb-2">Qatar</h3>
-                <p className="text-text-secondary text-sm mb-1">Alsaad Street, Doha, Qatar</p>
+                <h3 className="font-semibold text-text-primary text-base mb-2">Lucknow, India</h3>
+                <p className="text-text-muted text-xs mb-1">Development Center, Engineering Operations</p>
+              </div>
+            </div>
+            <div className="glass-card p-6 group">
+              <div className="relative z-10">
+                <h3 className="font-semibold text-text-primary text-base mb-2">Doha, Qatar</h3>
                 <p className="text-text-muted text-xs mb-1">Middle East Sales, Client Success, Strategic Partnerships</p>
-                <a href="tel:+97455402909" className="block text-accent-primary-400 text-sm mt-3 hover:text-accent-primary-300 transition-colors">+974 5540 2909</a>
+                <a href="tel:+97455258998" className="block text-accent-primary-400 text-sm mt-3 hover:text-accent-primary-300 transition-colors">+974 5525 8998</a>
               </div>
             </div>
           </div>
