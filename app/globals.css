@@ -34,7 +34,13 @@
     --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255,255,255,0.80), inset 0 0 20px rgba(255,255,255,0.10);
     --shadow-glass-hover: 0 16px 48px rgba(0, 0, 0, 0.10), 0 0 50px rgba(225,29,72,0.05), inset 0 1px 0 rgba(255,255,255,0.90), inset 0 0 30px rgba(255,255,255,0.10);
     --shadow-neo: 8px 8px 24px rgba(0, 0, 0, 0.08), -4px -4px 16px rgba(255, 255, 255, 0.80);
+    --shadow-neo-sm: 4px 4px 12px rgba(0, 0, 0, 0.06), -2px -2px 8px rgba(255, 255, 255, 0.70);
+    --shadow-neo-inset: inset 3px 3px 8px rgba(0, 0, 0, 0.06), inset -2px -2px 6px rgba(255, 255, 255, 0.80);
+    --shadow-neo-pressed: inset 4px 4px 12px rgba(0, 0, 0, 0.08), inset -3px -3px 8px rgba(255, 255, 255, 0.70);
     --shadow-nav: 0 1px 0 rgba(0, 0, 0, 0.06);
+
+    --neo-bg: #EDEDF0;
+    --neo-bg-hover: #E4E4E8;
 
     --nav-bg-scrolled: rgba(248, 248, 250, 0.80);
     --nav-border: rgba(0, 0, 0, 0.06);
@@ -91,7 +97,13 @@
     --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.60), inset 0 1px 0 rgba(255,255,255,0.10), inset 0 0 20px rgba(255,255,255,0.02);
     --shadow-glass-hover: 0 16px 48px rgba(0, 0, 0, 0.70), 0 0 50px rgba(225,29,72,0.08), inset 0 1px 0 rgba(255,255,255,0.18), inset 0 0 30px rgba(225,29,72,0.03);
     --shadow-neo: 8px 8px 24px rgba(0, 0, 0, 0.70), -4px -4px 16px rgba(255, 255, 255, 0.02);
+    --shadow-neo-sm: 4px 4px 12px rgba(0, 0, 0, 0.50), -2px -2px 8px rgba(255, 255, 255, 0.03);
+    --shadow-neo-inset: inset 3px 3px 8px rgba(0, 0, 0, 0.50), inset -2px -2px 6px rgba(255, 255, 255, 0.04);
+    --shadow-neo-pressed: inset 4px 4px 12px rgba(0, 0, 0, 0.60), inset -3px -3px 8px rgba(255, 255, 255, 0.03);
     --shadow-nav: 0 1px 0 rgba(255, 255, 255, 0.06);
+
+    --neo-bg: #0E0E0E;
+    --neo-bg-hover: #141414;
 
     --nav-bg-scrolled: rgba(5, 5, 5, 0.70);
     --nav-border: rgba(255, 255, 255, 0.08);
@@ -195,6 +207,60 @@
     border-top: 1px solid var(--glass-card-border-top);
     border-radius: 20px;
     box-shadow: var(--shadow-neo);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .neo-card:hover {
+    box-shadow: var(--shadow-neo), 0 0 30px rgba(225, 29, 72, 0.05);
+    transform: translateY(-2px);
+  }
+
+  .neo-input {
+    background: var(--neo-bg);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: var(--shadow-neo-inset);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .neo-input:focus {
+    box-shadow: var(--shadow-neo-inset), 0 0 0 3px rgba(225, 29, 72, 0.10);
+    border-color: rgba(225, 29, 72, 0.30);
+    outline: none;
+  }
+
+  .neo-input:hover:not(:focus) {
+    background: var(--neo-bg-hover);
+  }
+
+  .neo-badge {
+    background: var(--neo-bg);
+    border: 1px solid var(--glass-card-border);
+    border-radius: 10px;
+    box-shadow: var(--shadow-neo-sm);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .neo-badge:hover {
+    box-shadow: var(--shadow-neo-sm), 0 0 20px rgba(225, 29, 72, 0.06);
+    border-color: rgba(225, 29, 72, 0.20);
+  }
+
+  .neo-icon-box {
+    background: var(--neo-bg);
+    border-radius: 10px;
+    box-shadow: var(--shadow-neo-sm);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .neo-icon-box:hover {
+    box-shadow: var(--shadow-neo-sm), 0 0 15px rgba(225, 29, 72, 0.08);
+  }
+
+  .glass-footer {
+    background: var(--glass-card-bg);
+    backdrop-filter: blur(30px) saturate(150%);
+    -webkit-backdrop-filter: blur(30px) saturate(150%);
   }
 
   .btn-primary {

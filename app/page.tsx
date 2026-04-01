@@ -153,7 +153,7 @@ export default function HomePage() {
               <AnimatedServiceCard key={title} index={i}>
                 <div className="glass-card p-6 group h-full">
                   <div className="relative z-10">
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/10 group-hover:bg-accent-primary-500/20 transition-colors">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 neo-icon-box">
                       <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
                     </div>
                     <h3 className="font-semibold text-text-primary text-sm mb-2">{title}</h3>
@@ -202,7 +202,7 @@ export default function HomePage() {
               {clients.map((client) => (
                 <div
                   key={client}
-                  className="flex items-center justify-center h-16 rounded-btn border border-glass-border px-4 hover:border-accent-primary-500/25 hover:bg-accent-primary-500/5 transition-all duration-200"
+                  className="flex items-center justify-center h-16 rounded-btn neo-badge px-4 transition-all duration-200"
                 >
                   <span className="text-text-secondary font-medium text-sm text-center">{client}</span>
                 </div>

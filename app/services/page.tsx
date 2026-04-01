@@ -218,7 +218,7 @@ export default function ServicesPage() {
                 >
                 <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
                   <div className="lg:col-span-1">
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/10 group-hover:bg-accent-primary-500/20 transition-colors">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 neo-icon-box">
                       <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
                     </div>
                     <h2 className="font-sans font-bold text-h3 text-text-primary mb-1">{title}</h2>

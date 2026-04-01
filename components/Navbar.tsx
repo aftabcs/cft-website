@@ -35,7 +35,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || mobileOpen
-          ? 'bg-[var(--nav-bg-scrolled)] backdrop-blur-[40px] saturate-[180%] border-b border-[var(--nav-border)] shadow-nav'
+          ? 'bg-[var(--nav-bg-scrolled)] backdrop-blur-[40px] saturate-[180%] border-b border-[var(--nav-border)] shadow-nav shadow-[0_4px_30px_rgba(0,0,0,0.1)]'
           : 'bg-transparent'
       }`}
     >
@@ -74,7 +74,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-3">
           <button
             onClick={toggleTheme}
-            className="p-2.5 rounded-btn border border-glass-border hover:border-accent-primary-500/30 hover:bg-accent-primary-500/10 text-text-muted hover:text-accent-primary-400 transition-all duration-200"
+            className="p-2.5 rounded-btn neo-badge text-text-muted hover:text-accent-primary-400 transition-all duration-200"
             aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           >
             {theme === 'dark' ? (

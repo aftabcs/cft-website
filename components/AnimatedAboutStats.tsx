@@ -34,13 +34,15 @@ export default function AnimatedAboutStats({ stats }: Props) {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.5, delay: i * 0.12, ease: 'easeOut' }}
-            className="glass-card p-6 text-center group"
+            className="neo-card p-6 text-center group"
           >
             <div className="relative z-10">
-              <Icon
-                className="w-8 h-8 text-accent-primary-400 mx-auto mb-3 group-hover:text-accent-primary-300 transition-colors"
-                aria-hidden="true"
-              />
+              <div className="neo-icon-box w-14 h-14 flex items-center justify-center mx-auto mb-3">
+                <Icon
+                  className="w-7 h-7 text-accent-primary-400 group-hover:text-accent-primary-300 transition-colors"
+                  aria-hidden="true"
+                />
+              </div>
               <CountUp
                 value={value}
                 className="font-sans font-bold text-4xl text-text-primary mb-1 block"

@@ -178,7 +178,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* INDUSTRY QUICK NAV */}
-      <section className="bg-[var(--nav-bg-scrolled)] backdrop-blur-[40px] saturate-[180%] py-4 border-b border-glass-border sticky top-20 z-30">
+      <section className="bg-[var(--nav-bg-scrolled)] backdrop-blur-[40px] saturate-[180%] py-4 border-b border-glass-border sticky top-20 z-30 shadow-[0_4px_30px_rgba(0,0,0,0.08)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav aria-label="Industry sections" className="overflow-x-auto scrollbar-hide">
             <ul className="flex items-center gap-2 min-w-max" role="list">
@@ -209,7 +209,7 @@ export default function IndustriesPage() {
               >
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/10 group-hover:bg-accent-primary-500/20 transition-colors">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 neo-icon-box">
                     <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
                   </div>
                   <h2 className="font-sans font-bold text-h3 text-text-primary mb-1">{title}</h2>
@@ -248,7 +248,7 @@ export default function IndustriesPage() {
                         {clients.map((client) => (
                           <span
                             key={client}
-                            className="px-3 py-1.5 rounded-chip bg-accent-primary-500/8 border border-accent-primary-500/15 text-text-secondary text-xs font-medium"
+                            className="px-3 py-1.5 rounded-chip neo-badge text-text-secondary text-xs font-medium"
                           >
                             {client}
                           </span>
@@ -256,7 +256,7 @@ export default function IndustriesPage() {
                       </div>
                     </div>
                   )}
-                  <div className="mt-auto p-6 rounded-card bg-glass-light border border-glass-border">
+                  <div className="mt-auto p-6 rounded-card neo-card">
                     <p className="text-text-secondary text-sm mb-4">
                       Ready to modernize your {title.toLowerCase()} operations?
                     </p>

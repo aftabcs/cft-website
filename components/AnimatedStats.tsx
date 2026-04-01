@@ -14,7 +14,7 @@ type Props = {
 
 export default function AnimatedStats({ stats }: Props) {
   return (
-    <div className="glass-card p-8 sm:p-12">
+    <div className="neo-card p-8 sm:p-12">
       <div className="relative z-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
         {stats.map(({ value, label }, i) => (
           <motion.div

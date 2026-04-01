@@ -102,10 +102,10 @@ export default function ContactForm() {
   }
 
   const inputClass = (field: keyof FormState) =>
-    `w-full px-4 py-3 bg-bg-surface backdrop-blur-sm border rounded-[10px] text-text-primary placeholder:text-text-subtle text-sm transition-all focus:outline-none ${
+    `w-full px-4 py-3 neo-input text-text-primary placeholder:text-text-subtle text-sm ${
       errors[field]
-        ? 'border-accent-primary-500 focus:border-accent-primary-400 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.15)]'
-        : 'border-glass-border focus:border-accent-primary-500 focus:shadow-[0_0_0_3px_rgba(225,29,72,0.10)] hover:border-glass-border-hover'
+        ? '!border-accent-primary-500 !shadow-[var(--shadow-neo-inset),0_0_0_3px_rgba(225,29,72,0.15)]'
+        : ''
     }`;
 
   const labelClass = 'block text-sm font-medium text-text-secondary mb-1.5';

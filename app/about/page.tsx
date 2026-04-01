@@ -207,7 +207,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
             <div className="glass-card p-6 text-center group">
               <div className="relative z-10">
-                <div className="w-16 h-16 rounded-full bg-accent-primary-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent-primary-500/20 transition-colors">
+                <div className="w-16 h-16 rounded-full neo-icon-box flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-accent-primary-400" aria-hidden="true" />
                 </div>
                 <h3 className="font-semibold text-text-primary text-lg mb-1">Zen Hadi</h3>
@@ -218,7 +218,7 @@ export default function AboutPage() {
             </div>
             <div className="glass-card p-6 text-center group">
               <div className="relative z-10">
-                <div className="w-16 h-16 rounded-full bg-accent-primary-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent-primary-500/20 transition-colors">
+                <div className="w-16 h-16 rounded-full neo-icon-box flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-accent-primary-400" aria-hidden="true" />
                 </div>
                 <h3 className="font-semibold text-text-primary text-lg mb-1">Faris Marwan</h3>
@@ -280,7 +280,7 @@ export default function AboutPage() {
               <AnimatedServiceCard key={title} index={i}>
                 <div className="glass-card p-6 text-center group h-full">
                   <div className="relative z-10">
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-accent-primary-500/10 group-hover:bg-accent-primary-500/20 transition-colors">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 neo-icon-box">
                       <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
                     </div>
                     <h3 className="font-semibold text-text-primary text-base mb-2">{title}</h3>
@@ -308,7 +308,7 @@ export default function AboutPage() {
             {clients.map((client) => (
               <div
                 key={client}
-                className="flex items-center justify-center h-16 rounded-card border border-glass-border px-4 hover:border-accent-primary-500/25 hover:bg-accent-primary-500/5 backdrop-blur-sm transition-all duration-200"
+                className="flex items-center justify-center h-16 rounded-card neo-badge px-4 transition-all duration-200"
               >
                 <span className="text-text-secondary font-medium text-sm text-center">{client}</span>
               </div>

@@ -20,7 +20,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-base border-t border-glass-border relative overflow-hidden">
+    <footer className="glass-footer border-t border-glass-border relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-primary-500/30 to-transparent" aria-hidden="true" />
 
       <div
@@ -58,7 +58,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`CodeFlick Technologies on ${label}`}
-                  className="w-9 h-9 rounded-btn bg-glass-light border border-glass-border flex items-center justify-center text-text-muted hover:text-accent-primary-400 hover:border-accent-primary-500/30 hover:bg-accent-primary-500/10 transition-all duration-200"
+                  className="w-9 h-9 rounded-btn neo-badge flex items-center justify-center text-text-muted hover:text-accent-primary-400 transition-all duration-200"
                 >
                   <Icon className="w-4 h-4" aria-hidden="true" />
                 </a>
