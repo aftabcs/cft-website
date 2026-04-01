@@ -154,7 +154,7 @@ export default function IndustriesPage() {
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 text-sm text-text-muted">
               <li>
-                <Link href="/" className="hover:text-white transition-colors">
+                <Link href="/" className="hover:text-accent-primary-400 transition-colors">
                   Home
                 </Link>
               </li>
@@ -162,7 +162,7 @@ export default function IndustriesPage() {
               <li className="text-white font-medium">Industries</li>
             </ol>
           </nav>
-          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 border border-accent-primary-500/15 px-3 py-1">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-accent-primary-400 mb-3 rounded-chip bg-accent-primary-500/10 px-3 py-1 border border-accent-primary-500/15">
             Industry Expertise
           </span>
           <h1 className="font-sans font-bold text-hero text-white max-w-2xl mb-4">
@@ -176,7 +176,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* INDUSTRY QUICK NAV */}
-      <section className="bg-[rgba(10,10,10,0.60)] backdrop-blur-[40px] saturate-[180%] py-4 border-b border-white/[0.15] sticky top-20 z-30">
+      <section className="bg-[rgba(5,5,5,0.70)] backdrop-blur-[40px] saturate-[180%] py-4 border-b border-white/[0.06] sticky top-20 z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav aria-label="Industry sections" className="overflow-x-auto scrollbar-hide">
             <ul className="flex items-center gap-2 min-w-max" role="list">
@@ -184,7 +184,7 @@ export default function IndustriesPage() {
                 <li key={id}>
                   <a
                     href={`#${id}`}
-                    className="flex items-center gap-2 px-3 py-2 text-xs text-text-muted hover:text-white rounded-btn hover:bg-white/[0.06] transition-all whitespace-nowrap"
+                    className="flex items-center gap-2 px-3 py-2 text-xs text-text-muted hover:text-accent-primary-400 rounded-btn hover:bg-accent-primary-500/10 transition-all whitespace-nowrap"
                   >
                     <Icon className="w-3.5 h-3.5" aria-hidden="true" />
                     {title.split(' &')[0].split(' and')[0]}
@@ -206,49 +206,47 @@ export default function IndustriesPage() {
               className="glass-card p-8 scroll-mt-36 group"
             >
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Left */}
                 <div>
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/10 border border-accent-primary-500/15 group-hover:bg-accent-primary-500/15 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-accent-primary-500/10 group-hover:bg-accent-primary-500/20 transition-colors">
                     <Icon className="w-6 h-6 text-accent-primary-400" aria-hidden="true" />
                   </div>
                   <h2 className="font-sans font-bold text-h3 text-white mb-1">{title}</h2>
-                  <p className="text-xs font-medium uppercase tracking-widest mb-4 text-accent-primary-400">
+                  <p className="text-xs font-medium uppercase tracking-[0.15em] mb-4 text-accent-primary-400">
                     {tagline}
                   </p>
 
                   <div className="mb-4">
-                    <h3 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-2">
+                    <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-text-muted mb-2">
                       The Challenge
                     </h3>
                     <p className="text-text-secondary text-sm leading-relaxed">{challenge}</p>
                   </div>
 
                   <div>
-                    <h3 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-2">
+                    <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-text-muted mb-2">
                       Our Solution
                     </h3>
                     <p className="text-white text-sm leading-relaxed">{solution}</p>
                   </div>
                 </div>
 
-                {/* Right */}
                 <div className="flex flex-col justify-between">
                   <div className="mb-6">
-                    <h3 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-2">
+                    <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-text-muted mb-2">
                       Key Focus Areas
                     </h3>
                     <p className="text-text-secondary text-sm">{focusAreas}</p>
                   </div>
                   {clients.length > 0 && (
                     <div className="mb-6">
-                      <h3 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-3">
+                      <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-text-muted mb-3">
                         Notable Clients
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         {clients.map((client) => (
                           <span
                             key={client}
-                            className="px-3 py-1.5 rounded-chip bg-accent-primary-500/[0.06] border border-accent-primary-500/15 text-text-secondary text-xs font-medium"
+                            className="px-3 py-1.5 rounded-chip bg-accent-primary-500/8 border border-accent-primary-500/15 text-text-secondary text-xs font-medium"
                           >
                             {client}
                           </span>
@@ -256,7 +254,7 @@ export default function IndustriesPage() {
                       </div>
                     </div>
                   )}
-                  <div className="mt-auto p-6 rounded-card bg-accent-primary-500/[0.03] border border-accent-primary-500/10">
+                  <div className="mt-auto p-6 rounded-card bg-white/[0.02] border border-white/[0.06]">
                     <p className="text-text-secondary text-sm mb-4">
                       Ready to modernize your {title.toLowerCase()} operations?
                     </p>
