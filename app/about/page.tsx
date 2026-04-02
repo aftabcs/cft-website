@@ -219,9 +219,7 @@ export default function AboutPage() {
                   <Image src="/team-zen.svg" alt="Zen Hadi" width={80} height={80} className="w-full h-full object-cover" />
                 </div>
                 <h3 className="font-semibold text-text-primary text-lg mb-1">Zen Hadi</h3>
-                <p className="text-text-muted text-xs mb-2">(&#x632;&#x64A;&#x646; &#x647;&#x627;&#x62F;&#x64A;)</p>
                 <p className="text-accent-primary-400 text-sm font-medium">Strategic Advisor / Consultant</p>
-                <p className="text-text-muted text-xs mt-1">India</p>
               </div>
             </div>
             <div className="glass-card p-6 text-center group">
@@ -230,9 +228,7 @@ export default function AboutPage() {
                   <Image src="/team-faris.svg" alt="Faris Marwan" width={80} height={80} className="w-full h-full object-cover" />
                 </div>
                 <h3 className="font-semibold text-text-primary text-lg mb-1">Faris Marwan</h3>
-                <p className="text-text-muted text-xs mb-2">(&#x641;&#x627;&#x631;&#x633; &#x645;&#x631;&#x648;&#x627;&#x646;)</p>
                 <p className="text-accent-primary-400 text-sm font-medium">AI/ML & Automation Expert</p>
-                <p className="text-text-muted text-xs mt-1">India</p>
               </div>
             </div>
             <div className="glass-card p-6 text-center group">
@@ -242,7 +238,6 @@ export default function AboutPage() {
                 </div>
                 <h3 className="font-semibold text-text-primary text-lg mb-1">Shah Alam</h3>
                 <p className="text-accent-primary-400 text-sm font-medium">Solution Architect</p>
-                <p className="text-text-muted text-xs mt-1">India</p>
               </div>
             </div>
             <div className="glass-card p-6 text-center group sm:col-start-1 lg:col-start-1">
@@ -251,8 +246,7 @@ export default function AboutPage() {
                   <Image src="/team-sana.svg" alt="Sana Khan" width={80} height={80} className="w-full h-full object-cover" />
                 </div>
                 <h3 className="font-semibold text-text-primary text-lg mb-1">Sana Khan</h3>
-                <p className="text-accent-primary-400 text-sm font-medium">CHRO</p>
-                <p className="text-text-muted text-xs mt-1">India</p>
+                <p className="text-accent-primary-400 text-sm font-medium">Head of Human Resources</p>
               </div>
             </div>
             <div className="glass-card p-6 text-center group">
@@ -262,7 +256,6 @@ export default function AboutPage() {
                 </div>
                 <h3 className="font-semibold text-text-primary text-lg mb-1">Syyed Haris</h3>
                 <p className="text-accent-primary-400 text-sm font-medium">Sales & Marketing</p>
-                <p className="text-text-muted text-xs mt-1">India</p>
               </div>
             </div>
           </div>

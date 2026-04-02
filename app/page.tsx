@@ -93,8 +93,8 @@ const clients = [
   'Invest Bank',
   'Capital Bank of Jordan',
   'Qatar Airways',
-  'Govt. of Uganda',
-  'Govt. of India',
+  'Government of Uganda',
+  'Government of India',
   'MPSEDC',
 ];
 
