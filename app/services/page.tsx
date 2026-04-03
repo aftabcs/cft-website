@@ -23,6 +23,34 @@ export const metadata: Metadata = {
   title: 'IT Services',
   description:
     'Comprehensive IT services from Code Flick Technologies: AI & Machine Learning, Automation, Software Development, FinTech, E-commerce, Manufacturing, CRM, Healthcare, Cloud & Infrastructure, and Data & Analytics.',
+  alternates: {
+    canonical: 'https://codeftech.com/services',
+  },
+  openGraph: {
+    title: 'IT Services | Code Flick Technologies',
+    description:
+      'AI & Machine Learning, Automation, Software Development, FinTech, E-commerce, Manufacturing, CRM, Healthcare, Cloud, and Data & Analytics services.',
+    url: 'https://codeftech.com/services',
+    type: 'website',
+  },
+};
+
+const servicesJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'IT Services by Code Flick Technologies',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Artificial Intelligence & Machine Learning', url: 'https://codeftech.com/services#ai' },
+    { '@type': 'ListItem', position: 2, name: 'Automation Services', url: 'https://codeftech.com/services#automation' },
+    { '@type': 'ListItem', position: 3, name: 'Software & Application Development', url: 'https://codeftech.com/services#software' },
+    { '@type': 'ListItem', position: 4, name: 'FinTech Solutions', url: 'https://codeftech.com/services#fintech' },
+    { '@type': 'ListItem', position: 5, name: 'E-commerce Solutions', url: 'https://codeftech.com/services#ecommerce' },
+    { '@type': 'ListItem', position: 6, name: 'Manufacturing Solutions', url: 'https://codeftech.com/services#manufacturing' },
+    { '@type': 'ListItem', position: 7, name: 'CRM Solutions', url: 'https://codeftech.com/services#crm' },
+    { '@type': 'ListItem', position: 8, name: 'Healthcare Solutions', url: 'https://codeftech.com/services#healthcare' },
+    { '@type': 'ListItem', position: 9, name: 'Cloud & Infrastructure', url: 'https://codeftech.com/services#cloud' },
+    { '@type': 'ListItem', position: 10, name: 'Data & Analytics', url: 'https://codeftech.com/services#data' },
+  ],
 };
 
 const serviceCategories = [
@@ -180,6 +208,11 @@ const serviceCategories = [
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
+
       {/* PAGE HERO */}
       <section className="relative bg-bg-base py-28 pt-40 overflow-hidden">
         <BackgroundBlobs page="services" />

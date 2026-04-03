@@ -4,9 +4,12 @@ import BackgroundBlobs from '@/components/BackgroundBlobs';
 import AnimatedSection from '@/components/AnimatedSection';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Code Flick Technologies',
+  title: 'Privacy Policy',
   description:
     'Privacy Policy for Code Flick Technologies — how we collect, use, and protect your personal data across our IT solutions and services.',
+  alternates: {
+    canonical: 'https://codeftech.com/privacy',
+  },
 };
 
 const sections = [

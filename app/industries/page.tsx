@@ -20,9 +20,43 @@ import GridPattern from '@/components/GridPattern';
 import GradientDivider from '@/components/GradientDivider';
 
 export const metadata: Metadata = {
-  title: 'Industries We Serve | Code Flick Technologies',
+  title: 'Industries We Serve',
   description:
     'Code Flick Technologies delivers enterprise-grade AI, automation, FinTech, and digital transformation solutions across banking, healthcare, aviation, government, manufacturing, and more.',
+  alternates: {
+    canonical: 'https://codeftech.com/industries',
+  },
+  openGraph: {
+    title: 'Industries We Serve | Code Flick Technologies',
+    description:
+      'Enterprise-grade solutions across banking, healthcare, aviation, government, manufacturing, e-commerce, logistics, and startups.',
+    url: 'https://codeftech.com/industries',
+    type: 'website',
+  },
+};
+
+const industriesJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Code Flick Technologies',
+  url: 'https://codeftech.com',
+  description:
+    'Enterprise-grade AI, automation, FinTech, and digital transformation solutions across multiple industries.',
+  areaServed: ['Middle East', 'Africa', 'South Asia', 'Europe'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Industry Solutions',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Banking & Financial Services' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'FinTech Solutions' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'E-commerce Solutions' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Manufacturing Solutions' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Healthcare Solutions' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Government & Public Sector' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Aviation Solutions' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Logistics & Supply Chain' } },
+    ],
+  },
 };
 
 const industries = [
@@ -151,6 +185,11 @@ const industries = [
 export default function IndustriesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(industriesJsonLd) }}
+      />
+
       {/* PAGE HERO */}
       <section className="relative bg-bg-base py-28 pt-40 overflow-hidden">
         <BackgroundBlobs page="industries" />

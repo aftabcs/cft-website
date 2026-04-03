@@ -8,6 +8,16 @@ export const metadata: Metadata = {
   title: 'Contact Us',
   description:
     'Get in touch with Code Flick Technologies. Tell us about your project and our experts will respond within 24 hours. Free initial consultation available.',
+  alternates: {
+    canonical: 'https://codeftech.com/contact',
+  },
+  openGraph: {
+    title: 'Contact Us | Code Flick Technologies',
+    description:
+      'Tell us about your project. Our experts will respond within 24 hours. Free initial consultation available.',
+    url: 'https://codeftech.com/contact',
+    type: 'website',
+  },
 };
 
 const jsonLd = {

@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   title: 'Code Flick Technologies — From Software to AI, We Build Everything',
   description:
     'End-to-end IT solutions across AI, Automation, FinTech, E-commerce, Manufacturing, CRM, and Healthcare. Trusted by Ajman Bank, Qatar Airways, and global enterprises.',
+  alternates: {
+    canonical: 'https://codeftech.com',
+  },
 };
 
 const services = [

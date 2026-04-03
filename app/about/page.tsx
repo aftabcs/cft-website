@@ -22,6 +22,43 @@ export const metadata: Metadata = {
   title: 'About Us',
   description:
     'Code Flick Technologies — a core IT solutions company with 15+ years of expertise delivering AI, FinTech, Automation, and Enterprise software to global leaders including Ajman Bank, Qatar Airways, and governments worldwide.',
+  alternates: {
+    canonical: 'https://codeftech.com/about',
+  },
+  openGraph: {
+    title: 'About Us | Code Flick Technologies',
+    description:
+      'A core IT solutions company with 15+ years of expertise delivering AI, FinTech, Automation, and Enterprise software to global leaders.',
+    url: 'https://codeftech.com/about',
+    type: 'website',
+  },
+};
+
+const aboutJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  mainEntity: {
+    '@type': 'Organization',
+    name: 'Code Flick Technologies',
+    url: 'https://codeftech.com',
+    foundingDate: '2011',
+    description:
+      'Code Flick Technologies is a core IT solutions company providing end-to-end technology services across AI, Automation, FinTech, E-commerce, Manufacturing, CRM, and Healthcare.',
+    areaServed: ['Middle East', 'Africa', 'South Asia', 'Europe'],
+    numberOfEmployees: { '@type': 'QuantitativeValue', value: '50+' },
+    employee: [
+      { '@type': 'Person', name: 'Zen Hadi', jobTitle: 'Strategic Advisor / Consultant' },
+      { '@type': 'Person', name: 'Faris Marwan', jobTitle: 'AI/ML & Automation Expert' },
+      { '@type': 'Person', name: 'Shah Alam', jobTitle: 'Solution Architect' },
+      { '@type': 'Person', name: 'Sana Khan', jobTitle: 'Head of Human Resources' },
+      { '@type': 'Person', name: 'Syyed Haris', jobTitle: 'Sales & Marketing' },
+    ],
+    address: [
+      { '@type': 'PostalAddress', addressLocality: 'Bhopal', addressCountry: 'IN' },
+      { '@type': 'PostalAddress', addressLocality: 'Lucknow', addressCountry: 'IN' },
+      { '@type': 'PostalAddress', addressLocality: 'Doha', addressCountry: 'QA' },
+    ],
+  },
 };
 
 const expertise = [
@@ -115,6 +152,11 @@ const stats = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
+      />
+
       {/* PAGE HERO */}
       <section className="relative bg-bg-base py-28 pt-40 overflow-hidden">
         <BackgroundBlobs page="about" />

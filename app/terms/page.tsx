@@ -4,9 +4,12 @@ import BackgroundBlobs from '@/components/BackgroundBlobs';
 import AnimatedSection from '@/components/AnimatedSection';
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions | Code Flick Technologies',
+  title: 'Terms & Conditions',
   description:
     'Terms and Conditions for Code Flick Technologies — governing the use of our website and IT services.',
+  alternates: {
+    canonical: 'https://codeftech.com/terms',
+  },
 };
 
 const sections = [
