@@ -64,6 +64,15 @@ export const metadata: Metadata = {
     description: 'From Software to AI — We Build Everything',
     images: ['/og-image.png'],
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/favicon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [{ url: '/apple-icon.svg', type: 'image/svg+xml' }],
+  },
+  manifest: '/manifest.json',
   robots: {
     index: true,
     follow: true,
