@@ -22,6 +22,7 @@ import AnimatedSection from '@/components/AnimatedSection';
 import GridPattern from '@/components/GridPattern';
 import GradientDivider from '@/components/GradientDivider';
 import TechCircuit from '@/components/TechCircuit';
+import LogoMarquee from '@/components/LogoMarquee';
 
 export const metadata: Metadata = {
   title: 'Code Flick Technologies — From Software to AI, We Build Everything',
@@ -206,18 +207,7 @@ export default function HomePage() {
               Banks, airlines, governments, and enterprises across 10+ countries
             </p>
           </AnimatedSection>
-          <div className="glass-card p-4 sm:p-6">
-            <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-4">
-              {clients.map((client) => (
-                <div
-                  key={client}
-                  className="flex items-center justify-center h-16 rounded-btn neo-badge px-4 transition-all duration-200"
-                >
-                  <span className="text-text-secondary font-medium text-sm text-center">{client}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          <LogoMarquee />
         </div>
       </section>
 

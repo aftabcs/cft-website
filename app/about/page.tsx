@@ -16,6 +16,7 @@ import AnimatedServiceCard from '@/components/AnimatedServiceCard';
 import AnimatedSection from '@/components/AnimatedSection';
 import GridPattern from '@/components/GridPattern';
 import GradientDivider from '@/components/GradientDivider';
+import LogoMarquee from '@/components/LogoMarquee';
 import TechCircuit from '@/components/TechCircuit';
 
 export const metadata: Metadata = {
@@ -393,6 +394,9 @@ export default function AboutPage() {
                 <span className="text-text-secondary font-medium text-sm text-center">{client}</span>
               </div>
             ))}
+          </div>
+          <div className="mt-10">
+            <LogoMarquee />
           </div>
         </div>
       </section>
