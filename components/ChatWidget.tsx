@@ -1,8 +1,10 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, Send, ArrowRight, CheckCircle, AlertCircle } from 'lucide-react';
+import { MessageCircle, X, Send, Mail, AlertCircle } from 'lucide-react';
+import { GoogleGenAI } from '@google/genai';
+import { COMPANY_KNOWLEDGE } from '@/lib/chatbot-knowledge';
 
 type Message = {
   id: number;
@@ -17,83 +19,20 @@ type ContactForm = {
   message: string;
 };
 
-const FAQ: { keywords: string[]; answer: string }[] = [
-  {
-    keywords: ['service', 'offer', 'do you do', 'what do you', 'help with'],
-    answer:
-      'We offer end-to-end IT solutions including AI & Machine Learning, Automation, Software Development, FinTech, E-commerce, CRM, Healthcare IT, Cloud & DevOps, and Data Analytics. Would you like details on any specific service?',
-  },
-  {
-    keywords: ['ai', 'machine learning', 'ml', 'artificial intelligence', 'chatbot', 'llm'],
-    answer:
-      'Our AI & ML services include chatbots, predictive analytics, LLM integration, AI agents, computer vision, NLP, and generative AI solutions. We can build custom AI solutions tailored to your business needs.',
-  },
-  {
-    keywords: ['automation', 'rpa', 'workflow', 'power automate'],
-    answer:
-      'We specialize in business process automation using Power Automate, Power Apps, n8n, and Make. Our solutions cover RPA, workflow automation, and intelligent document processing.',
-  },
-  {
-    keywords: ['fintech', 'banking', 'payment', 'kyc'],
-    answer:
-      'We build digital banking platforms, payment gateways, KYC/AML systems, core banking integrations (Temenos T24), and lending platforms. Our clients include Ajman Bank, National Bank of Iraq, and Capital Bank of Jordan.',
-  },
-  {
-    keywords: ['price', 'cost', 'quote', 'budget', 'how much', 'pricing'],
-    answer:
-      'Pricing depends on the project scope, complexity, and timeline. I\'d recommend speaking with our team for a tailored quote. Would you like to fill out a quick contact form?',
-  },
-  {
-    keywords: ['location', 'office', 'where', 'based', 'country'],
-    answer:
-      'Code Flick Technologies has offices in Bhopal and Lucknow (India) and Doha (Qatar). We serve clients across 10+ countries globally.',
-  },
-  {
-    keywords: ['contact', 'reach', 'email', 'phone', 'call'],
-    answer:
-      'You can reach us at info@codeftech.com or call +91 7987421429. Or I can open a contact form right here for you!',
-  },
-  {
-    keywords: ['client', 'portfolio', 'project', 'work', 'case study'],
-    answer:
-      'We\'ve delivered solutions for Ajman Bank, National Bank of Iraq, Qatar Airways, Government of Uganda, Government of India, and 50+ other enterprise clients worldwide.',
-  },
-  {
-    keywords: ['ecommerce', 'e-commerce', 'shopify', 'woocommerce', 'store', 'online'],
-    answer:
-      'We build high-performance storefronts on Shopify, WooCommerce, and Magento, plus custom marketplace platforms and headless commerce architectures.',
-  },
-  {
-    keywords: ['healthcare', 'emr', 'ehr', 'telemedicine', 'medical'],
-    answer:
-      'Our healthcare solutions include EMR/EHR platforms, telemedicine systems, patient portals, HL7/FHIR integration, and clinical decision support tools.',
-  },
-  {
-    keywords: ['crm', 'salesforce', 'odoo', 'dynamics', 'hubspot'],
-    answer:
-      'We implement and customize leading CRM platforms — Salesforce, Odoo, Microsoft Dynamics, Zoho, and HubSpot — with full integration across your business systems.',
-  },
-  {
-    keywords: ['cloud', 'devops', 'aws', 'azure', 'docker', 'kubernetes'],
-    answer:
-      'We offer cloud-native architecture on AWS, Azure, and GCP, plus CI/CD pipelines, containerization with Docker/Kubernetes, and enterprise-grade security.',
-  },
-  {
-    keywords: ['hello', 'hi', 'hey', 'good morning', 'good evening'],
-    answer:
-      'Hello! Welcome to Code Flick Technologies. I\'m here to help you learn about our services. What can I assist you with today?',
-  },
-];
+const SYSTEM_PROMPT = `You are the Code Flick Technologies virtual assistant on the company website (codeftech.com). Be helpful, friendly, concise, and professional.
 
-function findAnswer(input: string): string | null {
-  const lower = input.toLowerCase();
-  for (const faq of FAQ) {
-    if (faq.keywords.some((kw) => lower.includes(kw))) {
-      return faq.answer;
-    }
-  }
-  return null;
-}
+RESPONSE GUIDELINES:
+- Answer in 2-3 sentences for simple questions
+- For detailed questions about services or industries, provide thorough answers with specific details from the knowledge base below
+- Use the specific details, client names, technologies, and offerings from the knowledge base — be precise, not vague
+- For pricing questions, say it depends on scope and suggest reaching out at info@codeftech.com for a free consultation
+- Never fabricate information. If unsure, suggest contacting the team at info@codeftech.com
+- Do not mention or suggest any "contact form" — the website UI handles that separately
+- Do not use markdown formatting — use plain text only
+- Be conversational and warm, not robotic
+
+COMPANY KNOWLEDGE BASE:
+${COMPANY_KNOWLEDGE}`;
 
 const quickActions = [
   'What services do you offer?',
@@ -101,6 +40,15 @@ const quickActions = [
   'How can I contact you?',
   'What are your locations?',
 ];
+
+// Initialize Gemini client
+const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+let genAI: GoogleGenAI | null = null;
+if (apiKey && apiKey !== 'your_gemini_api_key_here') {
+  genAI = new GoogleGenAI({ apiKey });
+}
+
+type ChatMessage = { role: 'user' | 'model'; content: string };
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -112,12 +60,14 @@ export default function ChatWidget() {
     },
   ]);
   const [input, setInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const [showContactForm, setShowContactForm] = useState(false);
   const [contactForm, setContactForm] = useState<ContactForm>({ name: '', email: '', phone: '', message: '' });
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const nextId = useRef(1);
+  const chatHistoryRef = useRef<ChatMessage[]>([]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -129,30 +79,82 @@ export default function ChatWidget() {
     }
   }, [isOpen]);
 
-  function sendMessage(text: string) {
-    if (!text.trim()) return;
+  // Re-focus input after loading completes
+  useEffect(() => {
+    if (!isLoading && isOpen && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isLoading, isOpen]);
+
+  const addBotMessage = useCallback((text: string) => {
+    setMessages((prev) => [...prev, { id: nextId.current++, from: 'bot', text }]);
+    chatHistoryRef.current.push({ role: 'model', content: text });
+  }, []);
+
+  const sendMessage = useCallback(async (text: string) => {
+    if (!text.trim() || isLoading) return;
 
     const userMsg: Message = { id: nextId.current++, from: 'user', text: text.trim() };
     setMessages((prev) => [...prev, userMsg]);
     setInput('');
+    setIsLoading(true);
+    setShowContactForm(false);
 
-    setTimeout(() => {
-      const answer = findAnswer(text);
-      if (answer) {
-        setMessages((prev) => [...prev, { id: nextId.current++, from: 'bot', text: answer }]);
-      } else {
-        setMessages((prev) => [
-          ...prev,
-          {
-            id: nextId.current++,
-            from: 'bot',
-            text: 'I\'m not sure I can answer that directly. Would you like to fill out a quick contact form so our team can get back to you?',
+    setTimeout(() => inputRef.current?.focus(), 0);
+
+    chatHistoryRef.current.push({ role: 'user', content: text.trim() });
+
+    if (!genAI) {
+      console.error('[ChatBot] Gemini not initialized. API key:', apiKey ? 'SET' : 'MISSING');
+      addBotMessage('I\'m having trouble connecting right now. Please send us a message using the button below and our team will get back to you shortly!');
+      setIsLoading(false);
+      return;
+    }
+
+    for (let attempt = 0; attempt < 2; attempt++) {
+      try {
+        console.log(`[ChatBot] Attempt ${attempt + 1} with gemini-2.5-flash-lite...`);
+
+        const contents = chatHistoryRef.current.map((msg) => ({
+          role: msg.role as 'user' | 'model',
+          parts: [{ text: msg.content }],
+        }));
+
+        const response = await genAI.models.generateContentStream({
+          model: 'gemini-2.5-flash-lite',
+          contents,
+          config: {
+            systemInstruction: SYSTEM_PROMPT,
+            maxOutputTokens: 300,
+            temperature: 0.3,
           },
-        ]);
-        setTimeout(() => setShowContactForm(true), 500);
+        });
+
+        let fullText = '';
+        for await (const chunk of response) {
+          fullText += chunk.text ?? '';
+        }
+
+        console.log('[ChatBot] Success! Response length:', fullText.length);
+        addBotMessage(fullText);
+        setIsLoading(false);
+        return;
+      } catch (err: unknown) {
+        const error = err as Error & { status?: number };
+        console.error(`[ChatBot] Attempt ${attempt + 1} failed:`, error.message);
+
+        if (error.status === 429 && attempt < 1) {
+          console.log('[ChatBot] Rate limited, retrying in 3 seconds...');
+          await new Promise((resolve) => setTimeout(resolve, 3000));
+          continue;
+        }
       }
-    }, 600);
-  }
+    }
+
+    console.warn('[ChatBot] All attempts failed');
+    addBotMessage('I\'m experiencing high demand right now. Please try again in a moment, or send us a message using the button below!');
+    setIsLoading(false);
+  }, [isLoading, addBotMessage]);
 
   async function handleContactSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -243,28 +245,66 @@ export default function ChatWidget() {
 
             {/* Messages */}
             <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3 scrollbar-hide">
-              {messages.map((msg) => (
-                <motion.div
-                  key={msg.id}
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className={`flex ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}
-                >
-                  <div
-                    className={`max-w-[80%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed ${
-                      msg.from === 'user'
-                        ? 'bg-gradient-to-br from-accent-primary-500 to-accent-primary-700 text-white rounded-br-md'
-                        : 'neo-badge !rounded-2xl !rounded-bl-md text-text-secondary'
-                    }`}
+              {messages.map((msg, index) => (
+                <div key={msg.id}>
+                  <motion.div
+                    initial={msg.id === 0 ? false : { opacity: 0, y: 10, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 0.4, ease: 'easeOut' }}
+                    className={`flex ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
-                    {msg.text}
-                  </div>
-                </motion.div>
+                    <div
+                      className={`max-w-[80%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed ${
+                        msg.from === 'user'
+                          ? 'bg-gradient-to-br from-accent-primary-500 to-accent-primary-700 text-white rounded-br-md'
+                          : 'neo-badge !rounded-2xl !rounded-bl-md text-text-secondary'
+                      }`}
+                    >
+                      {msg.text}
+                    </div>
+                  </motion.div>
+
+                  {/* "Send Us a Message" button after the last bot response */}
+                  {msg.from === 'bot' && !isLoading && index === messages.length - 1 && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 4 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: 0.3 }}
+                      className="flex justify-start mt-2"
+                    >
+                      <button
+                        onClick={() => {
+                          setShowContactForm(true);
+                          setFormStatus('idle');
+                        }}
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-chip text-xs text-accent-primary-400 border border-accent-primary-500/20 bg-accent-primary-500/5 hover:bg-accent-primary-500/10 hover:border-accent-primary-500/30 transition-all"
+                      >
+                        <Mail className="w-3 h-3" />
+                        Send Us a Message
+                      </button>
+                    </motion.div>
+                  )}
+                </div>
               ))}
 
-              {/* Quick actions (show only after first bot message if few messages) */}
-              {messages.length <= 2 && !showContactForm && (
+              {/* Typing dots — shown while waiting for API response */}
+              {isLoading && (
+                <motion.div
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  className="flex justify-start"
+                >
+                  <div className="neo-badge !rounded-2xl !rounded-bl-md px-4 py-3 flex items-center gap-1">
+                    <span className="w-2 h-2 rounded-full bg-text-muted animate-bounce" style={{ animationDelay: '0ms' }} />
+                    <span className="w-2 h-2 rounded-full bg-text-muted animate-bounce" style={{ animationDelay: '150ms' }} />
+                    <span className="w-2 h-2 rounded-full bg-text-muted animate-bounce" style={{ animationDelay: '300ms' }} />
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Quick actions on initial screen */}
+              {messages.length <= 2 && !showContactForm && !isLoading && (
                 <div className="flex flex-wrap gap-1.5 pt-1">
                   {quickActions.map((action) => (
                     <button
@@ -351,14 +391,6 @@ export default function ChatWidget() {
             {/* Input */}
             <div className="px-4 py-3 border-t border-glass-border">
               <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setShowContactForm(true)}
-                  className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-text-muted hover:text-accent-primary-400 hover:bg-accent-primary-500/10 transition-all"
-                  aria-label="Open contact form"
-                  title="Contact form"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </button>
                 <input
                   ref={inputRef}
                   type="text"
@@ -372,10 +404,11 @@ export default function ChatWidget() {
                   }}
                   placeholder="Type a message..."
                   className="flex-1 px-3 py-2 neo-input text-text-primary placeholder:text-text-subtle text-sm"
+                  disabled={isLoading}
                 />
                 <button
                   onClick={() => sendMessage(input)}
-                  disabled={!input.trim()}
+                  disabled={!input.trim() || isLoading}
                   className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-accent-primary-500 to-accent-primary-700 text-white flex items-center justify-center disabled:opacity-40 hover:opacity-90 transition-opacity"
                   aria-label="Send message"
                 >

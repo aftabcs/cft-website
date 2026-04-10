@@ -2,3 +2,5 @@ node_modules/
 .next/
 out/
 write_plan.js
+.env.local
+.env*.local
