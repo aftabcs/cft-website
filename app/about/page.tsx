@@ -255,47 +255,47 @@ export default function AboutPage() {
               Core Team
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="glass-card p-6 text-center group">
+          <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
+            <div className="glass-card p-6 text-center group w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
               <div className="relative z-10">
-                <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-accent-primary-400/30">
-                  <Image src="/team-zen.svg" alt="Zen Hadi" width={80} height={80} className="w-full h-full object-cover" />
+                <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-accent-primary-400/30">
+                  <Image src="/team/zen-hadi.jpg" alt="Zen Hadi" width={112} height={112} className="w-full h-full object-cover" />
                 </div>
                 <h3 className="font-semibold text-text-primary text-lg mb-1">Zen Hadi</h3>
                 <p className="text-accent-primary-400 text-sm font-medium">Strategic Advisor / Consultant</p>
               </div>
             </div>
-            <div className="glass-card p-6 text-center group">
+            <div className="glass-card p-6 text-center group w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
               <div className="relative z-10">
-                <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-accent-primary-400/30">
-                  <Image src="/team-faris.svg" alt="Faris Marwan" width={80} height={80} className="w-full h-full object-cover" />
+                <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-accent-primary-400/30">
+                  <Image src="/team/faris-marwan.png" alt="Faris Marwan" width={112} height={112} className="w-full h-full object-cover" />
                 </div>
                 <h3 className="font-semibold text-text-primary text-lg mb-1">Faris Marwan</h3>
                 <p className="text-accent-primary-400 text-sm font-medium">AI/ML & Automation Expert</p>
               </div>
             </div>
-            <div className="glass-card p-6 text-center group">
+            <div className="glass-card p-6 text-center group w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
               <div className="relative z-10">
-                <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-accent-primary-400/30">
-                  <Image src="/team-shah.svg" alt="Shah Alam" width={80} height={80} className="w-full h-full object-cover" />
+                <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-accent-primary-400/30">
+                  <Image src="/team/shah-alam.jpg" alt="Shah Alam" width={112} height={112} className="w-full h-full object-cover" />
                 </div>
                 <h3 className="font-semibold text-text-primary text-lg mb-1">Shah Alam</h3>
                 <p className="text-accent-primary-400 text-sm font-medium">Solution Architect</p>
               </div>
             </div>
-            <div className="glass-card p-6 text-center group sm:col-start-1 lg:col-start-1">
+            <div className="glass-card p-6 text-center group w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
               <div className="relative z-10">
-                <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-accent-primary-400/30">
-                  <Image src="/team-sana.svg" alt="Sana Khan" width={80} height={80} className="w-full h-full object-cover" />
+                <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-accent-primary-400/30">
+                  <Image src="/team/sana-khan.png" alt="Sana Khan" width={112} height={112} className="w-full h-full object-cover" />
                 </div>
                 <h3 className="font-semibold text-text-primary text-lg mb-1">Sana Khan</h3>
                 <p className="text-accent-primary-400 text-sm font-medium">Head of Human Resources</p>
               </div>
             </div>
-            <div className="glass-card p-6 text-center group">
+            <div className="glass-card p-6 text-center group w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
               <div className="relative z-10">
-                <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-accent-primary-400/30">
-                  <Image src="/team-haris.svg" alt="Syyed Haris" width={80} height={80} className="w-full h-full object-cover" />
+                <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-accent-primary-400/30">
+                  <Image src="/team/syyed-haris.png" alt="Syyed Haris" width={112} height={112} className="w-full h-full object-cover" />
                 </div>
                 <h3 className="font-semibold text-text-primary text-lg mb-1">Syyed Haris</h3>
                 <p className="text-accent-primary-400 text-sm font-medium">Sales & Marketing</p>
