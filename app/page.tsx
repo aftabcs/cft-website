@@ -120,7 +120,7 @@ const jsonLd = {
     'Code Flick Technologies delivers end-to-end IT solutions across AI, Automation, FinTech, E-commerce, Manufacturing, CRM, and Healthcare.',
   slogan: 'From Software to AI — We Build Everything',
   areaServed: ['Middle East', 'Africa', 'South Asia', 'Europe'],
-  sameAs: ['https://linkedin.com', 'https://twitter.com'],
+  sameAs: ['https://www.linkedin.com/company/code-flick-technologies/posts/?feedView=all'],
 };
 
 export default function HomePage() {

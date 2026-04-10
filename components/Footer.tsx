@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Linkedin, Twitter, Github, Mail, MapPin, Phone, ArrowUpRight, ChevronRight } from 'lucide-react';
+import { Linkedin, Mail, MapPin, Phone, ArrowUpRight, ChevronRight } from 'lucide-react';
 
 const footerLinks = {
   company: [
@@ -23,9 +23,7 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { href: 'https://linkedin.com', label: 'LinkedIn', Icon: Linkedin },
-  { href: 'https://twitter.com', label: 'X/Twitter', Icon: Twitter },
-  { href: 'https://github.com', label: 'GitHub', Icon: Github },
+  { href: 'https://www.linkedin.com/company/code-flick-technologies/posts/?feedView=all', label: 'LinkedIn', Icon: Linkedin },
 ];
 
 export default function Footer() {

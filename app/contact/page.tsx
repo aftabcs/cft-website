@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Mail, MapPin, Phone, Linkedin, Twitter, Github, Zap } from 'lucide-react';
+import { Mail, MapPin, Phone, Linkedin, Zap } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import BackgroundBlobs from '@/components/BackgroundBlobs';
 
@@ -31,7 +31,7 @@ const jsonLd = {
     name: 'Code Flick Technologies',
     url: 'https://codeftech.com',
     email: 'info@codeftech.com',
-    sameAs: ['https://linkedin.com', 'https://twitter.com'],
+    sameAs: ['https://www.linkedin.com/company/code-flick-technologies/posts/?feedView=all'],
   },
 };
 
@@ -149,9 +149,7 @@ export default function ContactPage() {
                 </p>
                 <div className="flex items-center gap-3">
                   {[
-                    { href: 'https://linkedin.com', label: 'LinkedIn', Icon: Linkedin },
-                    { href: 'https://twitter.com', label: 'X/Twitter', Icon: Twitter },
-                    { href: 'https://github.com', label: 'GitHub', Icon: Github },
+                    { href: 'https://www.linkedin.com/company/code-flick-technologies/posts/?feedView=all', label: 'LinkedIn', Icon: Linkedin },
                   ].map(({ href, label, Icon }) => (
                     <a
                       key={label}
