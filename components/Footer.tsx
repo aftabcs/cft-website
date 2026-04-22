@@ -168,24 +168,13 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="tel:+917987421429"
+                    href="tel:+97455258998"
                     className="flex items-center gap-3 text-text-muted text-sm hover:text-text-primary transition-colors group"
                   >
                     <span className="w-8 h-8 rounded-lg bg-accent-primary-500/10 dark:bg-accent-primary-500/8 flex items-center justify-center shrink-0 group-hover:bg-accent-primary-500/20 transition-colors">
                       <Phone className="w-3.5 h-3.5 text-accent-primary-500" aria-hidden="true" />
                     </span>
-                    <span>+91 7987421429</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="tel:+917376766613"
-                    className="flex items-center gap-3 text-text-muted text-sm hover:text-text-primary transition-colors group"
-                  >
-                    <span className="w-8 h-8 rounded-lg bg-accent-primary-500/10 dark:bg-accent-primary-500/8 flex items-center justify-center shrink-0 group-hover:bg-accent-primary-500/20 transition-colors">
-                      <Phone className="w-3.5 h-3.5 text-accent-primary-500" aria-hidden="true" />
-                    </span>
-                    <span>+91 7376766613</span>
+                    <span>+974 5525 8998</span>
                   </a>
                 </li>
                 <li>
@@ -193,7 +182,7 @@ export default function Footer() {
                     <span className="w-8 h-8 rounded-lg bg-accent-primary-500/10 dark:bg-accent-primary-500/8 flex items-center justify-center shrink-0">
                       <MapPin className="w-3.5 h-3.5 text-accent-primary-500" aria-hidden="true" />
                     </span>
-                    <span>India &middot; Qatar</span>
+                    <span>Qatar</span>
                   </div>
                 </li>
               </ul>

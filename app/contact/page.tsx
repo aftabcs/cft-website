@@ -123,18 +123,6 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.15em] text-text-muted mb-0.5">
-                      India Office
-                    </p>
-                    <p className="text-text-primary text-sm">Bhopal, Madhya Pradesh, India</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-btn neo-icon-box flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-accent-primary-400" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.15em] text-text-muted mb-0.5">
                       Qatar Office
                     </p>
                     <p className="text-text-primary text-sm">Al Sadd, Doha, Qatar</p>
