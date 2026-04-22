@@ -8,6 +8,11 @@ const footerLinks = {
     { href: '/industries', label: 'Industries' },
     { href: '/contact', label: 'Contact' },
   ],
+  products: [
+    { href: '/products', label: 'All Products' },
+    { href: '/products/mail-merge', label: 'Mail Merge' },
+    { href: '/products/eduflick', label: 'EduFlick' },
+  ],
   services: [
     { href: '/services#ai', label: 'AI & Machine Learning' },
     { href: '/services#automation', label: 'Automation' },
@@ -72,7 +77,7 @@ export default function Footer() {
           {/* Link columns */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-14">
             {/* Brand column */}
-            <div className="lg:col-span-4">
+            <div className="sm:col-span-2 lg:col-span-3">
               <Link href="/" className="flex items-center mb-5 group w-fit">
                 <img
                   src="/logo.svg"
@@ -127,8 +132,29 @@ export default function Footer() {
               </ul>
             </div>
 
+            {/* Products links */}
+            <div className="lg:col-span-2">
+              <h3 className="text-xs font-semibold text-text-primary uppercase tracking-[0.2em] mb-5 flex items-center gap-2">
+                <span className="w-5 h-px bg-accent-primary-500/40" aria-hidden="true" />
+                Products
+              </h3>
+              <ul className="space-y-3" role="list">
+                {footerLinks.products.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      className="text-text-muted text-sm hover:text-accent-primary-400 transition-colors inline-flex items-center gap-1 group"
+                    >
+                      <ChevronRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200 text-accent-primary-500" aria-hidden="true" />
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             {/* Services links */}
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-2">
               <h3 className="text-xs font-semibold text-text-primary uppercase tracking-[0.2em] mb-5 flex items-center gap-2">
                 <span className="w-5 h-px bg-accent-primary-500/40" aria-hidden="true" />
                 Services
